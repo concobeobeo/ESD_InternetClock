@@ -1,9 +1,9 @@
 
-ROM used:   2545/8192 (31%)
-            2622/8192 (32%) including unused fragments
+ROM used:   2535/8192 (31%)
+            2612/8192 (32%) including unused fragments
 
             1.9 Average locations per line
-            10.8 Average locations per statement
+            11.0 Average locations per statement
 
 RAM used:   76/368 (21%) at main() level
             94/368 (26%) worst case
@@ -13,11 +13,11 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  245   135  57  main.c
+  241   131  57  main.c
   773     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
   311   100  43  5110lib\3310(modified).c
 ----- -----
- 1329   235 Total
+ 1325   231 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -40,9 +40,9 @@ Page ROM  %  RAM    Vol Diff  Functions:
  Inline         0    226  1.8  init
 0     14   1    0     48  1.1  buzz
 0     65   3    0    946  5.8  uart_receive
-0     14   1    0    305  4.1  @goto25893
+0     14   1    0    305  4.1  @goto54078
 0     59   2    2    305  4.1  encoder
-1    574  23   15   2890  8.0  MAIN
+1    564  22   15   2767  8.0  MAIN
 0      6   0    0             @const696
 0     98   4    4             @PSTRINGC7_636
 0      6   0    0             @const701
@@ -53,22 +53,22 @@ Page ROM  %  RAM    Vol Diff  Functions:
 
 Program metrics:
     Functions               16
-    Statements              235
+    Statements              231
     Comments                318
-    Volume (V)              10827
-    Difficulty (D)          57.5
-    Effort to implement (E) 622489
-    Time to implement (T)   9 hours, 36 minutes
+    Volume (V)              10681
+    Difficulty (D)          57.4
+    Effort to implement (E) 613601
+    Time to implement (T)   9 hours, 28 minutes
     Est Delivered Bugs (B)  2
-    Cyclomatic Complexity   38
-    Maintainability (MI)    122
+    Cyclomatic Complexity   37
+    Maintainability (MI)    123
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-0005B    88  0  
 0005C-007FF  1879  77  
-00800-00FFF   574  1474  
+00800-00FFF   564  1484  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
 

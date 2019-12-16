@@ -1,5 +1,5 @@
 ÀÄmain
-   ÃÄMAIN  1/574  Ram=15
+   ÃÄMAIN  1/564  Ram=15
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄinit  (Inline)  Ram=0
    ³  ³  ÀÄlcd_init  (Inline)  Ram=0
@@ -63,7 +63,6 @@
    ³  ³  ÀÄ*
    ³  ÃÄlcd_print_digit  0/77  Ram=7
    ³  ³  ÀÄ*
-   ³  ÃÄ@delay_ms1  0/20  Ram=1
    ³  ÃÄlcd_print_digit  0/77  Ram=7
    ³  ³  ÀÄ*
    ³  ÃÄlcd_print_digit  0/77  Ram=7
@@ -122,5 +121,5 @@
    ÃÄuart_receive  0/65  Ram=0
    ³  ÃÄlcd_putc  0/4  Ram=1
    ³  ³  ÀÄ*
-   ³  ÀÄ@goto25893  0/14  Ram=0
+   ³  ÀÄ@goto54078  0/14  Ram=0
    ÀÄencoder  0/59  Ram=2

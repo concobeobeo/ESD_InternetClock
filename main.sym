@@ -143,7 +143,7 @@ ROM Allocation:
 0005BD  table_to_lcd
 0005F6  lcd_putc
 0005FA  uart_receive
-00063B  @goto25893
+00063B  @goto54078
 000649  encoder
 000684  @const696.call
 00068A  @const701.call
@@ -168,14 +168,14 @@ Project Directory:
     C:\Users\NGUYEN DUY LINH\Desktop\NOKIA5110\
 
 Project Files:
-    main.c                                                  [16-Dec-19 12:10  CRC=C87B00B2]
+    main.c                                                  [16-Dec-19 13:36  CRC=7D8D663E]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h   [22-Oct-15 10:30  CRC=E224733F]
     5110lib\3310(modified).c                                [16-Dec-19 11:01  CRC=7260FBFB]
 
-Source signature=8F616BE7
+Source signature=4473D173
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=4388
+Hex file CRC=4A35
 
 Units:
     main (main)

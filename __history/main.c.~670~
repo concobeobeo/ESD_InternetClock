@@ -181,7 +181,11 @@ void main()
             lcd_putc("16/12/2019"); 
             lcd_print_digit(hr1 -0x30, x, y);
             lcd_print_digit(hr2-0x30, x + 12, y);
-            lcd_print_digit(11, x + 24, y);
+            if (blink == 10) {
+               lcd_print_digit(11, x + 24, y);
+               blink =0;
+               delay_ms(100);
+            }
             lcd_print_digit(min1-0x30, x + 36, y); 
             lcd_print_digit(min2-0x30, x + 48, y);
 //!            lcd_putc(tempd2);
