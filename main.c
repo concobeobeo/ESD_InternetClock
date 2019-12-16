@@ -65,7 +65,9 @@ void init()
 
 void buzz(){
    output_high(PIN_D1);
+   output_high(PIN_A4);
    delay_ms(50);
+   output_low(PIN_A4);
    output_low(PIN_D1);
 }
 
