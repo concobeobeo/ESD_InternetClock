@@ -17,13 +17,8 @@
 
 int buffer[16];
 
-char state = 0;
-char k;
-char l;
-char count = 0;
 int hr1 , hr2, min1, min2, temp1, temp2, date1, date2, hum1, hum2;
 int incode;
-char cnt;
 boolean ready = 0;
 
 int index = 0;
@@ -87,9 +82,8 @@ void uart_receive(){
 //!        else{ index =0; ready = false;
 //!        }
 //!   }
-      cnt = count;
+  
       switch(index){
-      
       case 0: 
          hr1 = incode;
          index++;
@@ -132,14 +126,14 @@ void uart_receive(){
          ready = false;
          break;
       }
-         if (cnt!= count) {
-            lcd_clear();
-            cnt = count;
-         }
    }
 }
 
 
+char state = 0;
+char k;
+char l;
+char count = 0;
 #int_ext
 void encoder(){
    if (!state){
@@ -170,6 +164,7 @@ void encoder(){
 void main()
 {
     init(); 
+    char cnt;
     char sec;
     char blink;
     char x= 4, y=2;
@@ -181,10 +176,7 @@ void main()
             cnt = count;
          }
          if (count == 0){
-            if (cnt!= count) {
             lcd_clear();
-            cnt = count;
-         }
              lcd_gotoxy(0,0);
             lcd_putc("16/12/2019"); 
             lcd_print_digit(hr1 -0x30, x, y);
@@ -199,11 +191,7 @@ void main()
          }
          if (count ==  1)
          {
-            //lcd_clear();
-            if (cnt!= count) {
-               lcd_clear();
-               cnt = count;
-            }
+            lcd_clear();
             lcd_gotoxy(4,1);
             lcd_putc("Nhiet do: ");
             lcd_gotoxy(5,2);
@@ -221,15 +209,10 @@ void main()
             lcd_putc(hum2);
             lcd_putc(" %");
             //delay_ms(200);
-            cnt= count;
          }
          if (count == 2)
          {
-         if (cnt!= count) {
             lcd_clear();
-            cnt = count;
-         }
-            //lcd_clear();
             //lcd_putc("Man hinh 3");
             lcd_gotoxy(0,0);
            // int16 i; 
@@ -242,16 +225,10 @@ void main()
          }
          if (count == 3)
          {
-         
-         if (cnt!= count) {
-            lcd_clear();
-            cnt = count;
-         }
-         
          char x= 4, y=2;
          int a, b, c, d;
          a = 1; b = 2; c = 1; d = 4;
-            //lcd_clear();
+            lcd_clear();
             lcd_gotoxy(1,0);
             lcd_putc("Arlam at:"); 
             lcd_print_digit(a, x, y);

@@ -17,13 +17,8 @@
 
 int buffer[16];
 
-char state = 0;
-char k;
-char l;
-char count = 0;
 int hr1 , hr2, min1, min2, temp1, temp2, date1, date2, hum1, hum2;
 int incode;
-char cnt;
 boolean ready = 0;
 
 int index = 0;
@@ -65,7 +60,7 @@ void init()
 
 void buzz(){
    output_high(PIN_D1);
-   delay_ms(50);
+   delay_ms(100);
    output_low(PIN_D1);
 }
 
@@ -74,6 +69,7 @@ void buzz(){
 void uart_receive(){
    incode = getc();
 //!   sprintf(str, "%d\n", incode);
+   lcd_putc(incode);
 //!   printf(str);
    if (incode == '#')
    {  
@@ -87,9 +83,8 @@ void uart_receive(){
 //!        else{ index =0; ready = false;
 //!        }
 //!   }
-      cnt = count;
+  
       switch(index){
-      
       case 0: 
          hr1 = incode;
          index++;
@@ -132,14 +127,14 @@ void uart_receive(){
          ready = false;
          break;
       }
-         if (cnt!= count) {
-            lcd_clear();
-            cnt = count;
-         }
    }
 }
 
 
+char state = 0;
+char k;
+char l;
+char count = 0;
 #int_ext
 void encoder(){
    if (!state){
@@ -170,21 +165,18 @@ void encoder(){
 void main()
 {
     init(); 
+    char cnt;
     char sec;
     char blink;
     char x= 4, y=2;
-    buzz();
     WHILE (true)                                        
     { 
-         if (cnt!= count) {
+         if (cnt!=count) {
             lcd_clear();
             cnt = count;
          }
          if (count == 0){
-            if (cnt!= count) {
             lcd_clear();
-            cnt = count;
-         }
              lcd_gotoxy(0,0);
             lcd_putc("16/12/2019"); 
             lcd_print_digit(hr1 -0x30, x, y);
@@ -195,63 +187,41 @@ void main()
 //!            lcd_putc(tempd2);
             cnt = count;
             blink++;
-            //delay_ms(300);
+            delay_ms(300);
          }
          if (count ==  1)
          {
-            //lcd_clear();
-            if (cnt!= count) {
-               lcd_clear();
-               cnt = count;
-            }
-            lcd_gotoxy(4,1);
+            lcd_clear();
+            lcd_gotoxy(4,2);
             lcd_putc("Nhiet do: ");
-            lcd_gotoxy(5,2);
             lcd_putc(temp1);
             lcd_putc(temp2);
-            lcd_putc(" ");
-            lcd_data(0x03);
-            lcd_data(0x03);
-            lcd_data(0x00);
-            lcd_putc("C");
-            lcd_gotoxy(4,3);
+            lcd_gotoxy(4,4);
             lcd_putc("Do am: ");
-            lcd_gotoxy(5,4);
             lcd_putc(hum1);
             lcd_putc(hum2);
-            lcd_putc(" %");
-            //delay_ms(200);
-            cnt= count;
+            delay_ms(200);
          }
          if (count == 2)
          {
-         if (cnt!= count) {
             lcd_clear();
-            cnt = count;
-         }
-            //lcd_clear();
             //lcd_putc("Man hinh 3");
             lcd_gotoxy(0,0);
            // int16 i; 
            for (int16 i=0; i<=504;i++) lcd_data(sunny[i]);
-//!           lcd_gotoxy(1,0);
-//!           lcd_putc("SUNNY");
+           lcd_gotoxy(1,0);
+           lcd_putc("sunny");
+           delay_ms(500);
             //delay_ms(50);
            //for(i=0; i<504; i++) 
           // cnt = count;
          }
          if (count == 3)
          {
-         
-         if (cnt!= count) {
-            lcd_clear();
-            cnt = count;
-         }
-         
          char x= 4, y=2;
          int a, b, c, d;
          a = 1; b = 2; c = 1; d = 4;
-            //lcd_clear();
+            lcd_clear();
             lcd_gotoxy(1,0);
             lcd_putc("Arlam at:"); 
             lcd_print_digit(a, x, y);
@@ -263,7 +233,7 @@ void main()
             buzz();
             }
             cnt = count;
-            //delay_ms(500);
+            delay_ms(500);
          }
         // delay_ms(30);
       } 

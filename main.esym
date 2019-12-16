@@ -1,10 +1,11 @@
 C L "MAIN" 0 16 1 "FUNCTION"
-D G "__PCM__" 0 246 ""5.051""
-D G "__DEVICE__" 0 246 "887"
-D G "__DATE__" 0 246 ""16-Dec-19""
-D G "__TIME__" 0 246 ""13:36:47""
-D G "_UNICODE" 0 246 ""?""
-D G "__EVAL" 0 246 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
+C L "MAIN" 0 16 1 "FUNCTION"
+D G "__PCM__" 0 271 ""5.051""
+D G "__DEVICE__" 0 271 "887"
+D G "__DATE__" 0 271 ""16-Dec-19""
+D G "__TIME__" 0 271 ""15:51:42""
+D G "_UNICODE" 0 271 ""?""
+D G "__EVAL" 0 271 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 39 ""
 v L "value" 1 39 "int8" `54 
@@ -1117,281 +1118,274 @@ D G "lcd_dc" 0 10 "PIN_D3"
 D G "lcd_cs" 0 11 "PIN_A5"
 D G "lcd_res" 0 12 "PIN_D2"
 C L "jump_to_isr" 0 7 1 "FUNCTION"
-C L "jump_to_isr" 2 2 2 "FUNCTION"
-V G "TABLE1" 2 8 "[240]" `604  "ASCII table for NOKIA LCD: 96 rows * 5 bytes= 480 bytes"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-V G "TABLE2" 2 58 "[240]" `607 
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-V G "digits" 2 108 "[260]" `610 
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-V G "cloudy" 2 122 "[1]" `613 
-V G "rainy" 2 130 "[1]" `616 
-V G "thunder" 2 138 "[1]" `619 
-V G "sunny" 2 146 "[1]" `622 
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-F N "lcd_init" 2 155 ""
-f G "lcd_init" 2 155 "void()" `624 
-F N "lcd_command" 2 156 ""
-V L "command" 2 156 "int8" `626 
-f G "lcd_command" 2 156 "void(int8 command)" `625 
-F N "lcd_data" 2 157 ""
-V L "data" 2 157 "int8" `628 
-f G "lcd_data" 2 157 "void(int8 data)" `627 
-F N "lcd_spi" 2 158 ""
-V L "spi_data" 2 158 "int8" `630 
-f G "lcd_spi" 2 158 "void(int8 spi_data)" `629 
-F N "lcd_gotoxy" 2 159 ""
-V L "x" 2 159 "int8" `632 
-V L "y" 2 159 "int8" `633 
-f G "lcd_gotoxy" 2 159 "void(int8 x,int8 y)" `631 
-F N "lcd_contrast" 2 160 ""
-V L "contrast" 2 160 "int8" `635 
-f G "lcd_contrast" 2 160 "void(int8 contrast)" `634 
-F N "lcd_putc" 2 161 ""
-V L "cvar" 2 161 "int8" `637 
-f G "lcd_putc" 2 161 "void(int8 cvar)" `636 
-F N "lcd_putcInv" 2 162 ""
-V L "cvar" 2 162 "int8" `639 
-f G "lcd_putcInv" 2 162 "void(int8 cvar)" `638 
-F N "lcd_clear" 2 163 ""
-f G "lcd_clear" 2 163 "void()" `640 
-F N "table_to_lcd" 2 164 ""
-f G "table_to_lcd" 2 164 "void()" `641 
-F N "table_to_lcd_inverted" 2 165 ""
-f G "table_to_lcd_inverted" 2 165 "void()" `642 
-F N "lcd_dot" 2 166 ""
-V L "x" 2 166 "int8" `644 
-V L "y" 2 166 "int8" `645 
-f G "lcd_dot" 2 166 "void(int8 x,int8 y)" `643 
-F N "lcd_print_digit" 2 167 ""
-V L "digit" 2 167 "int8" `647 
-V L "x" 2 167 "int8" `648 
-V L "y" 2 167 "int8" `649 
-f G "lcd_print_digit" 2 167 "void(int8 digit,int8 x,int8 y)" `646 
-V G "char_row" 2 169 "int8" `650 
-V G "charsel" 2 169 "int8" `651 
-V G "charpos" 2 169 "int8" `652 
-V G "chardata" 2 169 "int8" `653 
-V G "ddram" 2 170 "int16" `654 
-F N "lcd_init" 2 172 ""
-F G "lcd_init" 2 172 "void()" `624 
-C L "lcd_init" 2 2 1 "FUNCTION"
-C L "lcd_init" 2 2 1 "FUNCTION"
-C L "lcd_init" 2 2 1 "FUNCTION"
-C L "lcd_init" 2 2 1 "FUNCTION"
-C L "lcd_init" 2 2 1 "FUNCTION"
-C L "lcd_init" 2 2 2 "FUNCTION"
-C L "lcd_init" 2 2 1 "FUNCTION"
-C L "lcd_init" 2 2 1 "FUNCTION"
-C L "lcd_init" 2 2 1 "FUNCTION"
-C L "lcd_init" 2 2 1 "FUNCTION"
-F N "lcd_clear" 2 200 ""
-F G "lcd_clear" 2 200 "void()" `640 
-C L "lcd_clear" 2 2 1 "FUNCTION"
-F N "lcd_command" 2 206 ""
-V L "command" 2 206 "int8" `656 
-F G "lcd_command" 2 207 "void(int8 command)" `625 
-C L "lcd_command" 2 2 1 "FUNCTION"
-C L "lcd_command" 2 2 1 "FUNCTION"
-C L "lcd_command" 2 2 1 "FUNCTION"
-F N "lcd_data" 2 216 ""
-V L "data" 2 216 "int8" `656 
-F G "lcd_data" 2 217 "void(int8 data)" `627 
-C L "lcd_data" 2 2 1 "FUNCTION"
-C L "lcd_data" 2 2 1 "FUNCTION"
-F N "lcd_spi" 2 226 ""
-V L "spi_data" 2 226 "int8" `656 
-F G "lcd_spi" 2 226 "void(int8 spi_data)" `629  "serial write data or command subroutine"
-V L "caa" 2 227 "int8" `655 
-F N "lcd_gotoxy" 2 239 ""
-V L "x" 2 239 "int8" `632 
-V L "y" 2 239 "int8" `659 
-F G "lcd_gotoxy" 2 239 "void(int8 x,int8 y)" `631  "Nokia LCD 3310 Position cursor"
-C L "lcd_gotoxy" 2 2 1 "FUNCTION"
-C L "lcd_gotoxy" 2 2 1 "FUNCTION"
-F N "lcd_contrast" 2 244 ""
-V L "contrast" 2 244 "int8" `658 
-F G "lcd_contrast" 2 244 "void(int8 contrast)" `634 
-C L "lcd_contrast" 2 2 1 "FUNCTION"
-C L "lcd_contrast" 2 2 1 "FUNCTION"
-C L "lcd_contrast" 2 2 1 "FUNCTION"
-F N "lcd_putc" 2 250 ""
-V L "cvar" 2 250 "int8" `658 
-F G "lcd_putc" 2 250 "void(int8 cvar)" `636  "Write 1 character to LCD"
-F N "lcd_putcInv" 2 254 ""
-V L "cvar" 2 254 "int8" `658 
-F G "lcd_putcInv" 2 254 "void(int8 cvar)" `638  "Write 1 character to LCD"
-F N "table_to_lcd" 2 258 ""
-F G "table_to_lcd" 2 258 "void()" `641  "extract ascii from tables & write to LCD"
-C L "table_to_lcd" 2 2 1 "FUNCTION"
-C L "table_to_lcd" 2 2 1 "FUNCTION"
-C L "table_to_lcd" 2 2 1 "FUNCTION"
-C L "table_to_lcd" 2 2 1 "FUNCTION"
-F N "table_to_lcd_inverted" 2 271 ""
-F G "table_to_lcd_inverted" 2 271 "void()" `642  "extract ascii from tables & write to LCD"
-C L "table_to_lcd_inverted" 2 2 1 "FUNCTION"
-C L "table_to_lcd_inverted" 2 2 1 "FUNCTION"
-C L "table_to_lcd_inverted" 2 2 1 "FUNCTION"
-C L "table_to_lcd_inverted" 2 2 1 "FUNCTION"
-F N "lcd_dot" 2 284 ""
-V L "x" 2 284 "int8" `644 
-V L "y" 2 284 "int8" `662 
-F G "lcd_dot" 2 284 "void(int8 x,int8 y)" `643 
-V L "offset" 2 285 "int8" `660 
-V L "data" 2 286 "int8" `661 
-F N "lcd_print_digit" 2 298 ""
-V L "digit" 2 298 "int8" `647 
-V L "x" 2 298 "int8" `648 
-V L "y" 2 298 "int8" `665 
-F G "lcd_print_digit" 2 298 "void(int8 digit,int8 x,int8 y)" `646 
-V L "temp" 2 299 "int8" `662 
-V L "row" 2 300 "int8" `663 
-V L "col" 2 302 "int8" `664 
+V G "TABLE1" 2 2 "[240]" `604  "ASCII table for NOKIA LCD: 96 rows * 5 bytes= 480 bytes"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+V G "TABLE2" 2 52 "[240]" `607 
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+V G "digits" 2 102 "[260]" `610 
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+V G "cloudy" 2 116 "[1]" `613 
+V G "rainy" 2 124 "[1]" `616 
+V G "thunder" 2 132 "[1]" `619 
+V G "sunny" 2 140 "[1]" `622 
+C L "jump_to_isr" 2 3 1 "FUNCTION"
+F N "lcd_init" 2 149 ""
+f G "lcd_init" 2 149 "void()" `624 
+F N "lcd_command" 2 150 ""
+V L "command" 2 150 "int8" `626 
+f G "lcd_command" 2 150 "void(int8 command)" `625 
+F N "lcd_data" 2 151 ""
+V L "data" 2 151 "int8" `628 
+f G "lcd_data" 2 151 "void(int8 data)" `627 
+F N "lcd_spi" 2 152 ""
+V L "spi_data" 2 152 "int8" `630 
+f G "lcd_spi" 2 152 "void(int8 spi_data)" `629 
+F N "lcd_gotoxy" 2 153 ""
+V L "x" 2 153 "int8" `632 
+V L "y" 2 153 "int8" `633 
+f G "lcd_gotoxy" 2 153 "void(int8 x,int8 y)" `631 
+F N "lcd_contrast" 2 154 ""
+V L "contrast" 2 154 "int8" `635 
+f G "lcd_contrast" 2 154 "void(int8 contrast)" `634 
+F N "lcd_putc" 2 155 ""
+V L "cvar" 2 155 "int8" `637 
+f G "lcd_putc" 2 155 "void(int8 cvar)" `636 
+F N "lcd_putcInv" 2 156 ""
+V L "cvar" 2 156 "int8" `639 
+f G "lcd_putcInv" 2 156 "void(int8 cvar)" `638 
+F N "lcd_clear" 2 157 ""
+f G "lcd_clear" 2 157 "void()" `640 
+F N "table_to_lcd" 2 158 ""
+f G "table_to_lcd" 2 158 "void()" `641 
+F N "table_to_lcd_inverted" 2 159 ""
+f G "table_to_lcd_inverted" 2 159 "void()" `642 
+F N "lcd_dot" 2 160 ""
+V L "x" 2 160 "int8" `644 
+V L "y" 2 160 "int8" `645 
+f G "lcd_dot" 2 160 "void(int8 x,int8 y)" `643 
+F N "lcd_print_digit" 2 161 ""
+V L "digit" 2 161 "int8" `647 
+V L "x" 2 161 "int8" `648 
+V L "y" 2 161 "int8" `649 
+f G "lcd_print_digit" 2 161 "void(int8 digit,int8 x,int8 y)" `646 
+V G "char_row" 2 163 "int8" `650 
+V G "charsel" 2 163 "int8" `651 
+V G "charpos" 2 163 "int8" `652 
+V G "chardata" 2 163 "int8" `653 
+V G "ddram" 2 164 "int16" `654 
+F N "lcd_init" 2 166 ""
+F G "lcd_init" 2 166 "void()" `624 
+C L "lcd_init" 2 3 1 "FUNCTION"
+F N "lcd_clear" 2 194 ""
+F G "lcd_clear" 2 194 "void()" `640 
+C L "lcd_clear" 2 3 1 "FUNCTION"
+F N "lcd_command" 2 200 ""
+V L "command" 2 200 "int8" `656 
+F G "lcd_command" 2 201 "void(int8 command)" `625 
+C L "lcd_command" 2 3 1 "FUNCTION"
+C L "lcd_command" 2 3 1 "FUNCTION"
+C L "lcd_command" 2 3 1 "FUNCTION"
+F N "lcd_data" 2 210 ""
+V L "data" 2 210 "int8" `656 
+F G "lcd_data" 2 211 "void(int8 data)" `627 
+C L "lcd_data" 2 3 1 "FUNCTION"
+C L "lcd_data" 2 3 1 "FUNCTION"
+F N "lcd_spi" 2 220 ""
+V L "spi_data" 2 220 "int8" `656 
+F G "lcd_spi" 2 220 "void(int8 spi_data)" `629  "serial write data or command subroutine"
+V L "caa" 2 221 "int8" `655 
+F N "lcd_gotoxy" 2 233 ""
+V L "x" 2 233 "int8" `632 
+V L "y" 2 233 "int8" `659 
+F G "lcd_gotoxy" 2 233 "void(int8 x,int8 y)" `631  "Nokia LCD 3310 Position cursor"
+C L "lcd_gotoxy" 2 3 1 "FUNCTION"
+C L "lcd_gotoxy" 2 3 1 "FUNCTION"
+F N "lcd_contrast" 2 238 ""
+V L "contrast" 2 238 "int8" `658 
+F G "lcd_contrast" 2 238 "void(int8 contrast)" `634 
+C L "lcd_contrast" 2 3 1 "FUNCTION"
+C L "lcd_contrast" 2 3 1 "FUNCTION"
+C L "lcd_contrast" 2 3 1 "FUNCTION"
+F N "lcd_putc" 2 244 ""
+V L "cvar" 2 244 "int8" `658 
+F G "lcd_putc" 2 244 "void(int8 cvar)" `636  "Write 1 character to LCD"
+F N "lcd_putcInv" 2 248 ""
+V L "cvar" 2 248 "int8" `658 
+F G "lcd_putcInv" 2 248 "void(int8 cvar)" `638  "Write 1 character to LCD"
+F N "table_to_lcd" 2 252 ""
+F G "table_to_lcd" 2 252 "void()" `641  "extract ascii from tables & write to LCD"
+C L "table_to_lcd" 2 3 1 "FUNCTION"
+C L "table_to_lcd" 2 3 1 "FUNCTION"
+C L "table_to_lcd" 2 3 1 "FUNCTION"
+C L "table_to_lcd" 2 3 1 "FUNCTION"
+F N "table_to_lcd_inverted" 2 265 ""
+F G "table_to_lcd_inverted" 2 265 "void()" `642  "extract ascii from tables & write to LCD"
+C L "table_to_lcd_inverted" 2 3 1 "FUNCTION"
+C L "table_to_lcd_inverted" 2 3 1 "FUNCTION"
+C L "table_to_lcd_inverted" 2 3 1 "FUNCTION"
+C L "table_to_lcd_inverted" 2 3 1 "FUNCTION"
+F N "lcd_dot" 2 278 ""
+V L "x" 2 278 "int8" `644 
+V L "y" 2 278 "int8" `662 
+F G "lcd_dot" 2 278 "void(int8 x,int8 y)" `643 
+V L "offset" 2 279 "int8" `660 
+V L "data" 2 280 "int8" `661 
+F N "lcd_print_digit" 2 292 ""
+V L "digit" 2 292 "int8" `647 
+V L "x" 2 292 "int8" `648 
+V L "y" 2 292 "int8" `665 
+F G "lcd_print_digit" 2 292 "void(int8 digit,int8 x,int8 y)" `646 
+V L "temp" 2 293 "int8" `662 
+V L "row" 2 294 "int8" `663 
+V L "col" 2 296 "int8" `664 
 V G "buffer" 0 18 "int8[16]" `665 
-V G "hr1" 0 20 "int8" `666 
-V G "hr2" 0 20 "int8" `667 
-V G "min1" 0 20 "int8" `668 
-V G "min2" 0 20 "int8" `669 
-V G "temp1" 0 20 "int8" `670 
-V G "temp2" 0 20 "int8" `671 
-V G "date1" 0 20 "int8" `672 
-V G "date2" 0 20 "int8" `673 
-V G "hum1" 0 20 "int8" `674 
-V G "hum2" 0 20 "int8" `675 
-V G "incode" 0 21 "int8" `676 
-V G "ready" 0 22 "int1" `677 
-V G "index" 0 24 "int8" `678 
-F N "init" 0 26 ""
-F G "init" 0 27 "void()" `679 
+V G "state" 0 20 "int8" `666 
+V G "k" 0 21 "int8" `667 
+V G "l" 0 22 "int8" `668 
+V G "count" 0 23 "int8" `669 
+V G "hr1" 0 24 "int8" `670 
+V G "hr2" 0 24 "int8" `671 
+V G "min1" 0 24 "int8" `672 
+V G "min2" 0 24 "int8" `673 
+V G "temp1" 0 24 "int8" `674 
+V G "temp2" 0 24 "int8" `675 
+V G "date1" 0 24 "int8" `676 
+V G "date2" 0 24 "int8" `677 
+V G "hum1" 0 24 "int8" `678 
+V G "hum2" 0 24 "int8" `679 
+V G "incode" 0 25 "int8" `680 
+V G "cnt" 0 26 "int8" `681 
+V G "ready" 0 27 "int1" `682 
+V G "index" 0 29 "int8" `683 
+F N "init" 0 31 ""
+F G "init" 0 32 "void()" `684 
 C L "buzz" 0 16 17 "FUNCTION"
-F N "buzz" 0 61 ""
-F G "buzz" 0 61 "void()" `680 
-F N "uart_receive" 0 69 ""
-F G "uart_receive" 0 69 "void()" `681 
-C L "uart_receive" 0 16 1 "FUNCTION"
-C L "uart_receive" 0 16 1 "FUNCTION"
+F N "buzz" 0 66 ""
+F G "buzz" 0 66 "void()" `685 
+F N "uart_receive" 0 74 ""
+F G "uart_receive" 0 74 "void()" `686 
+C L "uart_receive" 0 16 2 "FUNCTION"
 C L "uart_receive" 0 16 6 "FUNCTION"
-V G "state" 0 134 "int8" `683 
-V G "k" 0 135 "int8" `684 
-V G "l" 0 136 "int8" `685 
-V G "count" 0 137 "int8" `686 
-F N "encoder" 0 139 ""
-F G "encoder" 0 139 "void()" `687 
+F N "encoder" 0 144 ""
+F G "encoder" 0 144 "void()" `688 
 C L "encoder" 0 16 4 "FUNCTION"
 C L "encoder" 0 16 1 "FUNCTION"
-F N "MAIN" 0 165 ""
-F G "MAIN" 0 166 "void()" `688 
-V L "cnt" 0 168 "int8" `691 
-V L "sec" 0 169 "int8" `692 
-V L "blink" 0 170 "int8" `693 
-V L "x" 0 171 "int8" `694 
-V L "y" 0 171 "int8" `695 
+F N "MAIN" 0 170 ""
+F G "MAIN" 0 171 "void()" `689 
+V L "sec" 0 173 "int8" `692 
+V L "blink" 0 174 "int8" `693 
+V L "x" 0 175 "int8" `694 
+V L "y" 0 175 "int8" `695 
 C L "MAIN" 0 16 1 "FUNCTION"
 C L "MAIN" 0 16 1 "FUNCTION"
 C L "MAIN" 0 16 1 "FUNCTION"
-V L "i" 0 211 "int16" `703 
-C L "MAIN" 0 16 3 "FUNCTION"
-V L "x" 0 221 "int8" `705 
-V L "y" 0 221 "int8" `706 
-V L "a" 0 222 "int8" `707 
-V L "b" 0 222 "int8" `708 
-V L "c" 0 222 "int8" `709 
-V L "d" 0 222 "int8" `710 
+C L "MAIN" 0 16 1 "FUNCTION"
+C L "MAIN" 0 16 2 "FUNCTION"
+C L "MAIN" 0 16 1 "FUNCTION"
+V L "i" 0 236 "int16" `706 
+C L "MAIN" 0 16 5 "FUNCTION"
+V L "x" 0 251 "int8" `707 
+V L "y" 0 251 "int8" `708 
+V L "a" 0 252 "int8" `709 
+V L "b" 0 252 "int8" `710 
+V L "c" 0 252 "int8" `711 
+V L "d" 0 252 "int8" `712 
+C L "MAIN" 0 16 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

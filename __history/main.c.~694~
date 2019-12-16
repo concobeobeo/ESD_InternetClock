@@ -176,15 +176,12 @@ void main()
     buzz();
     WHILE (true)                                        
     { 
-         if (cnt!= count) {
-            lcd_clear();
-            cnt = count;
-         }
+//!         if (cnt!= count) {
+//!            lcd_clear();
+//!            cnt = count;
+//!         }
          if (count == 0){
-            if (cnt!= count) {
-            lcd_clear();
-            cnt = count;
-         }
+            //lcd_clear();
              lcd_gotoxy(0,0);
             lcd_putc("16/12/2019"); 
             lcd_print_digit(hr1 -0x30, x, y);
@@ -200,10 +197,6 @@ void main()
          if (count ==  1)
          {
             //lcd_clear();
-            if (cnt!= count) {
-               lcd_clear();
-               cnt = count;
-            }
             lcd_gotoxy(4,1);
             lcd_putc("Nhiet do: ");
             lcd_gotoxy(5,2);
@@ -221,14 +214,9 @@ void main()
             lcd_putc(hum2);
             lcd_putc(" %");
             //delay_ms(200);
-            cnt= count;
          }
          if (count == 2)
          {
-         if (cnt!= count) {
-            lcd_clear();
-            cnt = count;
-         }
             //lcd_clear();
             //lcd_putc("Man hinh 3");
             lcd_gotoxy(0,0);
@@ -242,12 +230,6 @@ void main()
          }
          if (count == 3)
          {
-         
-         if (cnt!= count) {
-            lcd_clear();
-            cnt = count;
-         }
-         
          char x= 4, y=2;
          int a, b, c, d;
          a = 1; b = 2; c = 1; d = 4;

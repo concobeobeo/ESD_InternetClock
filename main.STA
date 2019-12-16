@@ -1,74 +1,76 @@
 
-ROM used:   2535/8192 (31%)
-            2612/8192 (32%) including unused fragments
+ROM used:   2648/8192 (32%)
+            2654/8192 (32%) including unused fragments
 
-            1.9 Average locations per line
-            11.0 Average locations per statement
+            2.0 Average locations per line
+            10.5 Average locations per statement
 
 RAM used:   76/368 (21%) at main() level
-            94/368 (26%) worst case
+            95/368 (26%) worst case
 
-Stack used: 10 worst case (5 in main + 5 for interrupts)
+Stack used: 9 worst case (4 in main + 5 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  241   131  57  main.c
+  271   152  60  main.c
   773     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
-  311   100  43  5110lib\3310(modified).c
+  305   100  40  5110lib\3310(modified).c
 ----- -----
- 1325   231 Total
+ 1349   252 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     20   1    1             @delay_ms1
  Inline         1             @delay_us1
-0    247  10    0             @const604
-0    247  10    0             @const607
-0    269  11    0             @const610
-0    513  20    0    119  1.3  @const622
+0    247   9    0             @const604
+0    247   9    0             @const607
+0    269  10    0             @const610
+0    513  19    0    119  1.3  @const622
  Inline         0    362  1.4  lcd_init
-0     27   1    0    104  3.3  lcd_clear
-0     30   1    1    119  1.3  lcd_command
+0     21   1    0    104  3.3  lcd_clear
+0     24   1    1    119  1.3  lcd_command
 0     24   1    1    119  1.3  lcd_data
 0     40   2    2    262  4.8  lcd_spi
-0     13   1    3    106  2.8  lcd_gotoxy
-0      4   0    1     37  1.7  lcd_putc
-0     57   2    2    530  7.1  table_to_lcd
+0     13   0    3    106  2.8  lcd_gotoxy
+0     71   3    1     37  1.7  lcd_putc
+ Inline         2    530  7.1  table_to_lcd
 0     37   1    2             @MUL88
-0     77   3    7    457  7.9  lcd_print_digit
- Inline         0    226  1.8  init
-0     14   1    0     48  1.1  buzz
-0     65   3    0    946  5.8  uart_receive
-0     14   1    0    305  4.1  @goto54078
+1     83   3    7    457  7.9  lcd_print_digit
+0    157   6    0    226  1.8  init
+0     12   0    0     48  1.1  buzz
+0     71   3    0   1046  6.3  uart_receive
+0     14   1    0    305  4.1  @goto22573
 0     59   2    2    305  4.1  encoder
-1    564  22   15   2767  8.0  MAIN
+1    523  20   14   3245  8.0  MAIN
 0      6   0    0             @const696
-0     98   4    4             @PSTRINGC7_636
+0     86   3    4             @PSTRINGC7_636
 0      6   0    0             @const701
-0      4   0    0             @const702
-0      3   0    0             @const704
-0      5   0    0             @const711
+0      1   0    0             @const702
+0      1   0    0             @const703
+0      4   0    0             @const704
+0      2   0    0             @const705
+0      5   0    0             @const713
  Inline         0             @cinit1
 
 Program metrics:
     Functions               16
-    Statements              231
-    Comments                318
-    Volume (V)              10681
-    Difficulty (D)          57.4
-    Effort to implement (E) 613601
-    Time to implement (T)   9 hours, 28 minutes
-    Est Delivered Bugs (B)  2
-    Cyclomatic Complexity   37
-    Maintainability (MI)    123
+    Statements              252
+    Comments                310
+    Volume (V)              11389
+    Difficulty (D)          57.8
+    Effort to implement (E) 658273
+    Time to implement (T)   10 hours, 10 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   42
+    Maintainability (MI)    117
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-0005B    88  0  
-0005C-007FF  1879  77  
-00800-00FFF   564  1484  
+0005C-007FF  1950  6  
+00800-00FFF   606  1442  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
 

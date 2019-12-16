@@ -1,3 +1,9 @@
+////////////////////////////////////////////////////////////////////////////////
+/*
+                     LPH7779-LCD(Nokia 3310) library
+                     LPH7366-LCD(Nokia 5110) library
+*/
+////////////////////////////////////////////////////////////////////////////////
 
 char CONST TABLE1 [240] = {  // ASCII table for NOKIA LCD: 96 rows * 5 bytes= 480 bytes
                   0x00,0x00,0x00,0x00,0x00,   // 20 space
@@ -164,35 +170,35 @@ char char_row,charsel,charpos,chardata;
 int16 ddram;
 
 void lcd_init() {
-   output_high(lcd_dc);          
-   output_high(lcd_cs);   
+   output_high(lcd_dc);            // bytes are stored in the display data ram, address counter, incremented automatically
+   output_high(lcd_cs);            // chip disabled
    delay_us(200);
 
    output_low(lcd_res);
    delay_ms(50);
    output_high(lcd_res);
 
-   lcd_command(0x21); 
-   lcd_command(0xc8); 
-   lcd_command(0x12); 
-   lcd_command(0x20); 
-                            
-   lcd_command(0x09); 
+   lcd_command(0x21); // set extins extended instruction set
+   lcd_command(0xc8); // Vop  v1: 0xc8 (for 3V), v2: 0xa0 (for 3V)
+   lcd_command(0x12); // bias (contrast)
+   lcd_command(0x20); // horizontal mode from left to right, X axe are incremented automatically,
+                              // 0x22 for vertical addressing, back on normal instruction set too
+   lcd_command(0x09); // all on
 
    delay_ms(50);
 
-   lcd_clear();       
+   lcd_clear();       // reset DDRAM, otherwise the lcd is blurred with random pixels
 
    delay_ms(10);
 
-   lcd_command(0x08); 
+   lcd_command(0x08); // mod control blank change (all off)
    delay_ms(10);
 
    lcd_command(0x0c); // mod control normal change
 }
 
 void lcd_clear() {
-   lcd_gotoxy(0,0);         // 84*6=504      clear
+   lcd_gotoxy(0,0);         // 84*6=504      clear LCD
    for (ddram=504; ddram>0; ddram--)
       lcd_data(0x00);
 }

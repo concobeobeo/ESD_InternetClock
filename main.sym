@@ -1,7 +1,7 @@
 004-005 @WRITE_PROGRAM_MEMORY8.P1
 004-005 @READ_PROGRAM_MEMORY8.P2
-015     CCP_1_LOW
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
 01B     CCP_2_LOW
 01B     CCP_2
@@ -26,25 +26,25 @@
 031-032 ddram
 033     @TRIS_C
 034-043 buffer
-044     hr1
-045     hr2
-046     min1
-047     min2
-048     temp1
-049     temp2
-04A     date1
-04B     date2
-04C     hum1
-04D     hum2
-04E     incode
-04F.0   ready
-050     index
-051     state
-052     k
-053     l
-054     count
-055-056 @sprintf_string
-057     MAIN.cnt
+044     state
+045     k
+046     l
+047     count
+048     hr1
+049     hr2
+04A     min1
+04B     min2
+04C     temp1
+04D     temp2
+04E     date1
+04F     date2
+050     hum1
+051     hum2
+052     incode
+053     cnt
+054.0   ready
+055     index
+056-057 @sprintf_string
 058     MAIN.sec
 059     MAIN.blink
 05A     MAIN.x
@@ -57,40 +57,40 @@
 062     MAIN.c
 063     MAIN.d
 064     @delay_us1.P1
+064     @delay_ms1.P2
 064     MAIN.@SCRATCH1
 064     @PSTRINGC7_636.@SCRATCH1
-065     @delay_ms1.P1
 065     MAIN.@SCRATCH2
 065     @PSTRINGC7_636.@SCRATCH2
 066     lcd_print_digit.digit
 066     @PSTRINGC7_636.@SCRATCH3
 067     lcd_print_digit.x
+067     lcd_putc.cvar
 067     @PSTRINGC7_636.@SCRATCH4
 068     lcd_print_digit.y
+068     table_to_lcd.@SCRATCH1
 069     lcd_print_digit.temp
+069     table_to_lcd.@SCRATCH2
 06A     lcd_print_digit.row
 06B     lcd_print_digit.col
 06C     lcd_print_digit.@SCRATCH1
-06D     lcd_gotoxy.x
-06E     lcd_gotoxy.y
-06F     lcd_gotoxy.@SCRATCH1
-070     lcd_command.command
-073     lcd_putc.cvar
+06D     @MUL88.P1
+06E     @MUL88.P1
+073     lcd_gotoxy.x
+073     lcd_data.data
 073     encoder.@SCRATCH1
-074     lcd_data.data
-074     table_to_lcd.@SCRATCH1
+074     lcd_gotoxy.y
 074     encoder.@SCRATCH2
-075     lcd_spi.spi_data
-075     table_to_lcd.@SCRATCH2
-076     lcd_spi.caa
-076     @MUL88.P1
+075     lcd_gotoxy.@SCRATCH1
+076     lcd_command.command
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
 079     @SCRATCH
 07A     @SCRATCH
 07B     @SCRATCH
-07C     @MUL88.P1
+07C     lcd_spi.spi_data
+07D     lcd_spi.caa
 07F     @INTERRUPT_AREA
 0FF     @INTERRUPT_AREA
 107.6   C1OUT
@@ -137,45 +137,47 @@ ROM Allocation:
 000253  digits.data
 000357  sunny.call
 000360  sunny.data
-000558  @MUL88
-00057D  lcd_spi
+000558  lcd_spi
+000580  lcd_command
+000598  lcd_gotoxy
 0005A5  lcd_data
-0005BD  table_to_lcd
-0005F6  lcd_putc
-0005FA  uart_receive
-00063B  @goto54078
-000649  encoder
-000684  @const696.call
-00068A  @const701.call
-000690  @const702.call
-000694  @const704.call
-000697  @const711.call
-00069C  @delay_ms1
-0006B0  lcd_command
-0006CE  lcd_gotoxy
-0006DB  lcd_clear
-0006F6  @PSTRINGC7_636
-000758  lcd_print_digit
-0007A5  buzz
-000800  MAIN
-000800  @cinit1
-000827  @cinit2
-000828  init
-00084F  lcd_init
-000859  @delay_us1
+0005BD  lcd_clear
+0005D2  uart_receive
+000619  @goto22573
+000627  encoder
+000662  @const696.call
+000668  @const701.call
+00066E  @const702.call
+00066F  @const703.call
+000670  @const704.call
+000674  @const705.call
+000676  @const713.call
+00067B  @delay_ms1
+00068F  init
+0006B7  lcd_init
+0006C1  @delay_us1
+00072C  buzz
+000738  @MUL88
+00075D  lcd_putc
+00075F  table_to_lcd
+0007A4  @PSTRINGC7_636
+000800  lcd_print_digit
+000853  @cinit1
+000853  MAIN
+00087A  @cinit2
 
 Project Directory:
     C:\Users\NGUYEN DUY LINH\Desktop\NOKIA5110\
 
 Project Files:
-    main.c                                                  [16-Dec-19 13:36  CRC=7D8D663E]
+    main.c                                                  [16-Dec-19 15:51  CRC=EDB97A40]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h   [22-Oct-15 10:30  CRC=E224733F]
-    5110lib\3310(modified).c                                [16-Dec-19 11:01  CRC=7260FBFB]
+    5110lib\3310(modified).c                                [16-Dec-19 14:50  CRC=0E65E54A]
 
-Source signature=4473D173
+Source signature=ECA9B813
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=4A35
+Hex file CRC=DAD4
 
 Units:
     main (main)
