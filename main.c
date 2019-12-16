@@ -251,7 +251,7 @@ void main()
          int a, b, c, d, check;
          a = 1; b = 2; c = 1; d = 4;check = pin_D6;
             //lcd_clear();
-            if(check!=PIN_D6) ouput_high(PIN_A4);
+            if(check!=PIN_D6) output_high(PIN_A4);
             lcd_gotoxy(1,0);
             lcd_putc("Arlam at:"); 
             lcd_print_digit(a, x, y);

@@ -1,135 +1,135 @@
 ÀÄmain
-   ÃÄMAIN  1/523  Ram=14
+   ÃÄMAIN  1/523  Ram=2
    ³  ÃÄ@cinit1  (Inline)  Ram=0
-   ³  ÃÄinit  0/157  Ram=0
+   ³  ÃÄinit  0/229  Ram=0
    ³  ³  ÀÄlcd_init  (Inline)  Ram=0
    ³  ³     ÃÄ@delay_us1  (Inline)  Ram=1
-   ³  ³     ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ³     ÃÄlcd_command  0/24  Ram=1
-   ³  ³     ³  ÀÄlcd_spi  0/40  Ram=2
-   ³  ³     ÃÄlcd_command  0/24  Ram=1
+   ³  ³     ÃÄ@delay_ms1  (Inline)  Ram=1
+   ³  ³     ÃÄlcd_command  0/28  Ram=1
+   ³  ³     ³  ÀÄlcd_spi  0/44  Ram=2
+   ³  ³     ÃÄlcd_command  0/28  Ram=1
    ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄlcd_command  0/24  Ram=1
+   ³  ³     ÃÄlcd_command  0/28  Ram=1
    ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄlcd_command  0/24  Ram=1
+   ³  ³     ÃÄlcd_command  0/28  Ram=1
    ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄlcd_command  0/24  Ram=1
+   ³  ³     ÃÄlcd_command  0/28  Ram=1
    ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³     ÃÄ@delay_ms1  (Inline)  Ram=1
    ³  ³     ÃÄlcd_clear  0/21  Ram=0
    ³  ³     ³  ÃÄlcd_gotoxy  0/13  Ram=3
-   ³  ³     ³  ³  ÃÄlcd_command  0/24  Ram=1
+   ³  ³     ³  ³  ÃÄlcd_command  0/28  Ram=1
    ³  ³     ³  ³  ³  ÀÄ*
-   ³  ³     ³  ³  ÀÄlcd_command  0/24  Ram=1
+   ³  ³     ³  ³  ÀÄlcd_command  0/28  Ram=1
    ³  ³     ³  ³     ÀÄ*
-   ³  ³     ³  ÀÄlcd_data  0/24  Ram=1
-   ³  ³     ³     ÀÄlcd_spi  0/40  Ram=2
-   ³  ³     ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ³     ÃÄlcd_command  0/24  Ram=1
+   ³  ³     ³  ÀÄlcd_data  0/28  Ram=1
+   ³  ³     ³     ÀÄlcd_spi  0/44  Ram=2
+   ³  ³     ÃÄ@delay_ms1  (Inline)  Ram=1
+   ³  ³     ÃÄlcd_command  0/28  Ram=1
    ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ³     ÀÄlcd_command  0/24  Ram=1
+   ³  ³     ÃÄ@delay_ms1  (Inline)  Ram=1
+   ³  ³     ÀÄlcd_command  0/28  Ram=1
    ³  ³        ÀÄ*
-   ³  ÃÄbuzz  0/12  Ram=0
-   ³  ³  ÀÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄbuzz  0/38  Ram=0
+   ³  ³  ÀÄ@delay_ms1  (Inline)  Ram=1
    ³  ÃÄlcd_clear  0/21  Ram=0
    ³  ³  ÀÄ*
    ³  ÃÄlcd_clear  0/21  Ram=0
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/13  Ram=3
    ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_636  0/86  Ram=4
-   ³  ³  ÃÄlcd_putc  0/71  Ram=1
+   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
+   ³  ³  ÃÄlcd_putc  1/151  Ram=1
    ³  ³  ³  ÀÄtable_to_lcd  (Inline)  Ram=2
-   ³  ³  ³     ÃÄ@MUL88  0/37  Ram=2
-   ³  ³  ³     ÃÄ@const604  0/247  Ram=0
-   ³  ³  ³     ÃÄ@MUL88  0/37  Ram=2
-   ³  ³  ³     ÃÄ@const607  0/247  Ram=0
-   ³  ³  ³     ÃÄlcd_data  0/24  Ram=1
+   ³  ³  ³     ÃÄ@MUL88  (Inline)  Ram=2
+   ³  ³  ³     ÃÄ@const623  0/247  Ram=0
+   ³  ³  ³     ÃÄ@MUL88  (Inline)  Ram=2
+   ³  ³  ³     ÃÄ@const626  0/247  Ram=0
+   ³  ³  ³     ÃÄlcd_data  0/28  Ram=1
    ³  ³  ³     ³  ÀÄ*
-   ³  ³  ³     ÀÄlcd_data  0/24  Ram=1
+   ³  ³  ³     ÀÄlcd_data  0/28  Ram=1
    ³  ³  ³        ÀÄ*
-   ³  ³  ÀÄlcd_putc  0/71  Ram=1
+   ³  ³  ÀÄlcd_putc  1/151  Ram=1
    ³  ³     ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
    ³  ³  ÃÄlcd_gotoxy  0/13  Ram=3
    ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄ@MUL88  0/37  Ram=2
-   ³  ³  ÃÄ@MUL88  0/37  Ram=2
-   ³  ³  ÃÄlcd_data  0/24  Ram=1
+   ³  ³  ÃÄ@MUL88  (Inline)  Ram=2
+   ³  ³  ÃÄ@MUL88  (Inline)  Ram=2
+   ³  ³  ÃÄlcd_data  0/28  Ram=1
    ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄ@const610  0/269  Ram=0
-   ³  ³  ÀÄlcd_data  0/24  Ram=1
+   ³  ³  ÃÄ@const629  0/269  Ram=0
+   ³  ³  ÀÄlcd_data  0/28  Ram=1
    ³  ³     ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
    ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
    ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
    ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_clear  0/21  Ram=0
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_gotoxy  0/13  Ram=3
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_636  0/86  Ram=4
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_gotoxy  0/13  Ram=3
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_putc  0/71  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_putc  0/71  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_636  0/86  Ram=4
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_data  0/24  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_data  0/24  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_data  0/24  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_636  0/86  Ram=4
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_gotoxy  0/13  Ram=3
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_636  0/86  Ram=4
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_gotoxy  0/13  Ram=3
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_putc  0/71  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_putc  0/71  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_636  0/86  Ram=4
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
    ³  ³  ÀÄ*
    ³  ÃÄlcd_clear  0/21  Ram=0
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/13  Ram=3
    ³  ³  ÀÄ*
-   ³  ÃÄ@const622  0/513  Ram=0
-   ³  ÃÄlcd_data  0/24  Ram=1
+   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/13  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  1/151  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  1/151  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_data  0/28  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_data  0/28  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_data  0/28  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/13  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/13  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  1/151  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  1/151  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
    ³  ³  ÀÄ*
    ³  ÃÄlcd_clear  0/21  Ram=0
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/13  Ram=3
    ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_636  0/86  Ram=4
+   ³  ÃÄ@const641  0/513  Ram=0
+   ³  ÃÄlcd_data  0/28  Ram=1
    ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄlcd_clear  0/21  Ram=0
    ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄlcd_gotoxy  0/13  Ram=3
    ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
    ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
    ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/83  Ram=7
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
    ³  ³  ÀÄ*
-   ³  ÀÄbuzz  0/12  Ram=0
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_print_digit  1/149  Ram=5
+   ³  ³  ÀÄ*
+   ³  ÀÄbuzz  0/38  Ram=0
    ³     ÀÄ*
    ÃÄuart_receive  0/71  Ram=0
-   ³  ÃÄ@goto22573  0/14  Ram=0
+   ³  ÃÄ@goto10777  0/14  Ram=0
    ³  ÀÄlcd_clear  0/21  Ram=0
    ³     ÀÄ*
    ÀÄencoder  0/59  Ram=2
