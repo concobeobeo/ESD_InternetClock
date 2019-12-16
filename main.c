@@ -149,10 +149,7 @@ void encoder(){
        l = input(PIN_D4);
        k = input(PIN_D5);
        Set_timer1(0);
-       if (k)
-       {
-         count++;
-       }
+       if (k) count++;
 //!       else 
 //!       {
 //!         count--;
@@ -251,9 +248,10 @@ void main()
          }
          
          char x= 4, y=2;
-         int a, b, c, d;
-         a = 1; b = 2; c = 1; d = 4;
+         int a, b, c, d, check;
+         a = 1; b = 2; c = 1; d = 4;check = pin_D6;
             //lcd_clear();
+            if(check!=PIN_D6) ouput_high(PIN_A4);
             lcd_gotoxy(1,0);
             lcd_putc("Arlam at:"); 
             lcd_print_digit(a, x, y);
@@ -265,6 +263,7 @@ void main()
             buzz();
             }
             cnt = count;
+            
             //delay_ms(500);
          }
         // delay_ms(30);
