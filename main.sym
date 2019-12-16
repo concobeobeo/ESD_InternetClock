@@ -1,0 +1,202 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C     @INTERRUPT_AREA
+02D     char_row
+02E     charsel
+02F     charpos
+030     chardata
+031-032 ddram
+033     @TRIS_C
+034-043 buffer
+044     hr1
+045     hr2
+046     min1
+047     min2
+048     temp1
+049     temp2
+04A     date1
+04B     date2
+04C     hum1
+04D     hum2
+04E     incode
+04F.0   ready
+050     index
+051     state
+052     k
+053     l
+054     count
+055-056 @sprintf_string
+057     MAIN.cnt
+058     MAIN.sec
+059     MAIN.blink
+05A     MAIN.x
+05B     MAIN.y
+05C-05D MAIN.i
+05E     MAIN.x
+05F     MAIN.y
+060     MAIN.a
+061     MAIN.b
+062     MAIN.c
+063     MAIN.d
+064     @delay_us1.P1
+064     MAIN.@SCRATCH1
+064     @PSTRINGC7_636.@SCRATCH1
+065     @delay_ms1.P1
+065     MAIN.@SCRATCH2
+065     @PSTRINGC7_636.@SCRATCH2
+066     lcd_print_digit.digit
+066     @PSTRINGC7_636.@SCRATCH3
+067     lcd_print_digit.x
+067     @PSTRINGC7_636.@SCRATCH4
+068     lcd_print_digit.y
+069     lcd_print_digit.temp
+06A     lcd_print_digit.row
+06B     lcd_print_digit.col
+06C     lcd_print_digit.@SCRATCH1
+06D     lcd_gotoxy.x
+06E     lcd_gotoxy.y
+06F     lcd_gotoxy.@SCRATCH1
+070     lcd_command.command
+073     lcd_putc.cvar
+073     encoder.@SCRATCH1
+074     lcd_data.data
+074     table_to_lcd.@SCRATCH1
+074     encoder.@SCRATCH2
+075     lcd_spi.spi_data
+075     table_to_lcd.@SCRATCH2
+076     lcd_spi.caa
+076     @MUL88.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+07C     @MUL88.P1
+07F     @INTERRUPT_AREA
+0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+00005C  TABLE1.call
+000063  TABLE1.data
+000153  TABLE2.call
+00015A  TABLE2.data
+00024A  digits.call
+000253  digits.data
+000357  sunny.call
+000360  sunny.data
+000558  @MUL88
+00057D  lcd_spi
+0005A5  lcd_data
+0005BD  table_to_lcd
+0005F6  lcd_putc
+0005FA  uart_receive
+00063B  @goto25893
+000649  encoder
+000684  @const696.call
+00068A  @const701.call
+000690  @const702.call
+000694  @const704.call
+000697  @const711.call
+00069C  @delay_ms1
+0006B0  lcd_command
+0006CE  lcd_gotoxy
+0006DB  lcd_clear
+0006F6  @PSTRINGC7_636
+000758  lcd_print_digit
+0007A5  buzz
+000800  MAIN
+000800  @cinit1
+000827  @cinit2
+000828  init
+00084F  lcd_init
+000859  @delay_us1
+
+Project Directory:
+    C:\Users\NGUYEN DUY LINH\Desktop\NOKIA5110\
+
+Project Files:
+    main.c                                                  [16-Dec-19 12:10  CRC=C87B00B2]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h   [22-Oct-15 10:30  CRC=E224733F]
+    5110lib\3310(modified).c                                [16-Dec-19 11:01  CRC=7260FBFB]
+
+Source signature=8F616BE7
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=4388
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

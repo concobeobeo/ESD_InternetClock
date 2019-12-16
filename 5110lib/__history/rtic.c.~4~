@@ -1,0 +1,131 @@
+char bin2bcd(char binary_value);
+char bcd2bin(char bcd_value);
+void ds1307_init();
+void ds1307_get_date(char &date, char &mth, char &year, char &day);
+void ds1307_set_date_time(char date, char mth, char year, char day, char hr, char min, char sec);
+void ds1307_get_time(char &hr, char &min, char &sec);
+
+void ds1307_init(void)
+{
+      char initsec = 0;
+      char initmin=0;
+      char inithr=0;
+      char initday=0;
+      char initdate=0;
+      char initmth=0;
+      char inityear=0;
+      i2c_start();
+      i2c_write(0xD0);      // Dia chi thiet bi nhan lenh
+      i2c_write(0x00);      // Dia chi du lieu thanh ghi 0
+      i2c_start();
+      i2c_write(0xD1);      // Gui lai dia chi thiet bi va lenh read (Addr+1)
+      initsec  = bcd2bin(i2c_read() & 0x7f);
+      initmin  = bcd2bin(i2c_read() & 0x7f);
+      inithr   = bcd2bin(i2c_read() & 0x3f); 
+      initday  = bcd2bin(i2c_read() & 0x7f);  
+      initdate  = bcd2bin(i2c_read() & 0x3f);  
+      initmth  = bcd2bin(i2c_read() & 0x1f); 
+      inityear = bcd2bin(i2c_read(0));       
+      i2c_stop();
+      delay_us(3);
+      
+      i2c_start();
+      i2c_write(0xD0);      // WR to RTC
+      i2c_write(0x00);      // REG 0
+      i2c_write(bin2bcd(initsec));      // Start oscillator with current "seconds value
+      i2c_write(bin2bcd(initmin));      // REG 1
+      i2c_write(bin2bcd(inithr));       // REG 2
+      i2c_write(bin2bcd(initday));      // REG 3
+      i2c_write(bin2bcd(initdate));      // REG 4
+      i2c_write(bin2bcd(initmth));      // REG 5
+      i2c_write(bin2bcd(inityear));     // REG 6
+      i2c_start();
+      i2c_write(0xD0);      // WR to RTC
+      i2c_write(0x07);      // Control Register
+      i2c_write(0x90);      //  squarewave output pin 1Hz
+      i2c_stop();
+}
+ 
+void ds1307_set_date_time(char date, char mth, char year, char day, char hr, char min, char sec)
+{
+      sec &= 0x7F;
+      hr &= 0x3F;
+       
+      i2c_start();
+      i2c_write(0xD0);              // I2C write address
+      i2c_write(0x00);              // Start at REG 0 - Seconds
+      i2c_write(bin2bcd(sec));      // REG 0
+      i2c_write(bin2bcd(min));      // REG 1
+      i2c_write(bin2bcd(hr));       // REG 2
+      i2c_write(bin2bcd(day));      // REG 3
+      i2c_write(bin2bcd(date));      // REG 4
+      i2c_write(bin2bcd(mth));      // REG 5
+      i2c_write(bin2bcd(year));     // REG 6
+      i2c_write(0x90);              // REG 7 - 1Hz squarewave output pin
+      i2c_stop();
+}
+ 
+void ds1307_get_date(char &date, char &mth, char &year, char &day)
+{
+      i2c_start();
+      i2c_write(0xD0);
+      i2c_write(0x03);              // Start at REG 3 - date of week
+      i2c_start();
+      i2c_write(0xD1);
+      day  = bcd2bin(i2c_read() & 0x7f);   // REG 3
+      date  = bcd2bin(i2c_read() & 0x3f);   // REG 4
+      mth  = bcd2bin(i2c_read() & 0x1f);   // REG 5
+      year = bcd2bin(i2c_read(0));         // REG 6
+      i2c_stop();
+}
+ 
+void ds1307_get_time(char &hr, char &min, char &sec)
+{
+      i2c_start();
+      i2c_write(0xD0);
+      i2c_write(0x00);                     // Start at REG 0 - Seconds
+      i2c_start();
+      i2c_write(0xD1);
+      *sec = bcd2bin(i2c_read() & 0x7f);
+      *min = bcd2bin(i2c_read() & 0x7f);
+      *hr  = bcd2bin(i2c_read(0) & 0x3f);
+      i2c_stop();
+}
+ 
+char bin2bcd(char binary_value) // Chuyen gia tri nhi phan sang so bcd nen
+{
+      char temp;
+      char retval;
+       
+      temp = binary_value;
+      retval = 0;
+       
+      while(1)
+      {
+      // Get the tens digit by doing multiple subtraction
+      // of 10 from the binary value.
+      if(temp >= 10)
+      {
+         temp -= 10;
+         retval += 0x10;
+      }
+      else // Get the ones digit by adding the remainder.
+      {
+         retval += temp;
+         break;
+      }
+      }
+       
+      return(retval);
+}
+ 
+
+char bcd2bin(char bcd_value) //Chuyen so BCD nen sang nhi phan
+{
+      char temp;
+       
+      temp = bcd_value;
+      temp >>= 4;
+
+      return(temp*10 + (bcd_value & 0x0f));
+}

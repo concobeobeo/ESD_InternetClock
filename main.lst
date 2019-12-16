@@ -1,0 +1,3151 @@
+CCS PCM C Compiler, Version 5.051, 5967               16-Dec-19 12:10
+
+               Filename:   C:\Users\NGUYEN DUY LINH\Desktop\NOKIA5110\main.lst
+
+               ROM used:   2545 words (31%)
+                           Largest free fragment is 2048
+               RAM used:   76 (21%) at main() level
+                           94 (26%) worst case
+               Stack used: 10 locations (5 in main + 5 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  08
+0001:  MOVWF  0A
+0002:  GOTO   000
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  MOVF   7B,W
+0016:  MOVWF  27
+0017:  BSF    03.6
+0018:  MOVF   0D,W
+0019:  BCF    03.6
+001A:  MOVWF  28
+001B:  BSF    03.6
+001C:  MOVF   0F,W
+001D:  BCF    03.6
+001E:  MOVWF  29
+001F:  BSF    03.6
+0020:  MOVF   0C,W
+0021:  BCF    03.6
+0022:  MOVWF  2A
+0023:  BSF    03.6
+0024:  MOVF   0E,W
+0025:  BCF    03.6
+0026:  MOVWF  2B
+0027:  BCF    03.7
+0028:  BCF    03.5
+0029:  BTFSS  0B.4
+002A:  GOTO   02D
+002B:  BTFSC  0B.1
+002C:  GOTO   056
+002D:  MOVLW  8C
+002E:  MOVWF  04
+002F:  BTFSS  00.5
+0030:  GOTO   033
+0031:  BTFSC  0C.5
+0032:  GOTO   059
+0033:  MOVF   22,W
+0034:  MOVWF  04
+0035:  MOVF   23,W
+0036:  MOVWF  77
+0037:  MOVF   24,W
+0038:  MOVWF  78
+0039:  MOVF   25,W
+003A:  MOVWF  79
+003B:  MOVF   26,W
+003C:  MOVWF  7A
+003D:  MOVF   27,W
+003E:  MOVWF  7B
+003F:  MOVF   28,W
+0040:  BSF    03.6
+0041:  MOVWF  0D
+0042:  BCF    03.6
+0043:  MOVF   29,W
+0044:  BSF    03.6
+0045:  MOVWF  0F
+0046:  BCF    03.6
+0047:  MOVF   2A,W
+0048:  BSF    03.6
+0049:  MOVWF  0C
+004A:  BCF    03.6
+004B:  MOVF   2B,W
+004C:  BSF    03.6
+004D:  MOVWF  0E
+004E:  BCF    03.6
+004F:  MOVF   20,W
+0050:  MOVWF  0A
+0051:  SWAPF  21,W
+0052:  MOVWF  03
+0053:  SWAPF  7F,F
+0054:  SWAPF  7F,W
+0055:  RETFIE
+0056:  BCF    0A.3
+0057:  BCF    0A.4
+0058:  GOTO   649
+0059:  BCF    0A.3
+005A:  BCF    0A.4
+005B:  GOTO   5FA
+.................... #include <16F887.h> 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F887 
+005C:  BCF    0A.0
+005D:  BCF    0A.1
+005E:  BCF    0A.2
+005F:  ADDLW  63
+0060:  BTFSC  03.0
+0061:  INCF   0A,F
+0062:  MOVWF  02
+0063:  RETLW  00
+0064:  RETLW  00
+0065:  RETLW  00
+0066:  RETLW  00
+0067:  RETLW  00
+0068:  RETLW  00
+0069:  RETLW  00
+006A:  RETLW  5F
+006B:  RETLW  00
+006C:  RETLW  00
+006D:  RETLW  00
+006E:  RETLW  07
+006F:  RETLW  00
+0070:  RETLW  07
+0071:  RETLW  00
+0072:  RETLW  14
+0073:  RETLW  7F
+0074:  RETLW  14
+0075:  RETLW  7F
+0076:  RETLW  14
+0077:  RETLW  24
+0078:  RETLW  2A
+0079:  RETLW  7F
+007A:  RETLW  2A
+007B:  RETLW  12
+007C:  RETLW  23
+007D:  RETLW  13
+007E:  RETLW  08
+007F:  RETLW  64
+0080:  RETLW  62
+0081:  RETLW  36
+0082:  RETLW  49
+0083:  RETLW  55
+0084:  RETLW  22
+0085:  RETLW  50
+0086:  RETLW  00
+0087:  RETLW  05
+0088:  RETLW  03
+0089:  RETLW  00
+008A:  RETLW  00
+008B:  RETLW  00
+008C:  RETLW  1C
+008D:  RETLW  22
+008E:  RETLW  41
+008F:  RETLW  00
+0090:  RETLW  00
+0091:  RETLW  41
+0092:  RETLW  22
+0093:  RETLW  1C
+0094:  RETLW  00
+0095:  RETLW  14
+0096:  RETLW  08
+0097:  RETLW  3E
+0098:  RETLW  08
+0099:  RETLW  14
+009A:  RETLW  08
+009B:  RETLW  08
+009C:  RETLW  3E
+009D:  RETLW  08
+009E:  RETLW  08
+009F:  RETLW  00
+00A0:  RETLW  50
+00A1:  RETLW  30
+00A2:  RETLW  00
+00A3:  RETLW  00
+00A4:  RETLW  08
+00A5:  RETLW  08
+00A6:  RETLW  08
+00A7:  RETLW  08
+00A8:  RETLW  08
+00A9:  RETLW  00
+00AA:  RETLW  60
+00AB:  RETLW  60
+00AC:  RETLW  00
+00AD:  RETLW  00
+00AE:  RETLW  20
+00AF:  RETLW  10
+00B0:  RETLW  08
+00B1:  RETLW  04
+00B2:  RETLW  02
+00B3:  RETLW  3E
+00B4:  RETLW  51
+00B5:  RETLW  49
+00B6:  RETLW  45
+00B7:  RETLW  3E
+00B8:  RETLW  00
+00B9:  RETLW  42
+00BA:  RETLW  7F
+00BB:  RETLW  40
+00BC:  RETLW  00
+00BD:  RETLW  42
+00BE:  RETLW  61
+00BF:  RETLW  51
+00C0:  RETLW  49
+00C1:  RETLW  46
+00C2:  RETLW  21
+00C3:  RETLW  41
+00C4:  RETLW  45
+00C5:  RETLW  4B
+00C6:  RETLW  31
+00C7:  RETLW  18
+00C8:  RETLW  14
+00C9:  RETLW  12
+00CA:  RETLW  7F
+00CB:  RETLW  10
+00CC:  RETLW  27
+00CD:  RETLW  45
+00CE:  RETLW  45
+00CF:  RETLW  45
+00D0:  RETLW  39
+00D1:  RETLW  3C
+00D2:  RETLW  4A
+00D3:  RETLW  49
+00D4:  RETLW  49
+00D5:  RETLW  30
+00D6:  RETLW  01
+00D7:  RETLW  71
+00D8:  RETLW  09
+00D9:  RETLW  05
+00DA:  RETLW  03
+00DB:  RETLW  36
+00DC:  RETLW  49
+00DD:  RETLW  49
+00DE:  RETLW  49
+00DF:  RETLW  36
+00E0:  RETLW  06
+00E1:  RETLW  49
+00E2:  RETLW  49
+00E3:  RETLW  29
+00E4:  RETLW  1E
+00E5:  RETLW  00
+00E6:  RETLW  36
+00E7:  RETLW  36
+00E8:  RETLW  00
+00E9:  RETLW  00
+00EA:  RETLW  00
+00EB:  RETLW  56
+00EC:  RETLW  36
+00ED:  RETLW  00
+00EE:  RETLW  00
+00EF:  RETLW  08
+00F0:  RETLW  14
+00F1:  RETLW  22
+00F2:  RETLW  41
+00F3:  RETLW  00
+00F4:  RETLW  14
+00F5:  RETLW  14
+00F6:  RETLW  14
+00F7:  RETLW  14
+00F8:  RETLW  14
+00F9:  RETLW  00
+00FA:  RETLW  41
+00FB:  RETLW  22
+00FC:  RETLW  14
+00FD:  RETLW  08
+00FE:  RETLW  02
+00FF:  RETLW  01
+0100:  RETLW  51
+0101:  RETLW  09
+0102:  RETLW  06
+0103:  RETLW  32
+0104:  RETLW  49
+0105:  RETLW  79
+0106:  RETLW  41
+0107:  RETLW  3E
+0108:  RETLW  7E
+0109:  RETLW  11
+010A:  RETLW  11
+010B:  RETLW  11
+010C:  RETLW  7E
+010D:  RETLW  7F
+010E:  RETLW  49
+010F:  RETLW  49
+0110:  RETLW  49
+0111:  RETLW  36
+0112:  RETLW  3E
+0113:  RETLW  41
+0114:  RETLW  41
+0115:  RETLW  41
+0116:  RETLW  22
+0117:  RETLW  7F
+0118:  RETLW  41
+0119:  RETLW  41
+011A:  RETLW  22
+011B:  RETLW  1C
+011C:  RETLW  7F
+011D:  RETLW  49
+011E:  RETLW  49
+011F:  RETLW  49
+0120:  RETLW  41
+0121:  RETLW  7F
+0122:  RETLW  09
+0123:  RETLW  09
+0124:  RETLW  09
+0125:  RETLW  01
+0126:  RETLW  3E
+0127:  RETLW  41
+0128:  RETLW  49
+0129:  RETLW  49
+012A:  RETLW  7A
+012B:  RETLW  7F
+012C:  RETLW  08
+012D:  RETLW  08
+012E:  RETLW  08
+012F:  RETLW  7F
+0130:  RETLW  00
+0131:  RETLW  41
+0132:  RETLW  7F
+0133:  RETLW  41
+0134:  RETLW  00
+0135:  RETLW  20
+0136:  RETLW  40
+0137:  RETLW  41
+0138:  RETLW  3F
+0139:  RETLW  01
+013A:  RETLW  7F
+013B:  RETLW  08
+013C:  RETLW  14
+013D:  RETLW  22
+013E:  RETLW  41
+013F:  RETLW  7F
+0140:  RETLW  40
+0141:  RETLW  40
+0142:  RETLW  40
+0143:  RETLW  40
+0144:  RETLW  7F
+0145:  RETLW  02
+0146:  RETLW  0C
+0147:  RETLW  02
+0148:  RETLW  7F
+0149:  RETLW  7F
+014A:  RETLW  04
+014B:  RETLW  08
+014C:  RETLW  10
+014D:  RETLW  7F
+014E:  RETLW  3E
+014F:  RETLW  41
+0150:  RETLW  41
+0151:  RETLW  41
+0152:  RETLW  3E
+0153:  BSF    0A.0
+0154:  BCF    0A.1
+0155:  BCF    0A.2
+0156:  ADDLW  5A
+0157:  BTFSC  03.0
+0158:  INCF   0A,F
+0159:  MOVWF  02
+015A:  RETLW  7F
+015B:  RETLW  09
+015C:  RETLW  09
+015D:  RETLW  09
+015E:  RETLW  06
+015F:  RETLW  3E
+0160:  RETLW  41
+0161:  RETLW  51
+0162:  RETLW  21
+0163:  RETLW  5E
+0164:  RETLW  7F
+0165:  RETLW  09
+0166:  RETLW  19
+0167:  RETLW  29
+0168:  RETLW  46
+0169:  RETLW  46
+016A:  RETLW  49
+016B:  RETLW  49
+016C:  RETLW  49
+016D:  RETLW  31
+016E:  RETLW  01
+016F:  RETLW  01
+0170:  RETLW  7F
+0171:  RETLW  01
+0172:  RETLW  01
+0173:  RETLW  3F
+0174:  RETLW  40
+0175:  RETLW  40
+0176:  RETLW  40
+0177:  RETLW  3F
+0178:  RETLW  1F
+0179:  RETLW  20
+017A:  RETLW  40
+017B:  RETLW  20
+017C:  RETLW  1F
+017D:  RETLW  3F
+017E:  RETLW  40
+017F:  RETLW  38
+0180:  RETLW  40
+0181:  RETLW  3F
+0182:  RETLW  63
+0183:  RETLW  14
+0184:  RETLW  08
+0185:  RETLW  14
+0186:  RETLW  63
+0187:  RETLW  07
+0188:  RETLW  08
+0189:  RETLW  70
+018A:  RETLW  08
+018B:  RETLW  07
+018C:  RETLW  61
+018D:  RETLW  51
+018E:  RETLW  49
+018F:  RETLW  45
+0190:  RETLW  43
+0191:  RETLW  00
+0192:  RETLW  7F
+0193:  RETLW  41
+0194:  RETLW  41
+0195:  RETLW  00
+0196:  RETLW  02
+0197:  RETLW  04
+0198:  RETLW  08
+0199:  RETLW  10
+019A:  RETLW  20
+019B:  RETLW  00
+019C:  RETLW  41
+019D:  RETLW  41
+019E:  RETLW  7F
+019F:  RETLW  00
+01A0:  RETLW  04
+01A1:  RETLW  02
+01A2:  RETLW  01
+01A3:  RETLW  02
+01A4:  RETLW  04
+01A5:  RETLW  40
+01A6:  RETLW  40
+01A7:  RETLW  40
+01A8:  RETLW  40
+01A9:  RETLW  40
+01AA:  RETLW  00
+01AB:  RETLW  01
+01AC:  RETLW  02
+01AD:  RETLW  04
+01AE:  RETLW  00
+01AF:  RETLW  20
+01B0:  RETLW  54
+01B1:  RETLW  54
+01B2:  RETLW  54
+01B3:  RETLW  78
+01B4:  RETLW  7F
+01B5:  RETLW  48
+01B6:  RETLW  44
+01B7:  RETLW  44
+01B8:  RETLW  38
+01B9:  RETLW  38
+01BA:  RETLW  44
+01BB:  RETLW  44
+01BC:  RETLW  44
+01BD:  RETLW  20
+01BE:  RETLW  38
+01BF:  RETLW  44
+01C0:  RETLW  44
+01C1:  RETLW  48
+01C2:  RETLW  7F
+01C3:  RETLW  38
+01C4:  RETLW  54
+01C5:  RETLW  54
+01C6:  RETLW  54
+01C7:  RETLW  18
+01C8:  RETLW  08
+01C9:  RETLW  7E
+01CA:  RETLW  09
+01CB:  RETLW  01
+01CC:  RETLW  02
+01CD:  RETLW  0C
+01CE:  RETLW  52
+01CF:  RETLW  52
+01D0:  RETLW  52
+01D1:  RETLW  3E
+01D2:  RETLW  7F
+01D3:  RETLW  08
+01D4:  RETLW  04
+01D5:  RETLW  04
+01D6:  RETLW  78
+01D7:  RETLW  00
+01D8:  RETLW  44
+01D9:  RETLW  7D
+01DA:  RETLW  40
+01DB:  RETLW  00
+01DC:  RETLW  20
+01DD:  RETLW  40
+01DE:  RETLW  44
+01DF:  RETLW  3D
+01E0:  RETLW  00
+01E1:  RETLW  7F
+01E2:  RETLW  10
+01E3:  RETLW  28
+01E4:  RETLW  44
+01E5:  RETLW  00
+01E6:  RETLW  00
+01E7:  RETLW  41
+01E8:  RETLW  7F
+01E9:  RETLW  40
+01EA:  RETLW  00
+01EB:  RETLW  7C
+01EC:  RETLW  04
+01ED:  RETLW  18
+01EE:  RETLW  04
+01EF:  RETLW  78
+01F0:  RETLW  7C
+01F1:  RETLW  08
+01F2:  RETLW  04
+01F3:  RETLW  04
+01F4:  RETLW  78
+01F5:  RETLW  38
+01F6:  RETLW  44
+01F7:  RETLW  44
+01F8:  RETLW  44
+01F9:  RETLW  38
+01FA:  RETLW  7C
+01FB:  RETLW  14
+01FC:  RETLW  14
+01FD:  RETLW  14
+01FE:  RETLW  08
+01FF:  RETLW  08
+0200:  RETLW  14
+0201:  RETLW  14
+0202:  RETLW  18
+0203:  RETLW  7C
+0204:  RETLW  7C
+0205:  RETLW  08
+0206:  RETLW  04
+0207:  RETLW  04
+0208:  RETLW  08
+0209:  RETLW  48
+020A:  RETLW  54
+020B:  RETLW  54
+020C:  RETLW  54
+020D:  RETLW  20
+020E:  RETLW  04
+020F:  RETLW  3F
+0210:  RETLW  44
+0211:  RETLW  40
+0212:  RETLW  20
+0213:  RETLW  3C
+0214:  RETLW  40
+0215:  RETLW  40
+0216:  RETLW  20
+0217:  RETLW  7C
+0218:  RETLW  1C
+0219:  RETLW  20
+021A:  RETLW  40
+021B:  RETLW  20
+021C:  RETLW  1C
+021D:  RETLW  3C
+021E:  RETLW  40
+021F:  RETLW  30
+0220:  RETLW  40
+0221:  RETLW  3C
+0222:  RETLW  44
+0223:  RETLW  28
+0224:  RETLW  10
+0225:  RETLW  28
+0226:  RETLW  44
+0227:  RETLW  0C
+0228:  RETLW  50
+0229:  RETLW  50
+022A:  RETLW  50
+022B:  RETLW  3C
+022C:  RETLW  44
+022D:  RETLW  64
+022E:  RETLW  54
+022F:  RETLW  4C
+0230:  RETLW  44
+0231:  RETLW  00
+0232:  RETLW  08
+0233:  RETLW  36
+0234:  RETLW  41
+0235:  RETLW  00
+0236:  RETLW  00
+0237:  RETLW  00
+0238:  RETLW  7F
+0239:  RETLW  00
+023A:  RETLW  00
+023B:  RETLW  00
+023C:  RETLW  41
+023D:  RETLW  36
+023E:  RETLW  08
+023F:  RETLW  00
+0240:  RETLW  10
+0241:  RETLW  08
+0242:  RETLW  08
+0243:  RETLW  10
+0244:  RETLW  08
+0245:  RETLW  78
+0246:  RETLW  46
+0247:  RETLW  41
+0248:  RETLW  46
+0249:  RETLW  78
+024A:  MOVWF  7B
+024B:  MOVLW  02
+024C:  ADDWF  7A,W
+024D:  MOVWF  0A
+024E:  MOVF   7B,W
+024F:  ADDLW  53
+0250:  BTFSC  03.0
+0251:  INCF   0A,F
+0252:  MOVWF  02
+0253:  RETLW  F0
+0254:  RETLW  FC
+0255:  RETLW  0E
+0256:  RETLW  03
+0257:  RETLW  83
+0258:  RETLW  C3
+0259:  RETLW  C3
+025A:  RETLW  67
+025B:  RETLW  FE
+025C:  RETLW  F8
+025D:  RETLW  0F
+025E:  RETLW  7F
+025F:  RETLW  76
+0260:  RETLW  C3
+0261:  RETLW  C3
+0262:  RETLW  C1
+0263:  RETLW  C0
+0264:  RETLW  60
+0265:  RETLW  3F
+0266:  RETLW  1F
+0267:  RETLW  0C
+0268:  RETLW  06
+0269:  RETLW  06
+026A:  RETLW  03
+026B:  RETLW  FF
+026C:  RETLW  FF
+026D:  RETLW  FF
+026E:  RETLW  00
+026F:  RETLW  00
+0270:  RETLW  00
+0271:  RETLW  C0
+0272:  RETLW  C0
+0273:  RETLW  C0
+0274:  RETLW  C0
+0275:  RETLW  FF
+0276:  RETLW  FF
+0277:  RETLW  FF
+0278:  RETLW  C0
+0279:  RETLW  C0
+027A:  RETLW  C0
+027B:  RETLW  06
+027C:  RETLW  06
+027D:  RETLW  03
+027E:  RETLW  03
+027F:  RETLW  03
+0280:  RETLW  03
+0281:  RETLW  C7
+0282:  RETLW  FE
+0283:  RETLW  7C
+0284:  RETLW  00
+0285:  RETLW  E0
+0286:  RETLW  F0
+0287:  RETLW  F8
+0288:  RETLW  DC
+0289:  RETLW  CE
+028A:  RETLW  C7
+028B:  RETLW  C3
+028C:  RETLW  C1
+028D:  RETLW  C0
+028E:  RETLW  C0
+028F:  RETLW  03
+0290:  RETLW  03
+0291:  RETLW  83
+0292:  RETLW  83
+0293:  RETLW  83
+0294:  RETLW  83
+0295:  RETLW  C3
+0296:  RETLW  FF
+0297:  RETLW  7E
+0298:  RETLW  38
+0299:  RETLW  C0
+029A:  RETLW  C0
+029B:  RETLW  C1
+029C:  RETLW  C1
+029D:  RETLW  C1
+029E:  RETLW  C1
+029F:  RETLW  C1
+02A0:  RETLW  E3
+02A1:  RETLW  7F
+02A2:  RETLW  3E
+02A3:  RETLW  00
+02A4:  RETLW  80
+02A5:  RETLW  E0
+02A6:  RETLW  70
+02A7:  RETLW  3C
+02A8:  RETLW  1E
+02A9:  RETLW  07
+02AA:  RETLW  FF
+02AB:  RETLW  FF
+02AC:  RETLW  00
+02AD:  RETLW  0F
+02AE:  RETLW  0F
+02AF:  RETLW  0D
+02B0:  RETLW  0C
+02B1:  RETLW  0C
+02B2:  RETLW  0C
+02B3:  RETLW  0C
+02B4:  RETLW  FF
+02B5:  RETLW  FF
+02B6:  RETLW  0C
+02B7:  RETLW  FF
+02B8:  RETLW  FF
+02B9:  RETLW  C3
+02BA:  RETLW  C3
+02BB:  RETLW  C3
+02BC:  RETLW  C3
+02BD:  RETLW  C3
+02BE:  RETLW  83
+02BF:  RETLW  03
+02C0:  RETLW  03
+02C1:  RETLW  C0
+02C2:  RETLW  C0
+02C3:  RETLW  C0
+02C4:  RETLW  C0
+02C5:  RETLW  C0
+02C6:  RETLW  E0
+02C7:  RETLW  61
+02C8:  RETLW  7F
+02C9:  RETLW  3F
+02CA:  RETLW  00
+02CB:  RETLW  FC
+02CC:  RETLW  FE
+02CD:  RETLW  CF
+02CE:  RETLW  C7
+02CF:  RETLW  C3
+02D0:  RETLW  C3
+02D1:  RETLW  C3
+02D2:  RETLW  C3
+02D3:  RETLW  83
+02D4:  RETLW  00
+02D5:  RETLW  3F
+02D6:  RETLW  7F
+02D7:  RETLW  E1
+02D8:  RETLW  C0
+02D9:  RETLW  C0
+02DA:  RETLW  C0
+02DB:  RETLW  C0
+02DC:  RETLW  E1
+02DD:  RETLW  7F
+02DE:  RETLW  3F
+02DF:  RETLW  03
+02E0:  RETLW  03
+02E1:  RETLW  03
+02E2:  RETLW  03
+02E3:  RETLW  03
+02E4:  RETLW  83
+02E5:  RETLW  E3
+02E6:  RETLW  FB
+02E7:  RETLW  3F
+02E8:  RETLW  0F
+02E9:  RETLW  00
+02EA:  RETLW  C0
+02EB:  RETLW  F0
+02EC:  RETLW  78
+02ED:  RETLW  3E
+02EE:  RETLW  0F
+02EF:  RETLW  03
+02F0:  RETLW  00
+02F1:  RETLW  00
+02F2:  RETLW  00
+02F3:  RETLW  3C
+02F4:  RETLW  7E
+02F5:  RETLW  E7
+02F6:  RETLW  C3
+02F7:  RETLW  C3
+02F8:  RETLW  C3
+02F9:  RETLW  C3
+02FA:  RETLW  E7
+02FB:  RETLW  7E
+02FC:  RETLW  3C
+02FD:  RETLW  3E
+02FE:  RETLW  7F
+02FF:  RETLW  E3
+0300:  RETLW  C1
+0301:  RETLW  C1
+0302:  RETLW  C1
+0303:  RETLW  C1
+0304:  RETLW  E3
+0305:  RETLW  7F
+0306:  RETLW  3E
+0307:  RETLW  FC
+0308:  RETLW  FE
+0309:  RETLW  87
+030A:  RETLW  03
+030B:  RETLW  03
+030C:  RETLW  03
+030D:  RETLW  03
+030E:  RETLW  87
+030F:  RETLW  FE
+0310:  RETLW  FC
+0311:  RETLW  00
+0312:  RETLW  C1
+0313:  RETLW  C3
+0314:  RETLW  C3
+0315:  RETLW  C3
+0316:  RETLW  C3
+0317:  RETLW  E3
+0318:  RETLW  73
+0319:  RETLW  3F
+031A:  RETLW  1F
+031B:  RETLW  00
+031C:  RETLW  00
+031D:  RETLW  00
+031E:  RETLW  00
+031F:  RETLW  00
+0320:  RETLW  00
+0321:  RETLW  00
+0322:  RETLW  00
+0323:  RETLW  00
+0324:  RETLW  00
+0325:  RETLW  00
+0326:  RETLW  00
+0327:  RETLW  00
+0328:  RETLW  E0
+0329:  RETLW  F0
+032A:  RETLW  F0
+032B:  RETLW  E0
+032C:  RETLW  00
+032D:  RETLW  00
+032E:  RETLW  00
+032F:  RETLW  00
+0330:  RETLW  00
+0331:  RETLW  00
+0332:  RETLW  30
+0333:  RETLW  70
+0334:  RETLW  70
+0335:  RETLW  70
+0336:  RETLW  00
+0337:  RETLW  00
+0338:  RETLW  00
+0339:  RETLW  00
+033A:  RETLW  00
+033B:  RETLW  00
+033C:  RETLW  60
+033D:  RETLW  E0
+033E:  RETLW  E0
+033F:  RETLW  E0
+0340:  RETLW  00
+0341:  RETLW  00
+0342:  RETLW  00
+0343:  RETLW  00
+0344:  RETLW  00
+0345:  RETLW  00
+0346:  RETLW  00
+0347:  RETLW  00
+0348:  RETLW  00
+0349:  RETLW  00
+034A:  RETLW  00
+034B:  RETLW  00
+034C:  RETLW  00
+034D:  RETLW  00
+034E:  RETLW  00
+034F:  RETLW  00
+0350:  RETLW  00
+0351:  RETLW  00
+0352:  RETLW  00
+0353:  RETLW  00
+0354:  RETLW  00
+0355:  RETLW  00
+0356:  RETLW  00
+0357:  MOVWF  7B
+0358:  MOVLW  03
+0359:  ADDWF  7A,W
+035A:  MOVWF  0A
+035B:  MOVF   7B,W
+035C:  ADDLW  60
+035D:  BTFSC  03.0
+035E:  INCF   0A,F
+035F:  MOVWF  02
+0360:  RETLW  00
+0361:  RETLW  00
+0362:  RETLW  00
+0363:  RETLW  00
+0364:  RETLW  00
+0365:  RETLW  00
+0366:  RETLW  00
+0367:  RETLW  00
+0368:  RETLW  00
+0369:  RETLW  00
+036A:  RETLW  00
+036B:  RETLW  00
+036C:  RETLW  00
+036D:  RETLW  00
+036E:  RETLW  00
+036F:  RETLW  00
+0370:  RETLW  00
+0371:  RETLW  00
+0372:  RETLW  00
+0373:  RETLW  00
+0374:  RETLW  00
+0375:  RETLW  00
+0376:  RETLW  00
+0377:  RETLW  00
+0378:  RETLW  00
+0379:  RETLW  00
+037A:  RETLW  00
+037B:  RETLW  00
+037C:  RETLW  00
+037D:  RETLW  00
+037E:  RETLW  00
+037F:  RETLW  00
+0380:  RETLW  00
+0381:  RETLW  00
+0382:  RETLW  00
+0383:  RETLW  00
+0384:  RETLW  00
+0385:  RETLW  00
+0386:  RETLW  00
+0387:  RETLW  00
+0388:  RETLW  00
+0389:  RETLW  00
+038A:  RETLW  00
+038B:  RETLW  00
+038C:  RETLW  00
+038D:  RETLW  00
+038E:  RETLW  00
+038F:  RETLW  00
+0390:  RETLW  10
+0391:  RETLW  C0
+0392:  RETLW  00
+0393:  RETLW  00
+0394:  RETLW  00
+0395:  RETLW  00
+0396:  RETLW  00
+0397:  RETLW  00
+0398:  RETLW  00
+0399:  RETLW  00
+039A:  RETLW  00
+039B:  RETLW  00
+039C:  RETLW  40
+039D:  RETLW  00
+039E:  RETLW  00
+039F:  RETLW  00
+03A0:  RETLW  00
+03A1:  RETLW  00
+03A2:  RETLW  00
+03A3:  RETLW  00
+03A4:  RETLW  00
+03A5:  RETLW  00
+03A6:  RETLW  00
+03A7:  RETLW  00
+03A8:  RETLW  00
+03A9:  RETLW  00
+03AA:  RETLW  00
+03AB:  RETLW  00
+03AC:  RETLW  00
+03AD:  RETLW  00
+03AE:  RETLW  00
+03AF:  RETLW  00
+03B0:  RETLW  00
+03B1:  RETLW  00
+03B2:  RETLW  00
+03B3:  RETLW  00
+03B4:  RETLW  00
+03B5:  RETLW  00
+03B6:  RETLW  00
+03B7:  RETLW  00
+03B8:  RETLW  00
+03B9:  RETLW  00
+03BA:  RETLW  00
+03BB:  RETLW  00
+03BC:  RETLW  00
+03BD:  RETLW  00
+03BE:  RETLW  00
+03BF:  RETLW  00
+03C0:  RETLW  00
+03C1:  RETLW  00
+03C2:  RETLW  00
+03C3:  RETLW  00
+03C4:  RETLW  00
+03C5:  RETLW  00
+03C6:  RETLW  00
+03C7:  RETLW  00
+03C8:  RETLW  00
+03C9:  RETLW  00
+03CA:  RETLW  00
+03CB:  RETLW  00
+03CC:  RETLW  00
+03CD:  RETLW  00
+03CE:  RETLW  00
+03CF:  RETLW  00
+03D0:  RETLW  00
+03D1:  RETLW  80
+03D2:  RETLW  80
+03D3:  RETLW  80
+03D4:  RETLW  00
+03D5:  RETLW  40
+03D6:  RETLW  40
+03D7:  RETLW  80
+03D8:  RETLW  80
+03D9:  RETLW  80
+03DA:  RETLW  08
+03DB:  RETLW  00
+03DC:  RETLW  10
+03DD:  RETLW  20
+03DE:  RETLW  20
+03DF:  RETLW  40
+03E0:  RETLW  00
+03E1:  RETLW  00
+03E2:  RETLW  80
+03E3:  RETLW  C0
+03E4:  RETLW  60
+03E5:  RETLW  21
+03E6:  RETLW  34
+03E7:  RETLW  10
+03E8:  RETLW  10
+03E9:  RETLW  10
+03EA:  RETLW  10
+03EB:  RETLW  20
+03EC:  RETLW  20
+03ED:  RETLW  40
+03EE:  RETLW  86
+03EF:  RETLW  01
+03F0:  RETLW  00
+03F1:  RETLW  00
+03F2:  RETLW  00
+03F3:  RETLW  00
+03F4:  RETLW  00
+03F5:  RETLW  80
+03F6:  RETLW  80
+03F7:  RETLW  80
+03F8:  RETLW  00
+03F9:  RETLW  00
+03FA:  RETLW  00
+03FB:  RETLW  00
+03FC:  RETLW  00
+03FD:  RETLW  00
+03FE:  RETLW  00
+03FF:  RETLW  00
+0400:  RETLW  00
+0401:  RETLW  00
+0402:  RETLW  00
+0403:  RETLW  00
+0404:  RETLW  00
+0405:  RETLW  00
+0406:  RETLW  00
+0407:  RETLW  00
+0408:  RETLW  00
+0409:  RETLW  00
+040A:  RETLW  00
+040B:  RETLW  00
+040C:  RETLW  00
+040D:  RETLW  00
+040E:  RETLW  00
+040F:  RETLW  00
+0410:  RETLW  00
+0411:  RETLW  00
+0412:  RETLW  00
+0413:  RETLW  00
+0414:  RETLW  00
+0415:  RETLW  00
+0416:  RETLW  00
+0417:  RETLW  00
+0418:  RETLW  00
+0419:  RETLW  00
+041A:  RETLW  00
+041B:  RETLW  00
+041C:  RETLW  00
+041D:  RETLW  00
+041E:  RETLW  00
+041F:  RETLW  00
+0420:  RETLW  F0
+0421:  RETLW  08
+0422:  RETLW  06
+0423:  RETLW  02
+0424:  RETLW  01
+0425:  RETLW  00
+0426:  RETLW  00
+0427:  RETLW  00
+0428:  RETLW  00
+0429:  RETLW  00
+042A:  RETLW  00
+042B:  RETLW  00
+042C:  RETLW  00
+042D:  RETLW  00
+042E:  RETLW  01
+042F:  RETLW  01
+0430:  RETLW  02
+0431:  RETLW  04
+0432:  RETLW  18
+0433:  RETLW  08
+0434:  RETLW  08
+0435:  RETLW  0E
+0436:  RETLW  09
+0437:  RETLW  10
+0438:  RETLW  10
+0439:  RETLW  10
+043A:  RETLW  20
+043B:  RETLW  60
+043C:  RETLW  C0
+043D:  RETLW  00
+043E:  RETLW  00
+043F:  RETLW  00
+0440:  RETLW  00
+0441:  RETLW  00
+0442:  RETLW  00
+0443:  RETLW  E7
+0444:  RETLW  18
+0445:  RETLW  00
+0446:  RETLW  01
+0447:  RETLW  01
+0448:  RETLW  01
+0449:  RETLW  00
+044A:  RETLW  00
+044B:  RETLW  00
+044C:  RETLW  00
+044D:  RETLW  00
+044E:  RETLW  00
+044F:  RETLW  00
+0450:  RETLW  00
+0451:  RETLW  00
+0452:  RETLW  00
+0453:  RETLW  00
+0454:  RETLW  00
+0455:  RETLW  00
+0456:  RETLW  00
+0457:  RETLW  00
+0458:  RETLW  00
+0459:  RETLW  00
+045A:  RETLW  00
+045B:  RETLW  00
+045C:  RETLW  00
+045D:  RETLW  00
+045E:  RETLW  00
+045F:  RETLW  00
+0460:  RETLW  00
+0461:  RETLW  00
+0462:  RETLW  00
+0463:  RETLW  00
+0464:  RETLW  00
+0465:  RETLW  00
+0466:  RETLW  00
+0467:  RETLW  00
+0468:  RETLW  00
+0469:  RETLW  00
+046A:  RETLW  00
+046B:  RETLW  80
+046C:  RETLW  60
+046D:  RETLW  18
+046E:  RETLW  0C
+046F:  RETLW  04
+0470:  RETLW  02
+0471:  RETLW  02
+0472:  RETLW  01
+0473:  RETLW  01
+0474:  RETLW  01
+0475:  RETLW  00
+0476:  RETLW  00
+0477:  RETLW  00
+0478:  RETLW  00
+0479:  RETLW  00
+047A:  RETLW  00
+047B:  RETLW  00
+047C:  RETLW  00
+047D:  RETLW  00
+047E:  RETLW  00
+047F:  RETLW  00
+0480:  RETLW  00
+0481:  RETLW  00
+0482:  RETLW  00
+0483:  RETLW  00
+0484:  RETLW  00
+0485:  RETLW  00
+0486:  RETLW  00
+0487:  RETLW  00
+0488:  RETLW  00
+0489:  RETLW  00
+048A:  RETLW  00
+048B:  RETLW  00
+048C:  RETLW  00
+048D:  RETLW  00
+048E:  RETLW  00
+048F:  RETLW  00
+0490:  RETLW  00
+0491:  RETLW  01
+0492:  RETLW  01
+0493:  RETLW  01
+0494:  RETLW  01
+0495:  RETLW  01
+0496:  RETLW  01
+0497:  RETLW  02
+0498:  RETLW  02
+0499:  RETLW  04
+049A:  RETLW  0D
+049B:  RETLW  10
+049C:  RETLW  62
+049D:  RETLW  80
+049E:  RETLW  04
+049F:  RETLW  08
+04A0:  RETLW  00
+04A1:  RETLW  00
+04A2:  RETLW  00
+04A3:  RETLW  00
+04A4:  RETLW  00
+04A5:  RETLW  00
+04A6:  RETLW  00
+04A7:  RETLW  00
+04A8:  RETLW  00
+04A9:  RETLW  00
+04AA:  RETLW  00
+04AB:  RETLW  00
+04AC:  RETLW  00
+04AD:  RETLW  00
+04AE:  RETLW  00
+04AF:  RETLW  00
+04B0:  RETLW  00
+04B1:  RETLW  00
+04B2:  RETLW  00
+04B3:  RETLW  00
+04B4:  RETLW  00
+04B5:  RETLW  00
+04B6:  RETLW  00
+04B7:  RETLW  00
+04B8:  RETLW  00
+04B9:  RETLW  00
+04BA:  RETLW  00
+04BB:  RETLW  00
+04BC:  RETLW  00
+04BD:  RETLW  00
+04BE:  RETLW  00
+04BF:  RETLW  3F
+04C0:  RETLW  E0
+04C1:  RETLW  80
+04C2:  RETLW  00
+04C3:  RETLW  00
+04C4:  RETLW  00
+04C5:  RETLW  00
+04C6:  RETLW  00
+04C7:  RETLW  00
+04C8:  RETLW  00
+04C9:  RETLW  00
+04CA:  RETLW  00
+04CB:  RETLW  00
+04CC:  RETLW  00
+04CD:  RETLW  00
+04CE:  RETLW  00
+04CF:  RETLW  00
+04D0:  RETLW  00
+04D1:  RETLW  00
+04D2:  RETLW  00
+04D3:  RETLW  00
+04D4:  RETLW  00
+04D5:  RETLW  00
+04D6:  RETLW  00
+04D7:  RETLW  00
+04D8:  RETLW  00
+04D9:  RETLW  00
+04DA:  RETLW  00
+04DB:  RETLW  00
+04DC:  RETLW  00
+04DD:  RETLW  00
+04DE:  RETLW  00
+04DF:  RETLW  00
+04E0:  RETLW  00
+04E1:  RETLW  00
+04E2:  RETLW  00
+04E3:  RETLW  00
+04E4:  RETLW  00
+04E5:  RETLW  00
+04E6:  RETLW  00
+04E7:  RETLW  00
+04E8:  RETLW  00
+04E9:  RETLW  00
+04EA:  RETLW  00
+04EB:  RETLW  00
+04EC:  RETLW  00
+04ED:  RETLW  00
+04EE:  RETLW  00
+04EF:  RETLW  80
+04F0:  RETLW  60
+04F1:  RETLW  1F
+04F2:  RETLW  00
+04F3:  RETLW  00
+04F4:  RETLW  00
+04F5:  RETLW  00
+04F6:  RETLW  00
+04F7:  RETLW  00
+04F8:  RETLW  00
+04F9:  RETLW  00
+04FA:  RETLW  00
+04FB:  RETLW  00
+04FC:  RETLW  00
+04FD:  RETLW  00
+04FE:  RETLW  00
+04FF:  RETLW  00
+0500:  RETLW  00
+0501:  RETLW  00
+0502:  RETLW  00
+0503:  RETLW  00
+0504:  RETLW  00
+0505:  RETLW  00
+0506:  RETLW  00
+0507:  RETLW  00
+0508:  RETLW  00
+0509:  RETLW  00
+050A:  RETLW  00
+050B:  RETLW  00
+050C:  RETLW  00
+050D:  RETLW  00
+050E:  RETLW  00
+050F:  RETLW  00
+0510:  RETLW  00
+0511:  RETLW  00
+0512:  RETLW  00
+0513:  RETLW  00
+0514:  RETLW  00
+0515:  RETLW  01
+0516:  RETLW  03
+0517:  RETLW  06
+0518:  RETLW  04
+0519:  RETLW  04
+051A:  RETLW  08
+051B:  RETLW  08
+051C:  RETLW  08
+051D:  RETLW  08
+051E:  RETLW  08
+051F:  RETLW  08
+0520:  RETLW  08
+0521:  RETLW  08
+0522:  RETLW  08
+0523:  RETLW  08
+0524:  RETLW  08
+0525:  RETLW  08
+0526:  RETLW  08
+0527:  RETLW  08
+0528:  RETLW  08
+0529:  RETLW  08
+052A:  RETLW  08
+052B:  RETLW  08
+052C:  RETLW  08
+052D:  RETLW  08
+052E:  RETLW  08
+052F:  RETLW  08
+0530:  RETLW  08
+0531:  RETLW  08
+0532:  RETLW  08
+0533:  RETLW  08
+0534:  RETLW  08
+0535:  RETLW  08
+0536:  RETLW  08
+0537:  RETLW  08
+0538:  RETLW  08
+0539:  RETLW  08
+053A:  RETLW  08
+053B:  RETLW  08
+053C:  RETLW  08
+053D:  RETLW  08
+053E:  RETLW  08
+053F:  RETLW  04
+0540:  RETLW  04
+0541:  RETLW  02
+0542:  RETLW  03
+0543:  RETLW  01
+0544:  RETLW  00
+0545:  RETLW  00
+0546:  RETLW  00
+0547:  RETLW  00
+0548:  RETLW  00
+0549:  RETLW  00
+054A:  RETLW  00
+054B:  RETLW  00
+054C:  RETLW  00
+054D:  RETLW  00
+054E:  RETLW  00
+054F:  RETLW  00
+0550:  RETLW  00
+0551:  RETLW  00
+0552:  RETLW  00
+0553:  RETLW  00
+0554:  RETLW  00
+0555:  RETLW  00
+0556:  RETLW  00
+0557:  RETLW  00
+0558:  CLRF   77
+0559:  CLRF   78
+055A:  MOVF   76,W
+055B:  BCF    03.0
+055C:  BTFSC  7C.0
+055D:  ADDWF  77,F
+055E:  RRF    77,F
+055F:  RRF    78,F
+0560:  BTFSC  7C.1
+0561:  ADDWF  77,F
+0562:  RRF    77,F
+0563:  RRF    78,F
+0564:  BTFSC  7C.2
+0565:  ADDWF  77,F
+0566:  RRF    77,F
+0567:  RRF    78,F
+0568:  BTFSC  7C.3
+0569:  ADDWF  77,F
+056A:  RRF    77,F
+056B:  RRF    78,F
+056C:  BTFSC  7C.4
+056D:  ADDWF  77,F
+056E:  RRF    77,F
+056F:  RRF    78,F
+0570:  BTFSC  7C.5
+0571:  ADDWF  77,F
+0572:  RRF    77,F
+0573:  RRF    78,F
+0574:  BTFSC  7C.6
+0575:  ADDWF  77,F
+0576:  RRF    77,F
+0577:  RRF    78,F
+0578:  BTFSC  7C.7
+0579:  ADDWF  77,F
+057A:  RRF    77,F
+057B:  RRF    78,F
+057C:  RETURN
+*
+063B:  BCF    0A.0
+063C:  BSF    0A.1
+063D:  BSF    0A.2
+063E:  ADDWF  02,F
+063F:  GOTO   60F
+0640:  GOTO   613
+0641:  GOTO   617
+0642:  GOTO   61B
+0643:  GOTO   61F
+0644:  GOTO   623
+0645:  GOTO   627
+0646:  GOTO   62B
+0647:  GOTO   62F
+0648:  GOTO   633
+*
+0684:  DATA 31,1B
+0685:  DATA AF,18
+0686:  DATA B2,17
+0687:  DATA 32,18
+0688:  DATA B1,1C
+0689:  DATA 00,00
+068A:  DATA 4E,34
+068B:  DATA E9,32
+068C:  DATA 74,10
+068D:  DATA E4,37
+068E:  DATA 3A,10
+068F:  DATA 00,01
+0690:  DATA C4,37
+0691:  DATA A0,30
+0692:  DATA 6D,1D
+0693:  DATA 20,00
+0694:  DATA F3,3A
+0695:  DATA 6E,37
+0696:  DATA 79,00
+0697:  DATA 41,39
+0698:  DATA EC,30
+0699:  DATA 6D,10
+069A:  DATA 61,3A
+069B:  DATA 3A,00
+*
+06F6:  MOVF   0B,W
+06F7:  MOVWF  64
+06F8:  BCF    0B.7
+06F9:  BSF    03.5
+06FA:  BSF    03.6
+06FB:  BSF    0C.7
+06FC:  BSF    0C.0
+06FD:  NOP
+06FE:  NOP
+06FF:  BCF    03.5
+0700:  BCF    03.6
+0701:  BTFSC  64.7
+0702:  BSF    0B.7
+0703:  BSF    03.6
+0704:  MOVF   0C,W
+0705:  ANDLW  7F
+0706:  BTFSC  03.2
+0707:  GOTO   756
+0708:  BCF    03.6
+0709:  MOVWF  64
+070A:  BSF    03.6
+070B:  MOVF   0D,W
+070C:  BCF    03.6
+070D:  MOVWF  65
+070E:  BSF    03.6
+070F:  MOVF   0F,W
+0710:  BCF    03.6
+0711:  MOVWF  66
+0712:  CLRF   2C
+0713:  BTFSC  0B.7
+0714:  BSF    2C.7
+0715:  BCF    0B.7
+0716:  MOVF   64,W
+0717:  MOVWF  73
+0718:  CALL   5F6
+0719:  BTFSC  2C.7
+071A:  BSF    0B.7
+071B:  MOVF   65,W
+071C:  BSF    03.6
+071D:  MOVWF  0D
+071E:  BCF    03.6
+071F:  MOVF   66,W
+0720:  BSF    03.6
+0721:  MOVWF  0F
+0722:  BCF    03.6
+0723:  MOVF   0B,W
+0724:  MOVWF  67
+0725:  BCF    0B.7
+0726:  BSF    03.5
+0727:  BSF    03.6
+0728:  BSF    0C.7
+0729:  BSF    0C.0
+072A:  NOP
+072B:  NOP
+072C:  BCF    03.5
+072D:  BCF    03.6
+072E:  BTFSC  67.7
+072F:  BSF    0B.7
+0730:  BSF    03.6
+0731:  RLF    0C,W
+0732:  RLF    0E,W
+0733:  ANDLW  7F
+0734:  BTFSC  03.2
+0735:  GOTO   756
+0736:  BCF    03.6
+0737:  MOVWF  64
+0738:  BSF    03.6
+0739:  MOVF   0D,W
+073A:  BCF    03.6
+073B:  MOVWF  65
+073C:  BSF    03.6
+073D:  MOVF   0F,W
+073E:  BCF    03.6
+073F:  MOVWF  66
+0740:  CLRF   2C
+0741:  BTFSC  0B.7
+0742:  BSF    2C.7
+0743:  BCF    0B.7
+0744:  MOVF   64,W
+0745:  MOVWF  73
+0746:  CALL   5F6
+0747:  BTFSC  2C.7
+0748:  BSF    0B.7
+0749:  MOVF   65,W
+074A:  BSF    03.6
+074B:  MOVWF  0D
+074C:  BCF    03.6
+074D:  MOVF   66,W
+074E:  BSF    03.6
+074F:  MOVWF  0F
+0750:  INCF   0D,F
+0751:  BTFSC  03.2
+0752:  INCF   0F,F
+0753:  BCF    03.6
+0754:  GOTO   6F6
+0755:  BSF    03.6
+0756:  BCF    03.6
+0757:  RETURN
+....................  
+.................... #list 
+....................  
+.................... #device  ADC = 10 *=16 
+.................... #FUSES HS NOWDT NOBROWNOUT NOLVP 
+.................... #use delay(CRYSTAL=20M) 
+*
+069C:  MOVLW  65
+069D:  MOVWF  04
+069E:  BCF    03.7
+069F:  MOVF   00,W
+06A0:  BTFSC  03.2
+06A1:  GOTO   6AF
+06A2:  MOVLW  06
+06A3:  MOVWF  78
+06A4:  CLRF   77
+06A5:  DECFSZ 77,F
+06A6:  GOTO   6A5
+06A7:  DECFSZ 78,F
+06A8:  GOTO   6A4
+06A9:  MOVLW  7B
+06AA:  MOVWF  77
+06AB:  DECFSZ 77,F
+06AC:  GOTO   6AB
+06AD:  DECFSZ 00,F
+06AE:  GOTO   6A2
+06AF:  RETURN
+*
+0859:  MOVLW  03
+085A:  SUBWF  64,F
+085B:  BTFSS  03.0
+085C:  GOTO   067
+085D:  MOVLW  64
+085E:  MOVWF  04
+085F:  BCF    03.7
+0860:  MOVF   00,W
+0861:  BTFSC  03.2
+0862:  GOTO   067
+0863:  GOTO   065
+0864:  GOTO   065
+0865:  DECFSZ 00,F
+0866:  GOTO   064
+.................... #use rs232(UART1) 
+....................   
+.................... // Define SPI Pins                                                              
+.................... #define lcd_sclk  PIN_C3  
+.................... #define lcd_sda   PIN_C5              
+.................... #define lcd_dc    PIN_D3                      
+.................... #define lcd_cs    PIN_A5                                                                             
+.................... #define lcd_res   PIN_D2   
+....................  
+.................... // Define orther source files 
+.................... #include "5110lib\3310(modified).c"  
+.................... //////////////////////////////////////////////////////////////////////////////// 
+.................... /* 
+....................                      LPH7779-LCD(Nokia 3310) library 
+....................                      LPH7366-LCD(Nokia 5110) library 
+.................... */ 
+.................... //////////////////////////////////////////////////////////////////////////////// 
+....................  
+.................... char CONST TABLE1 [240] = {  // ASCII table for NOKIA LCD: 96 rows * 5 bytes= 480 bytes 
+....................                   0x00,0x00,0x00,0x00,0x00,   // 20 space 
+....................                   0x00,0x00,0x5f,0x00,0x00,   // 21 ! 
+....................                   0x00,0x07,0x00,0x07,0x00,   // 22 " 
+....................                   0x14,0x7f,0x14,0x7f,0x14,   // 23 # 
+....................                   0x24,0x2a,0x7f,0x2a,0x12,   // 24 $ 
+....................                   0x23,0x13,0x08,0x64,0x62,   // 25 % 
+....................                   0x36,0x49,0x55,0x22,0x50,   // 26 & 
+....................                   0x00,0x05,0x03,0x00,0x00,   // 27 ' 
+....................                   0x00,0x1c,0x22,0x41,0x00,   // 28 ( 
+....................                   0x00,0x41,0x22,0x1c,0x00,   // 29 ) 
+....................                   0x14,0x08,0x3e,0x08,0x14,   // 2a * 
+....................                   0x08,0x08,0x3e,0x08,0x08,   // 2b + 
+....................                   0x00,0x50,0x30,0x00,0x00,   // 2c , 
+....................                   0x08,0x08,0x08,0x08,0x08,   // 2d - 
+....................                   0x00,0x60,0x60,0x00,0x00,   // 2e . 
+....................                   0x20,0x10,0x08,0x04,0x02,   // 2f / 
+....................                   0x3e,0x51,0x49,0x45,0x3e,   // 30 0 
+....................                   0x00,0x42,0x7f,0x40,0x00,   // 31 1 
+....................                   0x42,0x61,0x51,0x49,0x46,   // 32 2 
+....................                   0x21,0x41,0x45,0x4b,0x31,   // 33 3 
+....................                   0x18,0x14,0x12,0x7f,0x10,   // 34 4 
+....................                   0x27,0x45,0x45,0x45,0x39,   // 35 5 
+....................                   0x3c,0x4a,0x49,0x49,0x30,   // 36 6 
+....................                   0x01,0x71,0x09,0x05,0x03,   // 37 7 
+....................                   0x36,0x49,0x49,0x49,0x36,   // 38 8 
+....................                   0x06,0x49,0x49,0x29,0x1e,   // 39 9 
+....................                   0x00,0x36,0x36,0x00,0x00,   // 3a : 
+....................                   0x00,0x56,0x36,0x00,0x00,   // 3b ; 
+....................                   0x08,0x14,0x22,0x41,0x00,   // 3c < 
+....................                   0x14,0x14,0x14,0x14,0x14,   // 3d = 
+....................                   0x00,0x41,0x22,0x14,0x08,   // 3e > 
+....................                   0x02,0x01,0x51,0x09,0x06,   // 3f ? 
+....................                   0x32,0x49,0x79,0x41,0x3e,   // 40 @ 
+....................                   0x7e,0x11,0x11,0x11,0x7e,   // 41 A 
+....................                   0x7f,0x49,0x49,0x49,0x36,   // 42 B 
+....................                   0x3e,0x41,0x41,0x41,0x22,   // 43 C 
+....................                   0x7f,0x41,0x41,0x22,0x1c,   // 44 D 
+....................                   0x7f,0x49,0x49,0x49,0x41,   // 45 E 
+....................                   0x7f,0x09,0x09,0x09,0x01,   // 46 F 
+....................                   0x3e,0x41,0x49,0x49,0x7a,   // 47 G 
+....................                   0x7f,0x08,0x08,0x08,0x7f,   // 48 H 
+....................                   0x00,0x41,0x7f,0x41,0x00,   // 49 I 
+....................                   0x20,0x40,0x41,0x3f,0x01,   // 4a J 
+....................                   0x7f,0x08,0x14,0x22,0x41,   // 4b K 
+....................                   0x7f,0x40,0x40,0x40,0x40,   // 4c L 
+....................                   0x7f,0x02,0x0c,0x02,0x7f,   // 4d M 
+....................                   0x7f,0x04,0x08,0x10,0x7f,   // 4e N 
+....................                   0x3e,0x41,0x41,0x41,0x3e};   // 4f O 
+....................  
+.................... char CONST TABLE2 [240] = { 
+....................                   0x7f,0x09,0x09,0x09,0x06,   // 50 P 
+....................                   0x3e,0x41,0x51,0x21,0x5e,   // 51 Q 
+....................                   0x7f,0x09,0x19,0x29,0x46,   // 52 R 
+....................                   0x46,0x49,0x49,0x49,0x31,   // 53 S 
+....................                   0x01,0x01,0x7f,0x01,0x01,   // 54 T 
+....................                   0x3f,0x40,0x40,0x40,0x3f,   // 55 U 
+....................                   0x1f,0x20,0x40,0x20,0x1f,   // 56 V 
+....................                   0x3f,0x40,0x38,0x40,0x3f,   // 57 W 
+....................                   0x63,0x14,0x08,0x14,0x63,   // 58 X 
+....................                   0x07,0x08,0x70,0x08,0x07,   // 59 Y 
+....................                   0x61,0x51,0x49,0x45,0x43,   // 5a Z 
+....................                   0x00,0x7f,0x41,0x41,0x00,   // 5b [ 
+....................                   0x02,0x04,0x08,0x10,0x20,   // 5c \ 
+....................                   0x00,0x41,0x41,0x7f,0x00,   // 5d ñ 
+....................                   0x04,0x02,0x01,0x02,0x04,   // 5e ^ 
+....................                   0x40,0x40,0x40,0x40,0x40,   // 5f _ 
+....................                   0x00,0x01,0x02,0x04,0x00,   // 60 ` 
+....................                   0x20,0x54,0x54,0x54,0x78,   // 61 a 
+....................                   0x7f,0x48,0x44,0x44,0x38,   // 62 b 
+....................                   0x38,0x44,0x44,0x44,0x20,   // 63 c 
+....................                   0x38,0x44,0x44,0x48,0x7f,   // 64 d 
+....................                   0x38,0x54,0x54,0x54,0x18,   // 65 e 
+....................                   0x08,0x7e,0x09,0x01,0x02,   // 66 f 
+....................                   0x0c,0x52,0x52,0x52,0x3e,   // 67 g 
+....................                   0x7f,0x08,0x04,0x04,0x78,   // 68 h 
+....................                   0x00,0x44,0x7d,0x40,0x00,   // 69 i 
+....................                   0x20,0x40,0x44,0x3d,0x00,   // 6a j 
+....................                   0x7f,0x10,0x28,0x44,0x00,   // 6b k 
+....................                   0x00,0x41,0x7f,0x40,0x00,   // 6c l 
+....................                   0x7c,0x04,0x18,0x04,0x78,   // 6d m 
+....................                   0x7c,0x08,0x04,0x04,0x78,   // 6e n 
+....................                   0x38,0x44,0x44,0x44,0x38,   // 6f o 
+....................                   0x7c,0x14,0x14,0x14,0x08,   // 70 p 
+....................                   0x08,0x14,0x14,0x18,0x7c,   // 71 q 
+....................                   0x7c,0x08,0x04,0x04,0x08,   // 72 r 
+....................                   0x48,0x54,0x54,0x54,0x20,   // 73 s 
+....................                   0x04,0x3f,0x44,0x40,0x20,   // 74 t 
+....................                   0x3c,0x40,0x40,0x20,0x7c,   // 75 u 
+....................                   0x1c,0x20,0x40,0x20,0x1c,   // 76 v 
+....................                   0x3c,0x40,0x30,0x40,0x3c,   // 77 w 
+....................                   0x44,0x28,0x10,0x28,0x44,   // 78 x 
+....................                   0x0c,0x50,0x50,0x50,0x3c,   // 79 y 
+....................                   0x44,0x64,0x54,0x4c,0x44,   // 7a z 
+....................                   0x00,0x08,0x36,0x41,0x00,   // 7b { 
+....................                   0x00,0x00,0x7f,0x00,0x00,   // 7c | 
+....................                   0x00,0x41,0x36,0x08,0x00,   // 7d } 
+....................                   0x10,0x08,0x08,0x10,0x08,   // 7e ~ 
+....................                   0x78,0x46,0x41,0x46,0x78};   // 7f ¦ 
+....................  
+.................... const char digits[260] = { 
+.................... 0xF0, 0xFC, 0x0E, 0x03, 0x83, 0xC3, 0xC3, 0x67, 0xFE, 0xF8, 0x0F, 0x7F, 0x76, 0xC3, 0xC3, 0xC1, 0xC0, 0x60, 0x3F, 0x1F,  
+.................... 0x0C, 0x06, 0x06, 0x03, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0xC0, 0xC0, 0xC0, 0xC0, 0xFF, 0xFF, 0xFF, 0xC0, 0xC0, 0xC0,  
+.................... 0x06, 0x06, 0x03, 0x03, 0x03, 0x03, 0xC7, 0xFE, 0x7C, 0x00, 0xE0, 0xF0, 0xF8, 0xDC, 0xCE, 0xC7, 0xC3, 0xC1, 0xC0, 0xC0,  
+.................... 0x03, 0x03, 0x83, 0x83, 0x83, 0x83, 0xC3, 0xFF, 0x7E, 0x38, 0xC0, 0xC0, 0xC1, 0xC1, 0xC1, 0xC1, 0xC1, 0xE3, 0x7F, 0x3E,  
+.................... 0x00, 0x80, 0xE0, 0x70, 0x3C, 0x1E, 0x07, 0xFF, 0xFF, 0x00, 0x0F, 0x0F, 0x0D, 0x0C, 0x0C, 0x0C, 0x0C, 0xFF, 0xFF, 0x0C,  
+.................... 0xFF, 0xFF, 0xC3, 0xC3, 0xC3, 0xC3, 0xC3, 0x83, 0x03, 0x03, 0xC0, 0xC0, 0xC0, 0xC0, 0xC0, 0xE0, 0x61, 0x7F, 0x3F, 0x00,  
+.................... 0xFC, 0xFE, 0xCF, 0xC7, 0xC3, 0xC3, 0xC3, 0xC3, 0x83, 0x00, 0x3F, 0x7F, 0xE1, 0xC0, 0xC0, 0xC0, 0xC0, 0xE1, 0x7F, 0x3F,  
+.................... 0x03, 0x03, 0x03, 0x03, 0x03, 0x83, 0xE3, 0xFB, 0x3F, 0x0F, 0x00, 0xC0, 0xF0, 0x78, 0x3E, 0x0F, 0x03, 0x00, 0x00, 0x00, 
+.................... 0x3C, 0x7E, 0xE7, 0xC3, 0xC3, 0xC3, 0xC3, 0xE7, 0x7E, 0x3C, 0x3E, 0x7F, 0xE3, 0xC1, 0xC1, 0xC1, 0xC1, 0xE3, 0x7F, 0x3E,  
+.................... 0xFC, 0xFE, 0x87, 0x03, 0x03, 0x03, 0x03, 0x87, 0xFE, 0xFC, 0x00, 0xC1, 0xC3, 0xC3, 0xC3, 0xC3, 0xE3, 0x73, 0x3F, 0x1F,  
+.................... 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xE0, 0xF0, 0xF0, 0xE0, 0x00, 0x00, 0x00, //cham 
+.................... 0x00, 0x00, 0x00, 0x30, 0x70, 0x70, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0xE0, 0xE0, 0xE0, 0x00, 0x00, 0x00 //hai cham 
+.................... }; 
+.................... const unsigned char cloudy[] = {  
+....................    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xc0, 0xe0, 0xf0, 0x70, 0x38, 0x38, 0x1c, 0x0c, 0x0e, 0x0e, 0x06, 0x07, 0x07, 0x07, 0x07, 0x03, 0x03, 0x07, 0x07, 0x07, 0x07, 0x06, 0x06, 0x0e, 0x0e, 0x1c, 0x1c, 0x38, 0x78, 0x70, 0xe0, 0xc0, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xe0, 0xf8, 0xf8, 0x1c, 0x0e, 0x0e, 0x07, 0x07, 0x07, 0x03, 0x03, 0x07, 0x07, 0x07, 0x0e, 0x0e, 0x1e, 0x0f, 0x07, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x07, 0x1f, 0xfe, 0xf8, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x80, 0xc0, 0xe0, 0xf0, 0x38, 0x38, 0x1c, 0x0c, 0x0e, 0x0e, 0x07, 0x07, 0x07, 0x07, 0x07, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7b, 0xff, 0xff, 0xc4, 0xc0, 0xc0, 0xc0, 0x80, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0xf8, 0xff, 0xff, 0x07, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x03, 0x07, 0x0f, 0x3e, 0xfc, 0xf0, 0xc0, 0x00, 0x00,  
+....................   0x01, 0x1f, 0x3f, 0x7c, 0xf0, 0xc0, 0xc0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xc0, 0xf0, 0xff, 0x3f, 0x0f, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x03, 0x07, 0x07, 0x0e, 0x0e, 0x0e, 0x0c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x0c, 0x0e, 0x0e, 0x07, 0x03, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00 
+.................... }; 
+.................... const unsigned char rainy[]= { 
+.................... 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xc0, 0xc0, 0xe0, 0xe0, 0xe0, 0x70, 0x70, 0x70, 0x70, 0x70, 0x70, 0x70, 0x70, 0x70, 0x70, 0x70, 0xe0, 0xe0, 0xe0, 0xc0, 0xc0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xc0, 0xf8, 0xfc, 0xfe, 0x1f, 0x0f, 0x07, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x03, 0x03, 0x0f, 0x1f, 0x3e, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x1c, 0x3c, 0x38, 0x78, 0xf0, 0xf0, 0xe0, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xe0, 0xf0, 0xf8, 0x7c, 0x1e, 0x0f, 0x0f, 0x07, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x07, 0x07, 0x07, 0x0f, 0x0e, 0x1e, 0x7c, 0xf8, 0xf0, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x1f, 0x3f, 0x7f, 0xf8, 0xf0, 0xe0, 0xc0, 0xc0, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0xc0, 0xc0, 0xe0, 0xf0, 0xfc, 0x7f, 0x3f, 0x0f, 0x13, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x03, 0x03, 0x03, 0x03, 0xf3, 0xfb, 0xfb, 0xf3, 0x03, 0x03, 0x03, 0x03, 0x83, 0xc3, 0x83, 0x03, 0x03, 0x03, 0x03, 0xf3, 0xfb, 0xfb, 0xf3, 0x03, 0x03, 0x03, 0x03, 0x83, 0xc3, 0x83, 0x03, 0x03, 0x03, 0x03, 0xf3, 0xfb, 0xfb, 0xf3, 0x03, 0x03, 0x03, 0x03, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x0f, 0x0f, 0x0f, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x0f, 0x0f, 0x0f, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 
+.................... }; 
+.................... const unsigned char thunder[]={ 
+....................  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x80, 0x40, 0x40, 0x40, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x40, 0x20, 0x20, 0x10, 0x10, 0x08, 0x08, 0x08, 0x08, 0x00, 0x04, 0x04, 0x04, 0x04, 0x04, 0x00, 0x08, 0x08, 0x08, 0x08, 0x10, 0x10, 0x20, 0x60, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0xc0, 0x80, 0x80, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x40, 0x40, 0x20, 0x3c, 0x2e, 0x21, 0x21, 0x20, 0x20, 0x20, 0x60, 0x30, 0x18, 0x08, 0x08, 0x0c, 0x04, 0x04, 0x04, 0x04, 0x04, 0x08, 0x08, 0x18, 0x10, 0x30, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x40, 0x40, 0xc0, 0x80, 0x80, 0x80, 0xc0, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0xc0, 0x80, 0x80, 0x00, 0x00, 0x00, 0x00, 0x01, 0x03, 0x02, 0x3c, 0x38, 0x60, 0x40, 0xc0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0xe0, 0x30, 0x10, 0x1f, 0x0f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x10, 0x19, 0x1f, 0x10, 0x30, 0xe0, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x03, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x02, 0x04, 0x04, 0x0f, 0xfe, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x06, 0x04, 0x04, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x88, 0xc8, 0x68, 0x38, 0x18, 0x08, 0x08, 0x08, 0x08, 0x48, 0x68, 0x78, 0x58, 0x58, 0xd8, 0xf8, 0x68, 0x48, 0x48, 0x48, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x84, 0x84, 0x86, 0x83, 0x81, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x81, 0x40, 0x40, 0x61, 0x23, 0x3e, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x81, 0xf1, 0xb9, 0xcf, 0x63, 0x30, 0x18, 0x0c, 0x06, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x0c, 0x0e, 0x0b, 0x09, 0x08, 0x08, 0x88, 0xf8, 0x38, 0x8a, 0x82, 0x43, 0x32, 0x32, 0x0a, 0x06, 0x06, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x07, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x1e, 0x0f, 0x06, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 
+.................... }; 
+.................... const unsigned char sunny[]={ 
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x80, 0x80, 0x00, 0x40, 0x40, 0x80, 0x80, 0x80, 0x08, 0x00, 0x10, 0x20, 0x20, 0x40, 0x00, 0x00, 0x80, 0xc0, 0x60, 0x21, 0x34, 0x10, 0x10, 0x10, 0x10, 0x20, 0x20, 0x40, 0x86, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x80, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0x08, 0x06, 0x02, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x02, 0x04, 0x18, 0x08, 0x08, 0x0e, 0x09, 0x10, 0x10, 0x10, 0x20, 0x60, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xe7, 0x18, 0x00, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x60, 0x18, 0x0c, 0x04, 0x02, 0x02, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x02, 0x02, 0x04, 0x0d, 0x10, 0x62, 0x80, 0x04, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3f, 0xe0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x60, 0x1f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  
+....................   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x03, 0x06, 0x04, 0x04, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x04, 0x04, 0x02, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 
+.................... }; 
+.................... //function prototypes 
+.................... void    lcd_init(); 
+.................... void    lcd_command(char command); 
+.................... void    lcd_data(char data); 
+.................... void    lcd_spi(char spi_data); 
+.................... void    lcd_gotoxy(char x, char y); 
+.................... void    lcd_contrast (byte contrast); 
+.................... void    lcd_putc(char cvar); 
+.................... void    lcd_putcInv(char cvar); 
+.................... void    lcd_clear(); 
+.................... void    table_to_lcd(); 
+.................... void    table_to_lcd_inverted(); 
+.................... void    lcd_dot (char x, char y); 
+.................... void    lcd_print_digit(char digit, char x, char y); 
+....................  
+.................... char char_row,charsel,charpos,chardata; 
+.................... int16 ddram; 
+....................  
+.................... void lcd_init() { 
+....................    output_high(lcd_dc);            // bytes are stored in the display data ram, address counter, incremented automatically 
+*
+084F:  BSF    03.5
+0850:  BCF    08.3
+0851:  BCF    03.5
+0852:  BSF    08.3
+....................    output_high(lcd_cs);            // chip disabled 
+0853:  BSF    03.5
+0854:  BCF    05.5
+0855:  BCF    03.5
+0856:  BSF    05.5
+....................    delay_us(200); 
+0857:  MOVLW  C8
+0858:  MOVWF  64
+....................  
+....................    output_low(lcd_res); 
+*
+0867:  BSF    03.5
+0868:  BCF    08.2
+0869:  BCF    03.5
+086A:  BCF    08.2
+....................    delay_ms(50); 
+086B:  MOVLW  32
+086C:  MOVWF  65
+086D:  BCF    0A.3
+086E:  CALL   69C
+086F:  BSF    0A.3
+....................    output_high(lcd_res); 
+0870:  BSF    03.5
+0871:  BCF    08.2
+0872:  BCF    03.5
+0873:  BSF    08.2
+....................  
+....................    lcd_command(0x21); // set extins extended instruction set 
+0874:  MOVLW  21
+0875:  MOVWF  70
+0876:  BCF    0A.3
+0877:  CALL   6B0
+0878:  BSF    0A.3
+....................    lcd_command(0xc8); // Vop  v1: 0xc8 (for 3V), v2: 0xa0 (for 3V) 
+0879:  MOVLW  C8
+087A:  MOVWF  70
+087B:  BCF    0A.3
+087C:  CALL   6B0
+087D:  BSF    0A.3
+....................    lcd_command(0x12); // bias (contrast) 
+087E:  MOVLW  12
+087F:  MOVWF  70
+0880:  BCF    0A.3
+0881:  CALL   6B0
+0882:  BSF    0A.3
+....................    lcd_command(0x20); // horizontal mode from left to right, X axe are incremented automatically, 
+0883:  MOVLW  20
+0884:  MOVWF  70
+0885:  BCF    0A.3
+0886:  CALL   6B0
+0887:  BSF    0A.3
+....................                               // 0x22 for vertical addressing, back on normal instruction set too 
+....................    lcd_command(0x09); // all on 
+0888:  MOVLW  09
+0889:  MOVWF  70
+088A:  BCF    0A.3
+088B:  CALL   6B0
+088C:  BSF    0A.3
+....................  
+....................    delay_ms(50); 
+088D:  MOVLW  32
+088E:  MOVWF  65
+088F:  BCF    0A.3
+0890:  CALL   69C
+0891:  BSF    0A.3
+....................  
+....................    lcd_clear();       // reset DDRAM, otherwise the lcd is blurred with random pixels 
+0892:  BCF    0A.3
+0893:  CALL   6DB
+0894:  BSF    0A.3
+....................  
+....................    delay_ms(10); 
+0895:  MOVLW  0A
+0896:  MOVWF  65
+0897:  BCF    0A.3
+0898:  CALL   69C
+0899:  BSF    0A.3
+....................  
+....................    lcd_command(0x08); // mod control blank change (all off) 
+089A:  MOVLW  08
+089B:  MOVWF  70
+089C:  BCF    0A.3
+089D:  CALL   6B0
+089E:  BSF    0A.3
+....................    delay_ms(10); 
+089F:  MOVLW  0A
+08A0:  MOVWF  65
+08A1:  BCF    0A.3
+08A2:  CALL   69C
+08A3:  BSF    0A.3
+....................  
+....................    lcd_command(0x0c); // mod control normal change 
+08A4:  MOVLW  0C
+08A5:  MOVWF  70
+08A6:  BCF    0A.3
+08A7:  CALL   6B0
+08A8:  BSF    0A.3
+.................... } 
+....................  
+.................... void lcd_clear() { 
+....................    lcd_gotoxy(0,0);         // 84*6=504      clear LCD 
+*
+06DB:  CLRF   6D
+06DC:  CLRF   6E
+06DD:  CALL   6CE
+....................    for (ddram=504; ddram>0; ddram--) 
+06DE:  MOVLW  01
+06DF:  MOVWF  32
+06E0:  MOVLW  F8
+06E1:  MOVWF  31
+06E2:  MOVF   31,F
+06E3:  BTFSS  03.2
+06E4:  GOTO   6E8
+06E5:  MOVF   32,F
+06E6:  BTFSC  03.2
+06E7:  GOTO   6F5
+06E8:  CLRF   2C
+06E9:  BTFSC  0B.7
+06EA:  BSF    2C.7
+06EB:  BCF    0B.7
+....................       lcd_data(0x00); 
+06EC:  CLRF   74
+06ED:  CALL   5A5
+06EE:  BTFSC  2C.7
+06EF:  BSF    0B.7
+06F0:  MOVF   31,W
+06F1:  BTFSC  03.2
+06F2:  DECF   32,F
+06F3:  DECF   31,F
+06F4:  GOTO   6E2
+06F5:  RETURN
+.................... } 
+....................  
+.................... void lcd_command(char command) 
+.................... { 
+....................    output_low(lcd_dc);   // byte is a command it is read with the eight SCLK pulse 
+*
+06B0:  BSF    03.5
+06B1:  BCF    08.3
+06B2:  BCF    03.5
+06B3:  BCF    08.3
+....................    output_low(lcd_cs);   // chip enabled 
+06B4:  BSF    03.5
+06B5:  BCF    05.5
+06B6:  BCF    03.5
+06B7:  BCF    05.5
+....................    delay_us(2); 
+06B8:  MOVLW  03
+06B9:  MOVWF  77
+06BA:  DECFSZ 77,F
+06BB:  GOTO   6BA
+06BC:  CLRF   2C
+06BD:  BTFSC  0B.7
+06BE:  BSF    2C.7
+06BF:  BCF    0B.7
+....................    lcd_spi(command); 
+06C0:  MOVF   70,W
+06C1:  MOVWF  75
+06C2:  CALL   57D
+06C3:  BTFSC  2C.7
+06C4:  BSF    0B.7
+....................    output_high(lcd_cs);   // chip disabled 
+06C5:  BSF    03.5
+06C6:  BCF    05.5
+06C7:  BCF    03.5
+06C8:  BSF    05.5
+....................    delay_us(2); 
+06C9:  MOVLW  03
+06CA:  MOVWF  77
+06CB:  DECFSZ 77,F
+06CC:  GOTO   6CB
+06CD:  RETURN
+.................... } 
+....................  
+.................... void lcd_data(char data) 
+.................... { 
+....................    output_high(lcd_dc); 
+*
+05A5:  BSF    03.5
+05A6:  BCF    08.3
+05A7:  BCF    03.5
+05A8:  BSF    08.3
+....................    output_low(lcd_cs);   // chip enabled 
+05A9:  BSF    03.5
+05AA:  BCF    05.5
+05AB:  BCF    03.5
+05AC:  BCF    05.5
+....................    delay_us(2); 
+05AD:  MOVLW  03
+05AE:  MOVWF  77
+05AF:  DECFSZ 77,F
+05B0:  GOTO   5AF
+....................    lcd_spi(data); 
+05B1:  MOVF   74,W
+05B2:  MOVWF  75
+05B3:  CALL   57D
+....................    output_high(lcd_cs);   // chip disabled 
+05B4:  BSF    03.5
+05B5:  BCF    05.5
+05B6:  BCF    03.5
+05B7:  BSF    05.5
+....................    delay_us(2); 
+05B8:  MOVLW  03
+05B9:  MOVWF  77
+05BA:  DECFSZ 77,F
+05BB:  GOTO   5BA
+05BC:  RETURN
+.................... } 
+....................  
+.................... void lcd_spi(char spi_data) {      // serial write data or command subroutine 
+....................    char caa; 
+....................    for (caa=8;caa>0;caa--) 
+*
+057D:  MOVLW  08
+057E:  MOVWF  76
+057F:  MOVF   76,F
+0580:  BTFSC  03.2
+0581:  GOTO   5A4
+....................    { 
+....................       output_low(lcd_sclk); 
+0582:  BCF    33.3
+0583:  MOVF   33,W
+0584:  BSF    03.5
+0585:  MOVWF  07
+0586:  BCF    03.5
+0587:  BCF    07.3
+....................       delay_us(2); 
+0588:  MOVLW  03
+0589:  MOVWF  77
+058A:  DECFSZ 77,F
+058B:  GOTO   58A
+....................       output_bit(lcd_sda,(spi_data&0x80)); 
+058C:  BTFSC  75.7
+058D:  GOTO   590
+058E:  BCF    07.5
+058F:  GOTO   591
+0590:  BSF    07.5
+0591:  BCF    33.5
+0592:  MOVF   33,W
+0593:  BSF    03.5
+0594:  MOVWF  07
+....................       output_high(lcd_sclk); 
+0595:  BCF    03.5
+0596:  BCF    33.3
+0597:  MOVF   33,W
+0598:  BSF    03.5
+0599:  MOVWF  07
+059A:  BCF    03.5
+059B:  BSF    07.3
+....................       delay_us(2); 
+059C:  MOVLW  03
+059D:  MOVWF  77
+059E:  DECFSZ 77,F
+059F:  GOTO   59E
+....................       spi_data = spi_data << 1; 
+05A0:  BCF    03.0
+05A1:  RLF    75,F
+05A2:  DECF   76,F
+05A3:  GOTO   57F
+....................    } 
+05A4:  RETURN
+.................... } 
+....................  
+.................... void lcd_gotoxy(char x, char y) {   // Nokia LCD 3310 Position cursor 
+....................    lcd_command(0x40|(y&0x07));     // Y axe initialisation: 0100 0yyy 
+*
+06CE:  MOVF   6E,W
+06CF:  ANDLW  07
+06D0:  IORLW  40
+06D1:  MOVWF  6F
+06D2:  MOVWF  70
+06D3:  CALL   6B0
+....................    lcd_command(0x80|(x&0x7f));     // X axe initialisation: 1xxx xxxx 
+06D4:  MOVF   6D,W
+06D5:  ANDLW  7F
+06D6:  IORLW  80
+06D7:  MOVWF  6F
+06D8:  MOVWF  70
+06D9:  CALL   6B0
+06DA:  RETURN
+.................... } 
+....................  
+.................... void lcd_contrast (char contrast) { 
+....................     lcd_command(0x21);                  // LCD Extended Commands. 
+....................     lcd_command(0x80 | contrast);       // Set LCD Vop (Contrast). 
+....................     lcd_command(0x20);                  // LCD Standard Commands, horizontal addressing mode. 
+.................... } 
+....................  
+.................... void lcd_putc(char cvar) {               // Write 1 character to LCD 
+....................    charsel=cvar; 
+*
+05F6:  MOVF   73,W
+05F7:  MOVWF  2E
+....................    table_to_lcd(); 
+05F8:  CALL   5BD
+05F9:  RETURN
+.................... } 
+.................... void lcd_putcInv(char cvar) {               // Write 1 character to LCD 
+....................    charsel=cvar; 
+....................    table_to_lcd_inverted(); 
+.................... } 
+.................... void table_to_lcd() {                      // extract ascii from tables & write to LCD 
+....................    if (charsel<0x20) return; 
+*
+05BD:  MOVF   2E,W
+05BE:  SUBLW  1F
+05BF:  BTFSC  03.0
+05C0:  GOTO   5F5
+....................    if (charsel>0x7f) return; 
+05C1:  MOVF   2E,W
+05C2:  SUBLW  7F
+05C3:  BTFSS  03.0
+05C4:  GOTO   5F5
+....................  
+....................    for (char_row=0;char_row<5;char_row++) 
+05C5:  CLRF   2D
+05C6:  MOVF   2D,W
+05C7:  SUBLW  04
+05C8:  BTFSS  03.0
+05C9:  GOTO   5F3
+....................       { 
+....................          if (charsel<0x50){charpos=(((charsel&0xff)-0x20)*5);chardata=TABLE1[(charpos+char_row)];}   // use TABLE1 
+05CA:  MOVF   2E,W
+05CB:  SUBLW  4F
+05CC:  BTFSS  03.0
+05CD:  GOTO   5DC
+05CE:  MOVF   2E,W
+05CF:  ADDLW  E0
+05D0:  MOVWF  75
+05D1:  MOVWF  76
+05D2:  MOVLW  05
+05D3:  MOVWF  7C
+05D4:  CALL   558
+05D5:  MOVF   78,W
+05D6:  MOVWF  2F
+05D7:  MOVF   2D,W
+05D8:  ADDWF  2F,W
+05D9:  CALL   05C
+05DA:  MOVWF  78
+05DB:  MOVWF  30
+....................          if (charsel>0x4f){charpos=(((charsel&0xff)-0x50)*5);chardata=TABLE2[(charpos+char_row)];}   // use TABLE2 
+05DC:  MOVF   2E,W
+05DD:  SUBLW  4F
+05DE:  BTFSC  03.0
+05DF:  GOTO   5EE
+05E0:  MOVF   2E,W
+05E1:  ADDLW  B0
+05E2:  MOVWF  75
+05E3:  MOVWF  76
+05E4:  MOVLW  05
+05E5:  MOVWF  7C
+05E6:  CALL   558
+05E7:  MOVF   78,W
+05E8:  MOVWF  2F
+05E9:  MOVF   2D,W
+05EA:  ADDWF  2F,W
+05EB:  CALL   153
+05EC:  MOVWF  78
+05ED:  MOVWF  30
+....................  
+....................          lcd_data(chardata);  // send data to nokia 
+05EE:  MOVF   30,W
+05EF:  MOVWF  74
+05F0:  CALL   5A5
+05F1:  INCF   2D,F
+05F2:  GOTO   5C6
+....................       } 
+....................          lcd_data(0x00);      // 1 byte (always blank) 
+05F3:  CLRF   74
+05F4:  CALL   5A5
+05F5:  RETURN
+.................... } 
+.................... void table_to_lcd_inverted() {                      // extract ascii from tables & write to LCD 
+....................    if (charsel<0x20) return; 
+....................    if (charsel>0x7f) return; 
+....................  
+....................    for (char_row=0;char_row<5;char_row++) 
+....................       { 
+....................          if (charsel<0x50){charpos=(((charsel&0xff)-0x20)*5);chardata=TABLE1[(charpos+char_row)];}   // use TABLE1 
+....................          if (charsel>0x4f){charpos=(((charsel&0xff)-0x50)*5);chardata=TABLE2[(charpos+char_row)];}   // use TABLE2 
+....................  
+....................          lcd_data(~chardata);  // send data to nokia 
+....................       } 
+....................          lcd_data(0xff);      // 1 byte (always blank) 
+.................... } 
+.................... void lcd_dot (char x, char y) { 
+....................     char offset; 
+....................     byte  data; 
+....................  
+....................     if (x > 84) return; 
+....................     if (y > 48) return; 
+....................  
+....................     offset = y % 8; 
+....................     data = (0x01<<offset); 
+....................          
+....................     lcd_gotoxy(x, (y/8)); 
+....................     lcd_data(data); 
+.................... } 
+....................  
+.................... void lcd_print_digit(char digit, char x, char y){ 
+....................    int temp; 
+....................    for (char row = 0; row <= 1; row++){ 
+*
+0758:  CLRF   6A
+0759:  MOVF   6A,W
+075A:  SUBLW  01
+075B:  BTFSS  03.0
+075C:  GOTO   7A4
+....................       lcd_gotoxy(x, y+row); 
+075D:  MOVF   6A,W
+075E:  ADDWF  68,W
+075F:  MOVWF  6C
+0760:  MOVF   67,W
+0761:  MOVWF  6D
+0762:  MOVF   6C,W
+0763:  MOVWF  6E
+0764:  CALL   6CE
+....................       for(char col = 0; col < 10; col++){ 
+0765:  CLRF   6B
+0766:  MOVF   6B,W
+0767:  SUBLW  09
+0768:  BTFSS  03.0
+0769:  GOTO   7A2
+076A:  CLRF   2C
+076B:  BTFSC  0B.7
+076C:  BSF    2C.7
+076D:  BCF    0B.7
+....................          temp = (digit*20)+(10*row)+col; 
+076E:  MOVF   66,W
+076F:  MOVWF  76
+0770:  MOVLW  14
+0771:  MOVWF  7C
+0772:  CALL   558
+0773:  BTFSC  2C.7
+0774:  BSF    0B.7
+0775:  MOVF   78,W
+0776:  MOVWF  6C
+0777:  CLRF   2C
+0778:  BTFSC  0B.7
+0779:  BSF    2C.7
+077A:  BCF    0B.7
+077B:  MOVLW  0A
+077C:  MOVWF  76
+077D:  MOVF   6A,W
+077E:  MOVWF  7C
+077F:  CALL   558
+0780:  BTFSC  2C.7
+0781:  BSF    0B.7
+0782:  MOVF   78,W
+0783:  ADDWF  6C,W
+0784:  ADDWF  6B,W
+0785:  MOVWF  69
+....................          if (digit == 12) { 
+0786:  MOVF   66,W
+0787:  SUBLW  0C
+0788:  BTFSS  03.2
+0789:  GOTO   793
+078A:  CLRF   2C
+078B:  BTFSC  0B.7
+078C:  BSF    2C.7
+078D:  BCF    0B.7
+....................          lcd_data(0x00); 
+078E:  CLRF   74
+078F:  CALL   5A5
+0790:  BTFSC  2C.7
+0791:  BSF    0B.7
+....................          continue;} 
+0792:  GOTO   7A0
+....................          lcd_data(digits[temp]); 
+0793:  CLRF   7A
+0794:  MOVF   69,W
+0795:  CALL   24A
+0796:  MOVWF  6C
+0797:  CLRF   2C
+0798:  BTFSC  0B.7
+0799:  BSF    2C.7
+079A:  BCF    0B.7
+079B:  MOVF   6C,W
+079C:  MOVWF  74
+079D:  CALL   5A5
+079E:  BTFSC  2C.7
+079F:  BSF    0B.7
+07A0:  INCF   6B,F
+07A1:  GOTO   766
+....................       } 
+07A2:  INCF   6A,F
+07A3:  GOTO   759
+....................    } 
+07A4:  RETURN
+.................... } 
+....................  
+.................... //#include "C:\Users\NGUYEN DUY LINH\Downloads\Goc.c" 
+....................  
+.................... int buffer[16]; 
+....................  
+.................... int hr1 , hr2, min1, min2, temp1, temp2, date1, date2, hum1, hum2; 
+.................... int incode; 
+.................... boolean ready = 0; 
+....................  
+.................... int index = 0; 
+....................  
+.................... void init() 
+.................... { 
+....................     setup_adc_ports(NO_ANALOGS); 
+*
+0828:  BSF    03.5
+0829:  MOVF   09,W
+082A:  ANDLW  C0
+082B:  MOVWF  09
+082C:  BCF    03.6
+082D:  BCF    1F.4
+082E:  BCF    1F.5
+082F:  MOVLW  00
+0830:  BSF    03.6
+0831:  MOVWF  08
+....................     setup_adc (ADC_OFF) ; 
+0832:  BCF    03.5
+0833:  BCF    03.6
+0834:  BCF    1F.0
+....................     setup_spi (FALSE); 
+0835:  CLRF   14
+....................     setup_uart(115200); 
+0836:  BSF    03.5
+0837:  BSF    03.6
+0838:  BSF    07.3
+0839:  MOVLW  2A
+083A:  BCF    03.6
+083B:  MOVWF  19
+083C:  MOVLW  00
+083D:  MOVWF  1A
+083E:  MOVLW  A6
+083F:  MOVWF  18
+0840:  MOVLW  90
+0841:  BCF    03.5
+0842:  MOVWF  18
+....................     enable_interrupts(INT_RDA); 
+0843:  BSF    03.5
+0844:  BSF    0C.5
+....................     enable_interrupts(GLOBAL); 
+0845:  MOVLW  C0
+0846:  BCF    03.5
+0847:  IORWF  0B,F
+....................     enable_interrupts(INT_EXT); 
+0848:  BSF    0B.4
+....................     ext_int_edge(H_TO_L); 
+0849:  BSF    03.5
+084A:  BCF    01.6
+....................     setup_timer_1( T1_INTERNAL | T1_DIV_BY_2); 
+084B:  MOVLW  15
+084C:  BCF    03.5
+084D:  MOVWF  10
+....................     Set_timer0(0); 
+084E:  CLRF   01
+....................     lcd_init (); 
+.................... } 
+.................... //! 
+.................... //!void time2digit(char hr, char min, char sec, char *hr1, char *hr2, char *min1, char *min2, char *sec1, char *sec2){ 
+.................... //!    *hr1 = hr/10 + 0x30; 
+.................... //!    *hr2 = hr%10 + 0x30; 
+.................... //!    *min1 = min/10 + 0x30; 
+.................... //!    *min2 = min%10 + 0x30; 
+.................... //!    *sec1 = sec/10 + 0x30; 
+.................... //!    *sec2 = sec%10+ 0x30; 
+.................... //!} 
+.................... //! 
+.................... //!void time_display(char hr1, char hr2, char min1, char min2, char sec1, char sec2, char x, char y){ 
+.................... //!    if (x>24 || y>4) return; 
+.................... //!    lcd_print_digit(hr1 -0x30, x, y); 
+.................... //!    lcd_print_digit(hr2-0x30, x + 12, y); 
+.................... //!    lcd_print_digit(min1-0x30, x + 24, y); 
+.................... //!    lcd_print_digit(min2-0x30, x + 36, y); 
+.................... //!    lcd_print_digit(sec1-0x30, x + 48, y); 
+.................... //!    lcd_print_digit(sec2-0x30, x + 60, y); 
+.................... //!} 
+....................  
+....................  
+.................... void buzz(){ 
+....................    output_high(PIN_D1); 
+*
+07A5:  BSF    03.5
+07A6:  BCF    08.1
+07A7:  BCF    03.5
+07A8:  BSF    08.1
+....................    delay_ms(100); 
+07A9:  MOVLW  64
+07AA:  MOVWF  65
+07AB:  CALL   69C
+....................    output_low(PIN_D1); 
+07AC:  BSF    03.5
+07AD:  BCF    08.1
+07AE:  BCF    03.5
+07AF:  BCF    08.1
+07B0:  BSF    0A.3
+07B1:  BCF    0A.4
+07B2:  GOTO   230 (RETURN)
+.................... } 
+....................  
+....................  
+.................... #int_rda 
+.................... void uart_receive(){ 
+....................    incode = getc(); 
+*
+05FA:  BTFSS  0C.5
+05FB:  GOTO   5FA
+05FC:  MOVF   1A,W
+05FD:  MOVWF  4E
+.................... //!   sprintf(str, "%d\n", incode); 
+....................    lcd_putc(incode); 
+05FE:  MOVF   4E,W
+05FF:  MOVWF  73
+0600:  CALL   5F6
+.................... //!   printf(str); 
+....................    if (incode == '#') 
+0601:  MOVF   4E,W
+0602:  SUBLW  23
+0603:  BTFSS  03.2
+0604:  GOTO   607
+....................    {   
+....................       ready=true; 
+0605:  BSF    4F.0
+....................       return; 
+0606:  GOTO   637
+....................    } 
+....................    if (ready){ 
+0607:  BTFSS  4F.0
+0608:  GOTO   637
+.................... //!        if (index<8){ 
+.................... //!         buffer[index] = incode; 
+.................... //!        } 
+.................... //!        else{ index =0; ready = false; 
+.................... //!        } 
+.................... //!   } 
+....................    
+....................       switch(index){ 
+0609:  MOVF   50,W
+060A:  ADDLW  F6
+060B:  BTFSC  03.0
+060C:  GOTO   637
+060D:  ADDLW  0A
+060E:  GOTO   63B
+....................       case 0:  
+....................          hr1 = incode; 
+060F:  MOVF   4E,W
+0610:  MOVWF  44
+....................          index++; 
+0611:  INCF   50,F
+....................          break; 
+0612:  GOTO   637
+....................       case 1: 
+....................          hr2 = incode; 
+0613:  MOVF   4E,W
+0614:  MOVWF  45
+....................          index++; 
+0615:  INCF   50,F
+....................          break; 
+0616:  GOTO   637
+....................       case 2:  
+....................          min1 = incode; 
+0617:  MOVF   4E,W
+0618:  MOVWF  46
+....................          index++; 
+0619:  INCF   50,F
+....................          break; 
+061A:  GOTO   637
+....................       case 3:  
+....................          min2 = incode; 
+061B:  MOVF   4E,W
+061C:  MOVWF  47
+....................          index++; 
+061D:  INCF   50,F
+....................          break; 
+061E:  GOTO   637
+....................       case 4:  
+....................          date1 = incode; 
+061F:  MOVF   4E,W
+0620:  MOVWF  4A
+....................          index++; 
+0621:  INCF   50,F
+....................          break; 
+0622:  GOTO   637
+....................       case 5:  
+....................          date2 = incode; 
+0623:  MOVF   4E,W
+0624:  MOVWF  4B
+....................          index++; 
+0625:  INCF   50,F
+....................          break; 
+0626:  GOTO   637
+....................       case 6:  
+....................          temp1 = incode; 
+0627:  MOVF   4E,W
+0628:  MOVWF  48
+....................          index++; 
+0629:  INCF   50,F
+....................          break; 
+062A:  GOTO   637
+....................       case 7:  
+....................          temp2 = incode; 
+062B:  MOVF   4E,W
+062C:  MOVWF  49
+....................          index++; 
+062D:  INCF   50,F
+....................          break; 
+062E:  GOTO   637
+....................       case 8:  
+....................          hum1 = incode; 
+062F:  MOVF   4E,W
+0630:  MOVWF  4C
+....................          index++; 
+0631:  INCF   50,F
+....................          break; 
+0632:  GOTO   637
+....................       case 9 : 
+....................          hum2 = incode; 
+0633:  MOVF   4E,W
+0634:  MOVWF  4D
+....................          index=0; 
+0635:  CLRF   50
+....................          ready = false; 
+0636:  BCF    4F.0
+....................          break; 
+....................       } 
+....................    } 
+0637:  BCF    0C.5
+0638:  BCF    0A.3
+0639:  BCF    0A.4
+063A:  GOTO   033
+.................... } 
+....................  
+....................  
+.................... char state = 0; 
+.................... char k; 
+.................... char l; 
+.................... char count = 0; 
+.................... #int_ext 
+.................... void encoder(){ 
+....................    if (!state){ 
+*
+0649:  MOVF   51,F
+064A:  BTFSS  03.2
+064B:  GOTO   665
+....................        state = 1; 
+064C:  MOVLW  01
+064D:  MOVWF  51
+....................        l = input(PIN_D4); 
+064E:  BSF    03.5
+064F:  BSF    08.4
+0650:  BCF    03.5
+0651:  CLRF   53
+0652:  BTFSC  08.4
+0653:  INCF   53,F
+....................        k = input(PIN_D5); 
+0654:  BSF    03.5
+0655:  BSF    08.5
+0656:  BCF    03.5
+0657:  CLRF   52
+0658:  BTFSC  08.5
+0659:  INCF   52,F
+....................        Set_timer1(0); 
+065A:  CLRF   0E
+065B:  CLRF   0F
+065C:  CLRF   0E
+....................        if (k) 
+065D:  MOVF   52,F
+065E:  BTFSS  03.2
+....................        { 
+....................          count++; 
+065F:  INCF   54,F
+....................        } 
+.................... //!       else  
+.................... //!       { 
+.................... //!         count--; 
+.................... //!       } 
+....................        if (count > 3) count = 0; 
+0660:  MOVF   54,W
+0661:  SUBLW  03
+0662:  BTFSS  03.0
+0663:  CLRF   54
+.................... //!       if (count < 0) count = 1;  
+....................     } 
+0664:  GOTO   680
+....................     else { 
+....................          if (get_timer1() > 6250){ 
+0665:  MOVF   0F,W
+0666:  MOVWF  7A
+0667:  MOVF   0E,W
+0668:  MOVWF  77
+0669:  MOVF   0F,W
+066A:  SUBWF  7A,W
+066B:  BTFSS  03.2
+066C:  GOTO   665
+066D:  MOVF   77,W
+066E:  MOVWF  73
+066F:  MOVF   7A,W
+0670:  MOVWF  74
+0671:  MOVF   74,W
+0672:  SUBLW  17
+0673:  BTFSC  03.0
+0674:  GOTO   680
+0675:  XORLW  FF
+0676:  BTFSS  03.2
+0677:  GOTO   67C
+0678:  MOVF   73,W
+0679:  SUBLW  6A
+067A:  BTFSC  03.0
+067B:  GOTO   680
+....................          state = 0; 
+067C:  CLRF   51
+....................          Set_timer1(0); 
+067D:  CLRF   0E
+067E:  CLRF   0F
+067F:  CLRF   0E
+....................          } 
+....................     } 
+0680:  BCF    0B.1
+0681:  BCF    0A.3
+0682:  BCF    0A.4
+0683:  GOTO   033
+.................... } 
+....................  
+....................  
+.................... void main() 
+*
+0800:  MOVF   03,W
+0801:  ANDLW  1F
+0802:  MOVWF  03
+0803:  BSF    03.5
+0804:  BSF    03.6
+0805:  BSF    07.3
+0806:  MOVLW  08
+0807:  BCF    03.6
+0808:  MOVWF  19
+0809:  MOVLW  02
+080A:  MOVWF  1A
+080B:  MOVLW  A6
+080C:  MOVWF  18
+080D:  MOVLW  90
+080E:  BCF    03.5
+080F:  MOVWF  18
+0810:  MOVLW  FF
+0811:  MOVWF  33
+0812:  BCF    4F.0
+0813:  CLRF   50
+0814:  CLRF   51
+0815:  CLRF   54
+0816:  CLRF   56
+0817:  CLRF   55
+0818:  BSF    03.5
+0819:  BSF    03.6
+081A:  MOVF   09,W
+081B:  ANDLW  C0
+081C:  MOVWF  09
+081D:  BCF    03.6
+081E:  BCF    1F.4
+081F:  BCF    1F.5
+0820:  MOVLW  00
+0821:  BSF    03.6
+0822:  MOVWF  08
+0823:  BCF    03.5
+0824:  CLRF   07
+0825:  CLRF   08
+0826:  CLRF   09
+0827:  BCF    03.7
+.................... { 
+....................     init();  
+....................     char cnt; 
+....................     char sec; 
+....................     char blink; 
+....................     char x= 4, y=2; 
+*
+08A9:  MOVLW  04
+08AA:  MOVWF  5A
+08AB:  MOVLW  02
+08AC:  MOVWF  5B
+....................     WHILE (true)                                         
+....................     {  
+....................          if (cnt!= count) { 
+08AD:  MOVF   54,W
+08AE:  SUBWF  57,W
+08AF:  BTFSC  03.2
+08B0:  GOTO   0B6
+....................             lcd_clear(); 
+08B1:  BCF    0A.3
+08B2:  CALL   6DB
+08B3:  BSF    0A.3
+....................             cnt = count; 
+08B4:  MOVF   54,W
+08B5:  MOVWF  57
+....................          } 
+....................          if (count == 0){ 
+08B6:  MOVF   54,F
+08B7:  BTFSS  03.2
+08B8:  GOTO   124
+....................             lcd_clear(); 
+08B9:  BCF    0A.3
+08BA:  CALL   6DB
+08BB:  BSF    0A.3
+....................              lcd_gotoxy(0,0); 
+08BC:  CLRF   6D
+08BD:  CLRF   6E
+08BE:  BCF    0A.3
+08BF:  CALL   6CE
+08C0:  BSF    0A.3
+....................             lcd_putc("16/12/2019");  
+08C1:  MOVLW  84
+08C2:  BSF    03.6
+08C3:  MOVWF  0D
+08C4:  MOVLW  06
+08C5:  MOVWF  0F
+08C6:  BCF    0A.3
+08C7:  BCF    03.6
+08C8:  CALL   6F6
+08C9:  BSF    0A.3
+....................             lcd_print_digit(hr1 -0x30, x, y); 
+08CA:  MOVLW  30
+08CB:  SUBWF  44,W
+08CC:  MOVWF  64
+08CD:  MOVWF  66
+08CE:  MOVF   5A,W
+08CF:  MOVWF  67
+08D0:  MOVF   5B,W
+08D1:  MOVWF  68
+08D2:  BCF    0A.3
+08D3:  CALL   758
+08D4:  BSF    0A.3
+....................             lcd_print_digit(hr2-0x30, x + 12, y); 
+08D5:  MOVLW  30
+08D6:  SUBWF  45,W
+08D7:  MOVWF  64
+08D8:  MOVLW  0C
+08D9:  ADDWF  5A,W
+08DA:  MOVWF  65
+08DB:  MOVF   64,W
+08DC:  MOVWF  66
+08DD:  MOVF   65,W
+08DE:  MOVWF  67
+08DF:  MOVF   5B,W
+08E0:  MOVWF  68
+08E1:  BCF    0A.3
+08E2:  CALL   758
+08E3:  BSF    0A.3
+....................             if (blink == 10) { 
+08E4:  MOVF   59,W
+08E5:  SUBLW  0A
+08E6:  BTFSS  03.2
+08E7:  GOTO   0FA
+....................                lcd_print_digit(11, x + 24, y); 
+08E8:  MOVLW  18
+08E9:  ADDWF  5A,W
+08EA:  MOVWF  64
+08EB:  MOVLW  0B
+08EC:  MOVWF  66
+08ED:  MOVF   64,W
+08EE:  MOVWF  67
+08EF:  MOVF   5B,W
+08F0:  MOVWF  68
+08F1:  BCF    0A.3
+08F2:  CALL   758
+08F3:  BSF    0A.3
+....................                blink =0; 
+08F4:  CLRF   59
+....................                delay_ms(100); 
+08F5:  MOVLW  64
+08F6:  MOVWF  65
+08F7:  BCF    0A.3
+08F8:  CALL   69C
+08F9:  BSF    0A.3
+....................             } 
+....................             lcd_print_digit(min1-0x30, x + 36, y);  
+08FA:  MOVLW  30
+08FB:  SUBWF  46,W
+08FC:  MOVWF  64
+08FD:  MOVLW  24
+08FE:  ADDWF  5A,W
+08FF:  MOVWF  65
+0900:  MOVF   64,W
+0901:  MOVWF  66
+0902:  MOVF   65,W
+0903:  MOVWF  67
+0904:  MOVF   5B,W
+0905:  MOVWF  68
+0906:  BCF    0A.3
+0907:  CALL   758
+0908:  BSF    0A.3
+....................             lcd_print_digit(min2-0x30, x + 48, y); 
+0909:  MOVLW  30
+090A:  SUBWF  47,W
+090B:  MOVWF  64
+090C:  MOVLW  30
+090D:  ADDWF  5A,W
+090E:  MOVWF  65
+090F:  MOVF   64,W
+0910:  MOVWF  66
+0911:  MOVF   65,W
+0912:  MOVWF  67
+0913:  MOVF   5B,W
+0914:  MOVWF  68
+0915:  BCF    0A.3
+0916:  CALL   758
+0917:  BSF    0A.3
+.................... //!            lcd_putc(tempd2); 
+....................             cnt = count; 
+0918:  MOVF   54,W
+0919:  MOVWF  57
+....................             blink++; 
+091A:  INCF   59,F
+....................             delay_ms(300); 
+091B:  MOVLW  02
+091C:  MOVWF  64
+091D:  MOVLW  96
+091E:  MOVWF  65
+091F:  BCF    0A.3
+0920:  CALL   69C
+0921:  BSF    0A.3
+0922:  DECFSZ 64,F
+0923:  GOTO   11D
+....................          } 
+....................          if (count ==  1) 
+0924:  DECFSZ 54,W
+0925:  GOTO   179
+....................          { 
+....................             lcd_clear(); 
+0926:  BCF    0A.3
+0927:  CALL   6DB
+0928:  BSF    0A.3
+....................             lcd_gotoxy(4,2); 
+0929:  MOVLW  04
+092A:  MOVWF  6D
+092B:  MOVLW  02
+092C:  MOVWF  6E
+092D:  BCF    0A.3
+092E:  CALL   6CE
+092F:  BSF    0A.3
+....................             lcd_putc("Nhiet do: "); 
+0930:  MOVLW  8A
+0931:  BSF    03.6
+0932:  MOVWF  0D
+0933:  MOVLW  06
+0934:  MOVWF  0F
+0935:  BCF    0A.3
+0936:  BCF    03.6
+0937:  CALL   6F6
+0938:  BSF    0A.3
+0939:  CLRF   2C
+093A:  BTFSC  0B.7
+093B:  BSF    2C.7
+093C:  BCF    0B.7
+....................             lcd_putc(temp1); 
+093D:  MOVF   48,W
+093E:  MOVWF  73
+093F:  BCF    0A.3
+0940:  CALL   5F6
+0941:  BSF    0A.3
+0942:  BTFSC  2C.7
+0943:  BSF    0B.7
+0944:  CLRF   2C
+0945:  BTFSC  0B.7
+0946:  BSF    2C.7
+0947:  BCF    0B.7
+....................             lcd_putc(temp2); 
+0948:  MOVF   49,W
+0949:  MOVWF  73
+094A:  BCF    0A.3
+094B:  CALL   5F6
+094C:  BSF    0A.3
+094D:  BTFSC  2C.7
+094E:  BSF    0B.7
+....................             lcd_gotoxy(4,4); 
+094F:  MOVLW  04
+0950:  MOVWF  6D
+0951:  MOVWF  6E
+0952:  BCF    0A.3
+0953:  CALL   6CE
+0954:  BSF    0A.3
+....................             lcd_putc("Do am: "); 
+0955:  MOVLW  90
+0956:  BSF    03.6
+0957:  MOVWF  0D
+0958:  MOVLW  06
+0959:  MOVWF  0F
+095A:  BCF    0A.3
+095B:  BCF    03.6
+095C:  CALL   6F6
+095D:  BSF    0A.3
+095E:  CLRF   2C
+095F:  BTFSC  0B.7
+0960:  BSF    2C.7
+0961:  BCF    0B.7
+....................             lcd_putc(hum1); 
+0962:  MOVF   4C,W
+0963:  MOVWF  73
+0964:  BCF    0A.3
+0965:  CALL   5F6
+0966:  BSF    0A.3
+0967:  BTFSC  2C.7
+0968:  BSF    0B.7
+0969:  CLRF   2C
+096A:  BTFSC  0B.7
+096B:  BSF    2C.7
+096C:  BCF    0B.7
+....................             lcd_putc(hum2); 
+096D:  MOVF   4D,W
+096E:  MOVWF  73
+096F:  BCF    0A.3
+0970:  CALL   5F6
+0971:  BSF    0A.3
+0972:  BTFSC  2C.7
+0973:  BSF    0B.7
+....................             delay_ms(200); 
+0974:  MOVLW  C8
+0975:  MOVWF  65
+0976:  BCF    0A.3
+0977:  CALL   69C
+0978:  BSF    0A.3
+....................          } 
+....................          if (count == 2) 
+0979:  MOVF   54,W
+097A:  SUBLW  02
+097B:  BTFSS  03.2
+097C:  GOTO   1BF
+....................          { 
+....................             lcd_clear(); 
+097D:  BCF    0A.3
+097E:  CALL   6DB
+097F:  BSF    0A.3
+....................             //lcd_putc("Man hinh 3"); 
+....................             lcd_gotoxy(0,0); 
+0980:  CLRF   6D
+0981:  CLRF   6E
+0982:  BCF    0A.3
+0983:  CALL   6CE
+0984:  BSF    0A.3
+....................            // int16 i;  
+....................            for (int16 i=0; i<=504;i++) lcd_data(sunny[i]); 
+0985:  CLRF   5D
+0986:  CLRF   5C
+0987:  MOVF   5D,W
+0988:  SUBLW  01
+0989:  BTFSS  03.0
+098A:  GOTO   1A7
+098B:  BTFSS  03.2
+098C:  GOTO   191
+098D:  MOVF   5C,W
+098E:  SUBLW  F8
+098F:  BTFSS  03.0
+0990:  GOTO   1A7
+0991:  MOVF   5D,W
+0992:  MOVWF  7A
+0993:  MOVF   5C,W
+0994:  BCF    0A.3
+0995:  CALL   357
+0996:  BSF    0A.3
+0997:  MOVWF  64
+0998:  CLRF   2C
+0999:  BTFSC  0B.7
+099A:  BSF    2C.7
+099B:  BCF    0B.7
+099C:  MOVF   64,W
+099D:  MOVWF  74
+099E:  BCF    0A.3
+099F:  CALL   5A5
+09A0:  BSF    0A.3
+09A1:  BTFSC  2C.7
+09A2:  BSF    0B.7
+09A3:  INCF   5C,F
+09A4:  BTFSC  03.2
+09A5:  INCF   5D,F
+09A6:  GOTO   187
+....................            lcd_gotoxy(1,0); 
+09A7:  MOVLW  01
+09A8:  MOVWF  6D
+09A9:  CLRF   6E
+09AA:  BCF    0A.3
+09AB:  CALL   6CE
+09AC:  BSF    0A.3
+....................            lcd_putc("sunny"); 
+09AD:  MOVLW  94
+09AE:  BSF    03.6
+09AF:  MOVWF  0D
+09B0:  MOVLW  06
+09B1:  MOVWF  0F
+09B2:  BCF    0A.3
+09B3:  BCF    03.6
+09B4:  CALL   6F6
+09B5:  BSF    0A.3
+....................            delay_ms(500); 
+09B6:  MOVLW  02
+09B7:  MOVWF  64
+09B8:  MOVLW  FA
+09B9:  MOVWF  65
+09BA:  BCF    0A.3
+09BB:  CALL   69C
+09BC:  BSF    0A.3
+09BD:  DECFSZ 64,F
+09BE:  GOTO   1B8
+....................             //delay_ms(50); 
+....................            //for(i=0; i<504; i++)  
+....................           // cnt = count; 
+....................          } 
+....................          if (count == 3) 
+09BF:  MOVF   54,W
+09C0:  SUBLW  03
+09C1:  BTFSS  03.2
+09C2:  GOTO   23C
+....................          { 
+....................          char x= 4, y=2; 
+....................          int a, b, c, d; 
+09C3:  MOVLW  04
+09C4:  MOVWF  5E
+09C5:  MOVLW  02
+09C6:  MOVWF  5F
+....................          a = 1; b = 2; c = 1; d = 4; 
+09C7:  MOVLW  01
+09C8:  MOVWF  60
+09C9:  MOVLW  02
+09CA:  MOVWF  61
+09CB:  MOVLW  01
+09CC:  MOVWF  62
+09CD:  MOVLW  04
+09CE:  MOVWF  63
+....................             lcd_clear(); 
+09CF:  BCF    0A.3
+09D0:  CALL   6DB
+09D1:  BSF    0A.3
+....................             lcd_gotoxy(1,0); 
+09D2:  MOVLW  01
+09D3:  MOVWF  6D
+09D4:  CLRF   6E
+09D5:  BCF    0A.3
+09D6:  CALL   6CE
+09D7:  BSF    0A.3
+....................             lcd_putc("Arlam at:");  
+09D8:  MOVLW  97
+09D9:  BSF    03.6
+09DA:  MOVWF  0D
+09DB:  MOVLW  06
+09DC:  MOVWF  0F
+09DD:  BCF    0A.3
+09DE:  BCF    03.6
+09DF:  CALL   6F6
+09E0:  BSF    0A.3
+....................             lcd_print_digit(a, x, y); 
+09E1:  MOVF   60,W
+09E2:  MOVWF  66
+09E3:  MOVF   5E,W
+09E4:  MOVWF  67
+09E5:  MOVF   5F,W
+09E6:  MOVWF  68
+09E7:  BCF    0A.3
+09E8:  CALL   758
+09E9:  BSF    0A.3
+....................             lcd_print_digit(b, x + 12, y); 
+09EA:  MOVLW  0C
+09EB:  ADDWF  5E,W
+09EC:  MOVWF  64
+09ED:  MOVF   61,W
+09EE:  MOVWF  66
+09EF:  MOVF   64,W
+09F0:  MOVWF  67
+09F1:  MOVF   5F,W
+09F2:  MOVWF  68
+09F3:  BCF    0A.3
+09F4:  CALL   758
+09F5:  BSF    0A.3
+....................             lcd_print_digit(11, x +24, y); 
+09F6:  MOVLW  18
+09F7:  ADDWF  5E,W
+09F8:  MOVWF  64
+09F9:  MOVLW  0B
+09FA:  MOVWF  66
+09FB:  MOVF   64,W
+09FC:  MOVWF  67
+09FD:  MOVF   5F,W
+09FE:  MOVWF  68
+09FF:  BCF    0A.3
+0A00:  CALL   758
+0A01:  BSF    0A.3
+....................             lcd_print_digit(c, x + 36,y); 
+0A02:  MOVLW  24
+0A03:  ADDWF  5E,W
+0A04:  MOVWF  64
+0A05:  MOVF   62,W
+0A06:  MOVWF  66
+0A07:  MOVF   64,W
+0A08:  MOVWF  67
+0A09:  MOVF   5F,W
+0A0A:  MOVWF  68
+0A0B:  BCF    0A.3
+0A0C:  CALL   758
+0A0D:  BSF    0A.3
+....................             lcd_print_digit(d, x +48, y); 
+0A0E:  MOVLW  30
+0A0F:  ADDWF  5E,W
+0A10:  MOVWF  64
+0A11:  MOVF   63,W
+0A12:  MOVWF  66
+0A13:  MOVF   64,W
+0A14:  MOVWF  67
+0A15:  MOVF   5F,W
+0A16:  MOVWF  68
+0A17:  BCF    0A.3
+0A18:  CALL   758
+0A19:  BSF    0A.3
+....................             if(((hr1-0x30==a) && (hr2 - 0x30 == b)) && ((min1 - 0x30 == c) && (min2-0x30 ==d))){ 
+0A1A:  MOVLW  30
+0A1B:  SUBWF  44,W
+0A1C:  SUBWF  60,W
+0A1D:  BTFSS  03.2
+0A1E:  GOTO   231
+0A1F:  MOVLW  30
+0A20:  SUBWF  45,W
+0A21:  SUBWF  61,W
+0A22:  BTFSS  03.2
+0A23:  GOTO   231
+0A24:  MOVLW  30
+0A25:  SUBWF  46,W
+0A26:  SUBWF  62,W
+0A27:  BTFSS  03.2
+0A28:  GOTO   231
+0A29:  MOVLW  30
+0A2A:  SUBWF  47,W
+0A2B:  SUBWF  63,W
+0A2C:  BTFSS  03.2
+0A2D:  GOTO   231
+....................             buzz(); 
+0A2E:  BCF    0A.3
+0A2F:  GOTO   7A5
+0A30:  BSF    0A.3
+....................             } 
+....................             cnt = count; 
+0A31:  MOVF   54,W
+0A32:  MOVWF  57
+....................             delay_ms(500); 
+0A33:  MOVLW  02
+0A34:  MOVWF  64
+0A35:  MOVLW  FA
+0A36:  MOVWF  65
+0A37:  BCF    0A.3
+0A38:  CALL   69C
+0A39:  BSF    0A.3
+0A3A:  DECFSZ 64,F
+0A3B:  GOTO   235
+....................          } 
+0A3C:  GOTO   0AD
+....................         // delay_ms(30); 
+....................       }  
+....................  }  
+0A3D:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CE2   HS NOWDT PUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 0700   BORV40 NOWRT

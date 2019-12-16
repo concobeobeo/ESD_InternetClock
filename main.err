@@ -1,0 +1,9 @@
+>>> Warning 216 "main.c" Line 244(2,3): Interrupts disabled during call to prevent re-entrancy:  (lcd_spi)
+>>> Warning 216 "main.c" Line 244(2,3): Interrupts disabled during call to prevent re-entrancy:  (lcd_data)
+>>> Warning 216 "main.c" Line 244(2,3): Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+>>> Warning 216 "main.c" Line 244(2,3): Interrupts disabled during call to prevent re-entrancy:  (@MUL88)
+>>> Warning 202 "main.c" Line 18(5,11): Variable never used:   buffer
+>>> Warning 202 "main.c" Line 169(10,13): Variable never used:   sec
+      Memory usage:   ROM=31%      RAM=21% - 26%
+      0 Errors,  6 Warnings.
+Build Successful.
