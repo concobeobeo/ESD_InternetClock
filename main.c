@@ -74,7 +74,9 @@ void init()
 
 void buzz(){
    output_high(PIN_D1);
+   output_high(PIN_A4);
    delay_ms(50);
+   output_low(PIN_A4);
    output_low(PIN_D1);
 }
 //!#INT_TIMER1
@@ -131,9 +133,18 @@ void encoder(){
        state = 1;
        l = input(PIN_D4);
        k = input(PIN_D5);
+<<<<<<< HEAD
        Set_timer0(0);
        count++;
        lcd_clear();
+=======
+       Set_timer1(0);
+       if (k) count++;
+//!       else 
+//!       {
+//!         count--;
+//!       }
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
        if (count > 3) count = 0;
        if (count < 0) count = 1;
        if (count == 2) putc('@'); // update thoi tiet khi vao man hinh thoi tiet
@@ -283,6 +294,7 @@ void main()
             lcd_data(0x80);
             lcd_data(0x80);
          }
+<<<<<<< HEAD
          else if (count == 3)
          {   
             char x= 4, y=2;
@@ -307,6 +319,27 @@ void main()
             lcd_data(0x00);
             lcd_data(0x60);
             lcd_data(0x60);
+=======
+         
+         char x= 4, y=2;
+         int a, b, c, d, check;
+         a = 1; b = 2; c = 1; d = 4;check = pin_D6;
+            //lcd_clear();
+            if(check!=PIN_D6) output_high(PIN_A4);
+            lcd_gotoxy(1,0);
+            lcd_putc("Arlam at:"); 
+            lcd_print_digit(a, x, y);
+            lcd_print_digit(b, x + 12, y);
+            lcd_print_digit(11, x +24, y);
+            lcd_print_digit(c, x + 36,y);
+            lcd_print_digit(d, x +48, y);
+            if(((hr1-0x30==a) && (hr2 - 0x30 == b)) && ((min1 - 0x30 == c) && (min2-0x30 ==d))){
+            buzz();
+            }
+            cnt = count;
+            
+            //delay_ms(500);
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
          }
        delay_ms(100);
 //!         if(((hr1-0x30==a) && (hr2 - 0x30 == b)) && ((min1 - 0x30 == c) && (min2-0x30 ==d))){

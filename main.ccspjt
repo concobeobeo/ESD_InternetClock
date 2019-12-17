@@ -26,7 +26,7 @@ Target=main.hex
 Development_Mode=
 Processor_Text=PIC16F887
 ToolSuite=CCS
-CCSVersion=5.051
+CCSVersion=5.025
 Compiler=PCM
 [Target Data]
 BuildTool=C-COMPILER
@@ -49,7 +49,7 @@ AdditionalOptionString=
 Fixed=
 [Opened Files]
 1=main.c
-2=5110lib\rtic.c
+2=
 3=5110lib\3310(modified).c
 4=..\5110 LCD-Pic18f4550\5110lib\Goc.c
 5=uart.c
@@ -390,7 +390,11 @@ D13_L36=[84005]Started Editing.
 D13_L37=[84433]Stopped Editing.
 D13_L38=[85508]Started Editing.
 D14=16-12-2019
+<<<<<<< HEAD
 D14_L=85
+=======
+D14_L=73
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
 D14_L1=[168]Stopped Editing.
 D14_L2=[493]Started Editing.
 D14_L3=[2782]Stopped Editing.
@@ -464,6 +468,7 @@ D14_L68=[53756]Stopped Editing.
 D14_L69=[54328]Started Editing.
 D14_L70=[55428]Stopped Editing.
 D14_L71=[55491]Started Editing.
+<<<<<<< HEAD
 D14_L72=[72844]Stopped Editing.
 D14_L73=[74704]Started Editing.
 D14_L74=[75134]Stopped Editing.
@@ -521,6 +526,10 @@ D15_L38=[67074]Stopped Editing.
 D15_E=308
 D15_D=0
 D15_L39=[67166]Project Closed.
+=======
+D14_L72=[80576]Project Opened.
+D14_L73=[80590]Started Editing.
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
 [Units]
 Count=1
 1=main (main)

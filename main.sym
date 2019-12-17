@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 004-005 @WRITE_PROGRAM_MEMORY8.P1
 004-005 @READ_PROGRAM_MEMORY8.P2
 00C.0   TMR1IF
 015     CCP_1
+=======
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
 015     CCP_1_LOW
+015     CCP_1
 016     CCP_1_HIGH
 01B     CCP_2
 01B     CCP_2_LOW
@@ -20,6 +26,7 @@
 02A     @INTERRUPT_AREA
 02B     @INTERRUPT_AREA
 02C     @INTERRUPT_AREA
+<<<<<<< HEAD
 02D     @TRIS_C
 02E     char_row
 02F     charsel
@@ -52,12 +59,83 @@
 04B-06A buffer
 06B-06C ptr
 06D     index
+=======
+02D     char_row
+02E     charsel
+02F     charpos
+030     chardata
+031-032 ddram
+033     @TRIS_C
+034-043 buffer
+044     state
+045     k
+046     l
+047     count
+048     hr1
+049     hr2
+04A     min1
+04B     min2
+04C     temp1
+04D     temp2
+04E     date1
+04F     date2
+050     hum1
+051     hum2
+052     incode
+053     cnt
+054.0   ready
+055     index
+056     MAIN.sec
+057     MAIN.blink
+058     MAIN.x
+059     MAIN.y
+05A-05B MAIN.i
+05C     MAIN.x
+05D     MAIN.y
+05E     MAIN.a
+05F     MAIN.b
+060     MAIN.c
+061     MAIN.d
+062     MAIN.check
+063     @delay_us1.P1
+063     @delay_ms1.P2
+063     MAIN.@SCRATCH1
+063     @PSTRINGC7_656.@SCRATCH1
+064     MAIN.@SCRATCH2
+064     @PSTRINGC7_656.@SCRATCH2
+065     lcd_print_digit.digit
+065     @PSTRINGC7_656.@SCRATCH3
+066     lcd_putc.cvar
+066     lcd_print_digit.x
+066     @PSTRINGC7_656.@SCRATCH4
+067     lcd_print_digit.y
+067     table_to_lcd.@SCRATCH1
+068     lcd_print_digit.temp
+068     table_to_lcd.@SCRATCH2
+069     lcd_print_digit.row
+06A     lcd_print_digit.col
+06B     lcd_print_digit.@SCRATCH1
+06C     @MUL88.P1
+06D     @MUL88.P1
+072     lcd_gotoxy.x
+072     lcd_data.data
+072     encoder.@SCRATCH1
+073     lcd_gotoxy.y
+073     encoder.@SCRATCH2
+074     lcd_gotoxy.@SCRATCH1
+075     lcd_command.command
+076     lcd_spi.spi_data
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
 079     @SCRATCH
 07A     @SCRATCH
 07B     @SCRATCH
+<<<<<<< HEAD
+=======
+07C     lcd_spi.caa
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
 07F     @INTERRUPT_AREA
 0A0-0AF str
 0B0     lcd_date.date
@@ -111,8 +189,8 @@
 0FF     @INTERRUPT_AREA
 107.6   C1OUT
 108.6   C2OUT
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 17F     @INTERRUPT_AREA
 1FF     @INTERRUPT_AREA
 27F     @INTERRUPT_AREA
@@ -151,6 +229,7 @@ ROM Allocation:
 00015A  TABLE2.data
 00024A  digits.call
 000253  digits.data
+<<<<<<< HEAD
 000357  @const671.call
 00035C  @const676.call
 000360  @const677.call
@@ -200,11 +279,44 @@ ROM Allocation:
 000800  @cinit1
 000800  MAIN
 00084D  @cinit2
+=======
+000357  sunny.call
+000360  sunny.data
+000558  lcd_spi
+000584  lcd_command
+0005A0  lcd_gotoxy
+0005AD  lcd_data
+0005C9  lcd_clear
+0005DE  uart_receive
+000625  @goto10777
+000633  encoder
+00066E  @const716.call
+000674  @const718.call
+00067A  @const719.call
+00067B  @const720.call
+00067C  @const721.call
+000680  @const722.call
+000682  @const731.call
+000687  init
+0006AF  lcd_init
+0006B9  @delay_us1
+00076C  buzz
+000776  @delay_ms1
+000792  @PSTRINGC7_656
+000800  lcd_putc
+000802  table_to_lcd
+000897  lcd_print_digit
+0008DF  @MUL88
+00092C  @cinit1
+00092C  MAIN
+000951  @cinit2
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
 
 Project Directory:
-    C:\Users\NGUYEN DUY LINH\Desktop\NOKIA5110\
+    C:\Users\user\Desktop\ESD\ESD_InternetClock\
 
 Project Files:
+<<<<<<< HEAD
     main.c                                                  [17-Dec-19 18:23  CRC=B3FB5E74]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h   [22-Oct-15 10:30  CRC=E224733F]
     5110lib\3310(modified).c                                [17-Dec-19 13:08  CRC=10DC5D2B]
@@ -214,6 +326,13 @@ Source signature=74FE6D86
 Program memory checksum=0000
 Program memory CRC=0000
 Hex file CRC=8B24
+=======
+    main.c                                                  [16-Dec-19 22:23  CRC=8227899B]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [18-Apr-14 16:56  CRC=42D047B0]
+    5110lib\3310(modified).c                                [16-Dec-19 20:33  CRC=0E65E54A]
+
+Source signature=E1C39BDF
+>>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
 
 Units:
     main (main)
