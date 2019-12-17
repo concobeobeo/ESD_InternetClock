@@ -3,9 +3,10 @@
 #include <ArduinoJson.h>
 #include <Wire.h>
 #include <WiFiUdp.h>
+#include <time.h>
 
-const char* ssid = "MI4 LTE";
-const char* password = "12345678";
+const char* ssid = "8 ae sieu nhan";
+const char* password = "07132018";
 String APIKEY = "bb627c72e172c70a7bd7c5e2e76eb9bc";                                 
 String CityID = "1566083";                                 
 int refresh_time = 10;
@@ -36,6 +37,9 @@ int Hr;
 int Min;
 int Sec;
 int Day;
+int Date;
+int Month;
+int Year;
 
 void setup() {
   Serial.begin(115200);
@@ -46,18 +50,29 @@ void setup() {
   {
       delay(500);
   }
+  delay(2000);
   Serial.flush();
+  Serial.print("@");
+  delay(100);
+  Serial.print("@");
+  delay(100);
+  Serial.print("@");
+  delay(100);
+  Serial.print("@");
+  delay(100);
+  Serial.print("@");
+  delay(100);
   Serial.print("@");
   timeClient.begin();
   getWeatherData();
   getTime();
-  delay(1000);
-  serialSend(weatherDescription, Temperature, Pressure, Humidity, Day, Hr, Min, Sec);
+  firstSend(weatherDescription, Temperature, Pressure, Humidity, Day, Hr, Min, Sec);
 }
 
 unsigned long timer1;
 unsigned long timer2;
 unsigned long timer3;
+char c;
 void loop() {
     if(counter == 3)                              
     {
@@ -79,10 +94,16 @@ void loop() {
 //      }
     if ( (unsigned long) (millis() - timer1) > 10000)
     {
-        serialSend(weatherDescription, Temperature, Pressure, Humidity, Day, Hr, Min, Sec);
+//        serialSend(weatherDescription, Temperature, Pressure, Humidity, Day, Hr, Min, Sec);
         getTime();
         timer1 = millis();   
-    }    
+    }  
+      c = Serial.read();
+      if (c=='@'){
+        serialSend(weatherDescription, Temperature, Pressure, Humidity, Day, Hr, Min, Sec);
+        
+//        timer1 = millis();          
+      }
 }
 
 void getTime(){
@@ -131,25 +152,53 @@ void getWeatherData()
     JsonObject &root = json_buf.parseObject(jsonArray);
     
     if (!root.success())
-      {
+    {
         Serial.println("parseObject() failed");
-      }
+    }
 
-      String location = root["name"];
-      String country = root["sys"]["country"];
-      float temperature = root["main"]["feels_like"];
-      float humidity = root["main"]["humidity"];
-      String weather = root["weather"]["main"];
-      String description = root["weather"]["description"];
-      float pressure = root["main"]["pressure"];
-      weatherDescription = description;
-      weatherLocation = location;
-      Country = country;
-      Temperature = temperature;
-      Humidity = humidity;
-      Pressure = pressure;
-      client.flush();
+    String location = root["name"];
+    String country = root["sys"]["country"];
+    float temperature = root["main"]["feels_like"];
+    float humidity = root["main"]["humidity"];
+    String weather = root["weather"]["main"];
+    String description = root["weather"]["description"];
+    float pressure = root["main"]["pressure"];
+    weatherDescription = description;
+    weatherLocation = location;
+    Country = country;
+    Temperature = temperature;
+    Humidity = humidity;
+    Pressure = pressure;
+    client.flush();
 
+}
+
+void firstSend(String description, float temperature, float pressure, float humidity, int d, int h, int m, int s)
+{
+      Serial.print("#");
+      if (h<10) {
+          Serial.print(0);
+         Serial.print(int(h));
+      } else Serial.print(int(h));
+      delay(100);
+      if (m<10) {
+          Serial.print(0);
+         Serial.print(int(m));
+      } else Serial.print(int(m));
+      delay(100);
+      Serial.print(d);
+      delay(100);
+      Serial.print(int(temperature));
+      delay(100);
+      Serial.print(int(humidity));
+      delay(100);
+      if (s<10) {
+          Serial.print(0);
+         Serial.print(int(s));
+      } else Serial.print(int(s));
+      delay(100);
+      Serial.println("$");
+      delay(100);
 }
 
 void serialSend(String description, float temperature, float pressure, float humidity, int d, int h, int m, int s)
@@ -168,7 +217,7 @@ void serialSend(String description, float temperature, float pressure, float hum
       delay(100);
 ////      Serial.print("%");
 ////      Serial.print("%");
-      Serial.print(0);
+//      Serial.print(0);
       Serial.print(d);
       delay(100);
       Serial.print(int(temperature));
@@ -179,42 +228,41 @@ void serialSend(String description, float temperature, float pressure, float hum
 //      Serial.print(h);
 ////      Serial.print("%");
 //      Serial.print(m);
-////      Serial.print("%");
-//      Serial.print(s);
-////      Serial.print("%");      
+////      Serial.print("%");     
 //      Serial.print("*");
-//      Serial.print(weatherDescription);
+      Serial.print(weatherDescription);
 //      Serial.print("*"); 
-//      Serial.println("$");
+      Serial.println("$");
+      delay(100);
 }
 
-void displayWeather(String location,String description)
-{
-      Serial.print("Country: ");
-      Serial.println(Country );
-      Serial.print("Weather Description: ");
-      Serial.println(description);
-}
-
-void displayConditions(float Temperature,float Humidity, float Pressure)
-{
-     //Printing Temperature
-     Serial.print("Nhiet do: "); 
-     Serial.print(Temperature,1);
-     Serial.print("*");
-     Serial.println("C "); 
-     //Printing Humidity                                        
-     Serial.print("Do am:");                       
-     Serial.print(Humidity,0);
-     Serial.println(" %"); 
-     //Printing Pressure 
-     Serial.print("Ap suat: ");
-     Serial.print(Pressure,1);
-     Serial.println(" hPa"); 
-     Serial.println("####################");
-}
-
-void displayGettingData()
-{
-     Serial.println("Getting data.........");
-}
+//void displayWeather(String location,String description)
+//{
+//      Serial.print("Country: ");
+//      Serial.println(Country );
+//      Serial.print("Weather Description: ");
+//      Serial.println(description);
+//}
+//
+//void displayConditions(float Temperature,float Humidity, float Pressure)
+//{
+//     //Printing Temperature
+//     Serial.print("Nhiet do: "); 
+//     Serial.print(Temperature,1);
+//     Serial.print("*");
+//     Serial.println("C "); 
+//     //Printing Humidity                                        
+//     Serial.print("Do am:");                       
+//     Serial.print(Humidity,0);
+//     Serial.println(" %"); 
+//     //Printing Pressure 
+//     Serial.print("Ap suat: ");
+//     Serial.print(Pressure,1);
+//     Serial.println(" hPa"); 
+//     Serial.println("####################");
+//}
+//
+//void displayGettingData()
+//{
+//     Serial.println("Getting data.........");
+//}

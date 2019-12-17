@@ -26,11 +26,9 @@ int hr1 = 0, hr2 =0, min1 = 0, min2 = 0, sec1 = 0, sec2= 0, temp1 = 0 , temp2 =0
 int incode;
 char cnt;
 int sec;
-char where2end;
-boolean connected = 0;
 boolean ready = 0;
 
-char buffer[32];
+char buffer[16];
 char str[16];
 char *ptr = &buffer;
 int index = 0;
@@ -50,26 +48,6 @@ void init()
     SET_TIMER1(3036);
     lcd_init ();
     TMR1IF = 1; // ep ngat timer1
-    lcd_gotoxy(22, 1);
-    lcd_putc("WELCOME!");
-    lcd_gotoxy(12, 2);
-    lcd_putc("San pham cua");
-    lcd_gotoxy(27, 3);
-    lcd_putc("NHOM 7");
-    delay_ms(2000);
-    lcd_clear();
-    lcd_gotoxy(10, 2);
-    lcd_putc("Connecting ");
-    lcd_gotoxy(15, 3);
-    while(!connected){
-       lcd_data(0x80);
-       lcd_data(0x00);
-       delay_ms(500);
-    }
-    lcd_clear();
-    while (!ready) 
-    sec1 = buffer[9];
-    sec1 = buffer[10];
 }
 
 void buzz(){
@@ -100,19 +78,13 @@ void buzz(){
 #INT_RDA 
 void uart_receive(){
    incode = getc();
-   if (incode == '@')
-   {  
-      connected = 1;
-      return;
-   }
    if (incode == '#')
    {  
       ready=true;
       return;
    }
    if (incode == '$')
-   { 
-      *ptr = incode;
+   {  
       ptr = &buffer;
       ready=false;
       return;
@@ -135,8 +107,7 @@ void encoder(){
        count++;
        lcd_clear();
        if (count > 3) count = 0;
-       if (count < 0) count = 1;
-       if (count == 2) putc('@'); // update thoi tiet khi vao man hinh thoi tiet
+       if (count < 0) count = 1; 
     }
     else {
          if (get_timer0() > 49){
@@ -151,7 +122,6 @@ void main()
 {
     init(); 
     char x= 4, y=2;
-    char x1= 10, y1=2;
     buzz();
     WHILE (true)                                        
     { 
@@ -161,27 +131,27 @@ void main()
             cnt++;
             if (cnt==10){
               sec++;
-              if (sec>=60){
+              if (sec>60){
                  sec = 0;
                  buzz();
                  putc(0x40);
               }
               cnt=0;
-//!              output_high(PIN_A4); 
+              output_high(PIN_A4); 
             }
-//!            else output_low(PIN_A4); 
+            else output_low(PIN_A4); 
             sec1 = sec/10 + 0x30;
             sec2 = sec%10 + 0x30;
          }
     
-         if (count == 1){
+         if (count == 0){
             hr1 = buffer[0];
             hr2 = buffer[1];
             min1 = buffer[2];
             min2 = buffer[3];
             date = buffer[4];
             
-            lcd_gotoxy(25, 0);
+            lcd_gotoxy(15, 0);
             lcd_putc(date-0x30);
             if (date == '0') lcd_putc("CHU NHAT");
             if (date == '1') lcd_putc("THU HAI");
@@ -196,13 +166,9 @@ void main()
             lcd_print_digit(11, x + 24, y);
             lcd_print_digit(min1-0x30, x + 36, y); 
             lcd_print_digit(min2-0x30, x + 48, y);
-            lcd_putc(" ");
             lcd_putc(sec1);
             lcd_putc(sec2);
             lcd_gotoxy(40,5);
-            lcd_data(0x80);
-            lcd_data(0x80);
-            lcd_data(0x00);
             lcd_data(0x60);
             lcd_data(0x60);
             lcd_data(0x00);
@@ -211,9 +177,11 @@ void main()
             lcd_data(0x00);
             lcd_data(0x80);
             lcd_data(0x80);
-         
+            lcd_data(0x00);
+            lcd_data(0x80);
+            lcd_data(0x80);
          }
-         else if (count ==  0)
+         else if (count ==  1)
          {  
             
             temp1 = buffer[5];
@@ -226,9 +194,9 @@ void main()
                lcd_gotoxy(10, 3);
                lcd_putc("Loading...");
             }
-            lcd_gotoxy(4,1);
+            lcd_gotoxy(4,0);
             lcd_putc("Temp.: ");
-            lcd_gotoxy(55,1);
+            lcd_gotoxy(55,0);
             lcd_putc(temp1);
             lcd_putc(temp2);
             lcd_putc(" ");
@@ -236,18 +204,18 @@ void main()
             lcd_data(0x03);
             lcd_data(0x00);
             lcd_putc("C");
-            lcd_gotoxy(5,3);
+            lcd_gotoxy(5,1);
             lcd_putc("Hum.: ");
-            lcd_gotoxy(55,3);
+            lcd_gotoxy(55,1);
             lcd_putc(hum1);
             lcd_putc(hum2);
             lcd_putc(" %");
             lcd_gotoxy(40,5);
-            lcd_data(0x60);
-            lcd_data(0x60);
+            lcd_data(0x80);
+            lcd_data(0x80);
             lcd_data(0x00);
-            lcd_data(0x80);
-            lcd_data(0x80);
+            lcd_data(0x60);
+            lcd_data(0x60);
             lcd_data(0x00);
             lcd_data(0x80);
             lcd_data(0x80);
@@ -257,19 +225,9 @@ void main()
          }
          else if (count == 2)
          {
+            
             lcd_gotoxy(0,0);
-            lcd_putc("Weather today:");
-            lcd_gotoxy(15,2);
-            for (char i=9; i< 32;i++){
-               if (buffer[i]=='$') break;
-               if (buffer[i]==' ') {
-                  for (int j=(i-9); j<=14; j++){ 
-                     lcd_putc(" "); //Xuong dong
-                  }
-                  continue;
-               }
-               lcd_putc(buffer[i]);
-            }
+            lcd_putc("SUNNY");
             lcd_gotoxy(40,5);
             lcd_data(0x80);
             lcd_data(0x80);
@@ -290,11 +248,11 @@ void main()
             a = 2; b = 3; c = 0; d = 3;
             lcd_gotoxy(1,0);
             lcd_putc("Arlam at:"); 
-            lcd_print_digit(a, x1, y1);
-            lcd_print_digit(b, x1 + 12, y1);
-            lcd_print_digit(11, x1 +24, y1);
-            lcd_print_digit(c, x1 + 36,y1);
-            lcd_print_digit(d, x1 +48, y1);
+            lcd_print_digit(a, x, y);
+            lcd_print_digit(b, x + 12, y);
+            lcd_print_digit(11, x +24, y);
+            lcd_print_digit(c, x + 36,y);
+            lcd_print_digit(d, x +48, y);
             lcd_gotoxy(40,5);
             lcd_data(0x80);
             lcd_data(0x80);

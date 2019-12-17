@@ -145,7 +145,6 @@ const unsigned char sunny[]={
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3f, 0xe0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x60, 0x1f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x03, 0x06, 0x04, 0x04, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x04, 0x04, 0x02, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
-
 //function prototypes
 void    lcd_init();
 void    lcd_command(char command);
@@ -160,7 +159,6 @@ void    table_to_lcd();
 void    table_to_lcd_inverted();
 void    lcd_dot (char x, char y);
 void    lcd_print_digit(char digit, char x, char y);
-void    lcd_date(unsigned char date, char x, char y);
 
 char char_row,charsel,charpos,chardata;
 int16 ddram;
@@ -205,9 +203,9 @@ void lcd_command(char command)
    #ifdef LCD_CS
    output_low(lcd_cs);
    #endif
-   spi_xfer(LCD_STREAM, command);
+   xfer_spi(LCD_STREAM, command);
    #ifdef LCD_CS
-   output_high(lcd_cs);
+   output_hight(lcd_cs);
    #endif
 }
 
@@ -218,9 +216,9 @@ void lcd_data(char data)
    output_low(lcd_cs);
    #endif
    delay_us(2);
-   spi_xfer(LCD_STREAM, data);
+   xfer_spi(LCD_STREAM, data);
    #ifdef LCD_CS
-   output_high(lcd_cs);
+   output_hight(lcd_cs);
    #endif
 }
 
@@ -310,99 +308,3 @@ void lcd_print_digit(char digit, char x, char y){
       }
    }
 }
-void lcd_date(unsigned char date, char x, char y){
-   lcd_gotoxy(x, y);
-   if (date > 6) return;
-   switch (date) {
-      case 0:{
-         lcd_putc("CHU NHAT");
-         break;
-      }
-      case 1:{
-         lcd_putc("THU HAI");
-         break;
-      }
-      case 2:{
-         lcd_putc("THU BA");
-         break;
-      }
-      case 3:{
-         lcd_putc("THU TU");
-         break;
-      }
-      case 4:{
-         lcd_putc("THU NAM");
-         break;
-      }
-      case 5:{
-         lcd_putc("THU SAU");
-         break;
-      }
-      case 6:{
-         lcd_putc("THU BAY");
-         break;
-      }
-   }
-}
-
-//!void lcd_menu(char index, char x, char y){
-//!     lcd_gotoxy(x,y);
-//!     switch (index) {
-//!      case 0:{
-//!            lcd_data(0x60);
-//!            lcd_data(0x60);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!         break;
-//!      }
-//!      case 1:{
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x60);
-//!            lcd_data(0x60);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!         break;
-//!      }
-//!      case 2:{
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x60);
-//!            lcd_data(0x60);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!         break;
-//!      }
-//!      case 3:{
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x80);
-//!            lcd_data(0x80);
-//!            lcd_data(0x00);
-//!            lcd_data(0x60);
-//!            lcd_data(0x60);
-//!         break;
-//!      }
-//!    }
-//!}
