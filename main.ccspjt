@@ -7,7 +7,7 @@ enabled=0
 chip=1
 D1=
 V1=
-buildcount=668
+buildcount=670
 [fileformats]
 forcecoff=1
 debug=4
@@ -26,7 +26,7 @@ Target=main.hex
 Development_Mode=
 Processor_Text=PIC16F887
 ToolSuite=CCS
-CCSVersion=5.025
+CCSVersion=5.051
 Compiler=PCM
 [Target Data]
 BuildTool=C-COMPILER
@@ -49,14 +49,14 @@ AdditionalOptionString=
 Fixed=
 [Opened Files]
 1=main.c
-2=
+2=5110lib\rtic.c
 3=5110lib\3310(modified).c
 4=..\5110 LCD-Pic18f4550\5110lib\Goc.c
 5=uart.c
 6=..\ESD1_project\main.c
-t1=253
+t1=25
 t2=85
-t3=338
+t3=328
 t4=1
 t5=1
 Count=10
@@ -71,7 +71,7 @@ t9=605
 t10=75
 
 [ProjectLog]
-Days=15
+Days=16
 D1=18-11-2019
 D1_L=92
 D1_L1=[34987]Project Opened.
@@ -392,7 +392,7 @@ D13_L38=[85508]Started Editing.
 D14=16-12-2019
 <<<<<<< HEAD
 D14_L=85
-=======
+================================================================================================================
 D14_L=73
 >>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
 D14_L1=[168]Stopped Editing.
@@ -526,10 +526,16 @@ D15_L38=[67074]Stopped Editing.
 D15_E=308
 D15_D=0
 D15_L39=[67166]Project Closed.
-=======
+================================================================================================================
 D14_L72=[80576]Project Opened.
 D14_L73=[80590]Started Editing.
 >>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
+D16=28-12-2019
+D16_L=4
+D16_L1=[51570]Project Opened.
+D16_L2=[51593]Started Editing.
+D16_L3=[51901]Stopped Editing.
+D16_L4=[51973]Started Editing.
 [Units]
 Count=1
 1=main (main)

@@ -28,11 +28,14 @@ int hr1 = 0, hr2 =0, min1 = 0, min2 = 0, sec1 = 0, sec2= 0, temp1 = 0 , temp2 =0
 int incode;
 char cnt;
 int sec;
+char where2end;
 boolean connected = 0;
 boolean ready = 0;
 
 char buffer[32];
+char str[16];
 char *ptr = &buffer;
+int index = 0;
 
 void init()
 {
@@ -286,7 +289,7 @@ void main()
          else if (count == 3)
          {   
             char x= 4, y=2;
-            int a, b, c, d, check;
+            int a, b, c, d;
             a = 2; b = 3; c = 0; d = 3;
             lcd_gotoxy(1,0);
             lcd_putc("Arlam at:"); 
@@ -307,7 +310,7 @@ void main()
             lcd_data(0x00);
             lcd_data(0x60);
             lcd_data(0x60);
-            a = 1; b = 2; c = 1; d = 4; check = pin_D6;
+            int a = 1; b = 2; c = 1; d = 4; check = pin_D6;
             if(check!=PIN_D6) output_high(PIN_A4);
             lcd_gotoxy(1,0);
             lcd_putc("Arlam at:"); 
@@ -323,4 +326,4 @@ void main()
          }
        delay_ms(100);
       } 
-} 
+ } 

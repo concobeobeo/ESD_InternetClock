@@ -1,6 +1,5 @@
 ÀÄmain
-<<<<<<< HEAD
-   ÃÄMAIN  1/1429  Ram=14
+   ÃÄMAIN  1/1583  Ram=15
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄinit  0/347  Ram=1
    ³  ³  ÃÄlcd_init  (Inline)  Ram=0
@@ -70,9 +69,9 @@
    ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
    ³  ³  ÀÄlcd_clear  0/25  Ram=0
    ³  ³     ÀÄ*
-   ³  ÃÄbuzz  0/14  Ram=0
+   ³  ÃÄbuzz  0/22  Ram=0
    ³  ³  ÀÄ@delay_ms1  0/20  Ram=1
-   ³  ÃÄbuzz  0/14  Ram=0
+   ³  ÃÄbuzz  0/22  Ram=0
    ³  ³  ÀÄ*
    ³  ÃÄ@DIV88  0/23  Ram=3
    ³  ÃÄ@DIV88  0/23  Ram=3
@@ -219,91 +218,15 @@
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
-=======
-   ÃÄMAIN  1/523  Ram=2
-   ³  ÃÄ@cinit1  (Inline)  Ram=0
-   ³  ÃÄinit  0/229  Ram=0
-   ³  ³  ÀÄlcd_init  (Inline)  Ram=0
-   ³  ³     ÃÄ@delay_us1  (Inline)  Ram=1
-   ³  ³     ÃÄ@delay_ms1  (Inline)  Ram=1
-   ³  ³     ÃÄlcd_command  0/28  Ram=1
-   ³  ³     ³  ÀÄlcd_spi  0/44  Ram=2
-   ³  ³     ÃÄlcd_command  0/28  Ram=1
-   ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄlcd_command  0/28  Ram=1
-   ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄlcd_command  0/28  Ram=1
-   ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄlcd_command  0/28  Ram=1
-   ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄ@delay_ms1  (Inline)  Ram=1
-   ³  ³     ÃÄlcd_clear  0/21  Ram=0
-   ³  ³     ³  ÃÄlcd_gotoxy  0/13  Ram=3
-   ³  ³     ³  ³  ÃÄlcd_command  0/28  Ram=1
-   ³  ³     ³  ³  ³  ÀÄ*
-   ³  ³     ³  ³  ÀÄlcd_command  0/28  Ram=1
-   ³  ³     ³  ³     ÀÄ*
-   ³  ³     ³  ÀÄlcd_data  0/28  Ram=1
-   ³  ³     ³     ÀÄlcd_spi  0/44  Ram=2
-   ³  ³     ÃÄ@delay_ms1  (Inline)  Ram=1
-   ³  ³     ÃÄlcd_command  0/28  Ram=1
-   ³  ³     ³  ÀÄ*
-   ³  ³     ÃÄ@delay_ms1  (Inline)  Ram=1
-   ³  ³     ÀÄlcd_command  0/28  Ram=1
-   ³  ³        ÀÄ*
-   ³  ÃÄbuzz  0/38  Ram=0
-   ³  ³  ÀÄ@delay_ms1  (Inline)  Ram=1
-   ³  ÃÄlcd_clear  0/21  Ram=0
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_clear  0/21  Ram=0
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_gotoxy  0/13  Ram=3
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
-   ³  ³  ÃÄlcd_putc  1/151  Ram=1
-   ³  ³  ³  ÀÄtable_to_lcd  (Inline)  Ram=2
-   ³  ³  ³     ÃÄ@MUL88  (Inline)  Ram=2
-   ³  ³  ³     ÃÄ@const623  0/247  Ram=0
-   ³  ³  ³     ÃÄ@MUL88  (Inline)  Ram=2
-   ³  ³  ³     ÃÄ@const626  0/247  Ram=0
-   ³  ³  ³     ÃÄlcd_data  0/28  Ram=1
-   ³  ³  ³     ³  ÀÄ*
-   ³  ³  ³     ÀÄlcd_data  0/28  Ram=1
-   ³  ³  ³        ÀÄ*
-   ³  ³  ÀÄlcd_putc  1/151  Ram=1
-   ³  ³     ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÃÄlcd_gotoxy  0/13  Ram=3
-   ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄ@MUL88  (Inline)  Ram=2
-   ³  ³  ÃÄ@MUL88  (Inline)  Ram=2
-   ³  ³  ÃÄlcd_data  0/28  Ram=1
-   ³  ³  ³  ÀÄ*
-   ³  ³  ÃÄ@const629  0/269  Ram=0
-   ³  ³  ÀÄlcd_data  0/28  Ram=1
-   ³  ³     ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
->>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
-<<<<<<< HEAD
    ³  ÃÄlcd_data  0/22  Ram=1
-=======
-   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
->>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
-<<<<<<< HEAD
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
@@ -317,62 +240,29 @@
    ³  ÃÄlcd_gotoxy  0/17  Ram=3
    ³  ³  ÀÄ*
    ³  ÃÄ@PSTRINGC7_640  0/116  Ram=4
-=======
-   ³  ÃÄlcd_putc  1/151  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_putc  1/151  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_data  0/28  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_data  0/28  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_data  0/28  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
->>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
    ³  ³  ÀÄ*
    ³  ÃÄlcd_print_digit  0/91  Ram=7
    ³  ³  ÀÄ*
-<<<<<<< HEAD
    ³  ÃÄlcd_print_digit  0/91  Ram=7
-=======
-   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
->>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
    ³  ³  ÀÄ*
    ³  ÃÄlcd_print_digit  0/91  Ram=7
    ³  ³  ÀÄ*
-<<<<<<< HEAD
    ³  ÃÄlcd_print_digit  0/91  Ram=7
    ³  ³  ÀÄ*
    ³  ÃÄlcd_print_digit  0/91  Ram=7
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/17  Ram=3
-=======
-   ³  ÃÄlcd_putc  1/151  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_putc  1/151  Ram=1
-   ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
->>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
-<<<<<<< HEAD
    ³  ÃÄlcd_data  0/22  Ram=1
-=======
-   ³  ÃÄ@const641  0/513  Ram=0
-   ³  ÃÄlcd_data  0/28  Ram=1
->>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
-<<<<<<< HEAD
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
@@ -384,30 +274,25 @@
    ³  ÃÄlcd_data  0/22  Ram=1
    ³  ³  ÀÄ*
    ³  ÃÄlcd_data  0/22  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/17  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC7_640  0/116  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_print_digit  0/91  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_print_digit  0/91  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_print_digit  0/91  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_print_digit  0/91  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_print_digit  0/91  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄbuzz  0/22  Ram=0
    ³  ³  ÀÄ*
    ³  ÀÄ@delay_ms1  0/20  Ram=1
    ÃÄuart_receive  0/48  Ram=2
-   ÀÄencoder  0/43  Ram=1
+   ÀÄencoder  0/49  Ram=1
       ÀÄlcd_clear  0/25  Ram=0
          ÀÄ*
-=======
-   ³  ÃÄ@PSTRINGC7_656  0/90  Ram=4
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÀÄ*
-   ³  ÃÄlcd_print_digit  1/149  Ram=5
-   ³  ³  ÀÄ*
-   ³  ÀÄbuzz  0/38  Ram=0
-   ³     ÀÄ*
-   ÃÄuart_receive  0/71  Ram=0
-   ³  ÃÄ@goto10777  0/14  Ram=0
-   ³  ÀÄlcd_clear  0/21  Ram=0
-   ³     ÀÄ*
-   ÀÄencoder  0/59  Ram=2
->>>>>>> 473bd370cd4d2ba0e73ccbd3df58994c526b9563

@@ -28,11 +28,14 @@ int hr1 = 0, hr2 =0, min1 = 0, min2 = 0, sec1 = 0, sec2= 0, temp1 = 0 , temp2 =0
 int incode;
 char cnt;
 int sec;
+char where2end;
 boolean connected = 0;
 boolean ready = 0;
 
 char buffer[32];
+char str[16];
 char *ptr = &buffer;
+int index = 0;
 
 void init()
 {
@@ -323,4 +326,4 @@ void main()
          }
        delay_ms(100);
       } 
-} 
+ } 

@@ -1,14 +1,13 @@
 >>> Warning 205 "main.c" Line 138(1,1): Unsigned variable is never less than zero
 >>> Warning 204 "main.c" Line 138(1,1): Condition always FALSE
->>> Warning 216 "main.c" Line 315(2,3): Interrupts disabled during call to prevent re-entrancy:  (lcd_data)
->>> Warning 216 "main.c" Line 315(2,3): Interrupts disabled during call to prevent re-entrancy:  (lcd_command)
->>> Warning 216 "main.c" Line 315(2,3): Interrupts disabled during call to prevent re-entrancy:  (lcd_clear)
->>> Warning 216 "main.c" Line 315(2,3): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
->>> Warning 202 "main.c" Line 29(6,15): Variable never used:   where2end
->>> Warning 202 "main.c" Line 34(6,9): Variable never used:   str
->>> Warning 202 "main.c" Line 36(5,10): Variable never used:   index
->>> Warning 202 "main.c" Line 288(18,19): Variable never used:   x
->>> Warning 202 "main.c" Line 288(24,25): Variable never used:   y
-      Memory usage:   ROM=40%      RAM=31% - 36%
-      0 Errors,  11 Warnings.
+>>> Warning 216 "main.c" Line 326(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_data)
+>>> Warning 216 "main.c" Line 326(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_command)
+>>> Warning 216 "main.c" Line 326(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_clear)
+>>> Warning 216 "main.c" Line 326(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+>>> Warning 202 "main.c" Line 0(0,0): Variable never used:   cloudy
+>>> Warning 202 "main.c" Line 0(0,0): Variable never used:   rainy
+>>> Warning 202 "main.c" Line 0(0,0): Variable never used:   thunder
+>>> Warning 202 "main.c" Line 0(0,0): Variable never used:   sunny
+      Memory usage:   ROM=43%      RAM=26% - 32%
+      0 Errors,  10 Warnings.
 Build Successful.
